@@ -1,0 +1,3856 @@
+[
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "BAGFITNESS",
+        "codeTva": "1",
+        "geant": 2.0,
+        "htmlKeyLabel": "B. fitness",
+        "id": 1,
+        "image": "null",
+        "label": "Baguette Fitness",
+        "mini": 0.5,
+        "name": "Baguette Fitness",
+        "normal": 1.0,
+        "ticketLabel": "Baguette Fitness",
+        "categoryTags": [
+            {
+                "tag": "baguette"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "BAGUETTE",
+        "codeTva": "1",
+        "fitgeant": 2.0,
+        "fitmini": 0.4,
+        "fitnormal": 1.5,
+        "geant": 1.2,
+        "htmlKeyLabel": "Baguette",
+        "id": 2,
+        "image": "null",
+        "label": "Baguette",
+        "mini": 0.4,
+        "name": "Baguette",
+        "normal": 1.3,
+        "ticketLabel": "Baguette",
+        "categoryTags": [
+            {
+                "tag": "baguette"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "BAGUETTE",
+        "codeTva": "1",
+        "fitgeant": 2.0,
+        "fitmini": 0.4,
+        "fitnormal": 1.5,
+        "geant": 1.2,
+        "htmlKeyLabel": "Baguette",
+        "id": 3,
+        "image": "null",
+        "label": "Baguette",
+        "mini": 0.4,
+        "name": "Baguette",
+        "normal": 1.3,
+        "ticketLabel": "Baguette",
+        "categoryTags": [
+            {
+                "tag": "baguette"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "BIERE",
+        "codeTva": "3",
+        "htmlKeyLabel": "Bière",
+        "id": 4,
+        "image": "null",
+        "label": "Bière",
+        "name": "Bière",
+        "normal": 2.0,
+        "ticketLabel": "Bière",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "BOULETTES",
+        "codeTva": "1",
+        "htmlKeyLabel": "Boulettes",
+        "id": 5,
+        "image": "null",
+        "label": "Boulettes",
+        "name": "Boulettes",
+        "normal": 1.6,
+        "ticketLabel": "Boulettes",
+        "categoryTags": [
+            {
+                "tag": "salaison"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CAFE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Café",
+        "id": 6,
+        "image": "null",
+        "label": "Café",
+        "name": "Café",
+        "normal": 1.8,
+        "ticketLabel": "Café",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CAMPAGNARD",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Campagnard",
+        "id": 7,
+        "image": "null",
+        "label": "Campagnard",
+        "mini": 2.0,
+        "name": "Campagnard",
+        "normal": 4.0,
+        "ticketLabel": "Campagnard",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Fromage frais de chèvre, bacon fumé, poivre, huile vierge de noix",
+        "canMerge": true,
+        "code": "CHEVREBACON",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Chèvre<br>Bacon",
+        "id": 8,
+        "image": "null",
+        "label": "Chèvre Bacon",
+        "mini": 2.0,
+        "name": "Chèvre Bacon",
+        "normal": 4.2,
+        "ticketLabel": "Chèvre Bacon",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "chevre"
+            }
+        ],
+        "webDetail": "Fromage frais de chèvre, bacon fumé, poivre, huile vierge de noix"
+    },
+    {
+        "afficheDetail": "Fromage frais de chèvre, miel, poivre, roquette",
+        "canMerge": true,
+        "code": "CHEVREMIEL",
+        "codeTva": "1",
+        "geant": 5.8,
+        "htmlKeyLabel": "Chèvre<br>Miel",
+        "id": 9,
+        "image": "vegetarien",
+        "label": "Chèvre Miel",
+        "mini": 2.0,
+        "name": "Chèvre Miel",
+        "normal": 3.8,
+        "ticketLabel": "Chèvre Miel",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "chevre"
+            }
+        ],
+        "webDetail": "Fromage frais de chèvre, miel, poivre, roquette"
+    },
+    {
+        "afficheDetail": "Fromage frais de chèvre, raisins secs, miel, crème balsamique, roquette",
+        "canMerge": true,
+        "code": "CHEVREMIELRAISIN",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Chèvre Miel<br>Raisin",
+        "id": 10,
+        "image": "vegetarien",
+        "label": "Chèvre Miel Raisin",
+        "mini": 2.0,
+        "name": "Chèvre Miel Raisin",
+        "normal": 4.0,
+        "ticketLabel": "Chèvre Miel Raisin",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "chevre"
+            }
+        ],
+        "webDetail": "Fromage frais de chèvre, raisins secs, miel, crème balsamique, roquette"
+    },
+    {
+        "afficheDetail": "Fromage frais de chèvre, raisins secs, crème balsamique, roquette",
+        "canMerge": true,
+        "code": "CHEVRERAISIN",
+        "codeTva": "1",
+        "geant": 5.8,
+        "htmlKeyLabel": "Chèvre<br>Raisin b.",
+        "id": 11,
+        "image": "vegetarien",
+        "label": "Chèvre Raisin Balsamique",
+        "mini": 2.0,
+        "name": "Chèvre Raisin Balsamique",
+        "normal": 3.8,
+        "ticketLabel": "Chèvre Raisin Balsamique",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "chevre"
+            }
+        ],
+        "webDetail": "Fromage frais de chèvre, raisins secs, crème balsamique, roquette"
+    },
+    {
+        "afficheDetail": "Fromage frais de chèvre, tomatade, olives, poivre, huile d'olive",
+        "canMerge": true,
+        "code": "CHEVRESUD",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Chèvre<br>Sud",
+        "id": 12,
+        "image": "vegetarien",
+        "label": "Chèvre Sud",
+        "mini": 2.0,
+        "name": "Chèvre Sud",
+        "normal": 4.2,
+        "ticketLabel": "Chèvre Sud",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "chevre"
+            }
+        ],
+        "webDetail": "Fromage frais de chèvre, tomatade, olives, poivre, huile d'olive"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CHOCCHTHE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Hotcemel<br>The",
+        "id": 13,
+        "image": "null",
+        "label": "Chocolat Chaud The",
+        "name": "Chocolat Chaud The",
+        "normal": 2.0,
+        "ticketLabel": "Chocolat Chaud The",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CHORIZO",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Chorizo",
+        "id": 14,
+        "image": "null",
+        "label": "Chorizo",
+        "mini": 2.0,
+        "name": "Chorizo",
+        "normal": 3.5,
+        "ticketLabel": "Chorizo",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Boulette traiteur froide tranchée, œufs, tomates, cornichons, sauce au choix",
+        "canMerge": true,
+        "code": "CLUBBOULETTE",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Club<br>boulette",
+        "id": 15,
+        "image": "null",
+        "label": "Club Boulette",
+        "mini": 2.0,
+        "name": "Club Boulette",
+        "normal": 4.0,
+        "ticketLabel": "Club Boulette",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "Boulette traiteur froide tranchée, œufs, tomates, cornichons, sauce au choix"
+    },
+    {
+        "afficheDetail": "Filet de poulet en tranches, fromage, œufs, tomates, cornichons, salade",
+        "canMerge": true,
+        "code": "CLUBDAGO",
+        "codeTva": "1",
+        "geant": 5.8,
+        "htmlKeyLabel": "Club<br>dago",
+        "id": 16,
+        "image": "epice",
+        "label": "Club Dago",
+        "mini": 2.0,
+        "name": "Club Dago",
+        "normal": 4.0,
+        "ticketLabel": "Club Dago",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Filet de poulet en tranches, fromage, œufs, tomates, cornichons, salade"
+    },
+    {
+        "afficheDetail": "Poulet grillé, ananas, tomates, salade, sauce cocktail maison",
+        "canMerge": true,
+        "code": "CLUBEXOTIQUE",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Club<br>Exotique",
+        "id": 17,
+        "image": "null",
+        "label": "Club Exotique",
+        "mini": 2.0,
+        "name": "Club Exotique",
+        "normal": 4.0,
+        "ticketLabel": "Club Exotique",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Poulet grillé, ananas, tomates, salade, sauce cocktail maison"
+    },
+    {
+        "afficheDetail": "Feta (fromage de brebis), tomates, cocombres, olives noires, origan, sel, poivre, huile d’olive",
+        "canMerge": true,
+        "code": "CLUBFETA",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Club Feta",
+        "id": 18,
+        "image": "null",
+        "label": "Club Feta",
+        "mini": 2.0,
+        "name": "Club Feta",
+        "normal": 4.5,
+        "ticketLabel": "Club Feta",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Feta (fromage de brebis), tomates, cocombres, olives noires, origan, sel, poivre, huile d’olive"
+    },
+    {
+        "afficheDetail": "Poulet grillé, tomatade, huile d'olive, copeaux de parmesan, roquette",
+        "canMerge": true,
+        "code": "CLUBITALIENNE",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Club<br>Italien",
+        "id": 19,
+        "image": "null",
+        "label": "Club à l'Italienne",
+        "mini": 2.0,
+        "name": "Club à l'Italienne",
+        "normal": 4.2,
+        "ticketLabel": "Club à l'Italienne",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Poulet grillé, tomatade, huile d'olive, copeaux de parmesan, roquette"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, mozzarella fraîche, tomates, poivre, sel, origan, huile d'olive, vinaigre balsamique, roquette",
+        "canMerge": true,
+        "code": "CLUBMOZZA",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Club Mozza",
+        "id": 20,
+        "image": "null",
+        "label": "Club Mozza",
+        "mini": 2.0,
+        "name": "Club Mozza",
+        "normal": 4.2,
+        "ticketLabel": "Club Mozza",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Jambon de Parme, mozzarella fraîche, tomates, poivre, sel, origan, huile d'olive, vinaigre balsamique, roquette"
+    },
+    {
+        "afficheDetail": "Thon naturel, huile d'olive, ail, poivre, câpres, anchois, olives noires, tomates",
+        "canMerge": true,
+        "code": "CLUBNICOIS",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Club<br>Niçois",
+        "id": 21,
+        "image": "null",
+        "label": "Club Niçois",
+        "mini": 2.0,
+        "name": "Club Niçois",
+        "normal": 4.2,
+        "ticketLabel": "Club Niçois",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Thon naturel, huile d'olive, ail, poivre, câpres, anchois, olives noires, tomates"
+    },
+    {
+        "afficheDetail": "Sauce au choix : poivre, andalouse, …",
+        "canMerge": true,
+        "code": "CLUBPOULETGRILLE",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "C.Poulet<br>Grillé",
+        "id": 22,
+        "image": "null",
+        "label": "Club Poulet Grillé",
+        "mini": 2.0,
+        "name": "Club Poulet Grillé",
+        "normal": 4.0,
+        "ticketLabel": "Club Poulet Grillé",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Sauce au choix : poivre, andalouse, …"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CRABE",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Crabe",
+        "id": 23,
+        "image": "null",
+        "label": "Crabe",
+        "mini": 1.7,
+        "name": "Crabe",
+        "normal": 3.0,
+        "ticketLabel": "Crabe",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CRABEEXOTIQUE",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Crabe exotique",
+        "id": 24,
+        "image": "null",
+        "label": "Crabe Exotique",
+        "mini": 1.7,
+        "name": "Crabe Exotique",
+        "normal": 3.0,
+        "ticketLabel": "Crabe Exotique",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CREVETCOCK",
+        "codeTva": "1",
+        "geant": 5.2,
+        "htmlKeyLabel": "Crevettes<br>cocktail",
+        "id": 25,
+        "image": "null",
+        "label": "Crevettes Cocktail",
+        "mini": 1.7,
+        "name": "Crevettes Cocktail",
+        "normal": 3.5,
+        "ticketLabel": "Crevettes Cocktail",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CREVETDIAB",
+        "codeTva": "1",
+        "geant": 5.2,
+        "htmlKeyLabel": "Crevettes<br>diable",
+        "id": 26,
+        "image": "epice",
+        "label": "Crevettes Diable",
+        "mini": 1.7,
+        "name": "Crevettes Diable",
+        "normal": 3.5,
+        "ticketLabel": "Crevettes Diable",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "( ou prix du jour) Crevettes grises fraîches préparées maison, œufs, tomates, salade",
+        "canMerge": true,
+        "code": "CREVETGRISE",
+        "codeTva": "1",
+        "geant": 7.0,
+        "htmlKeyLabel": "Crevettes<br>Grises",
+        "id": 27,
+        "image": "null",
+        "label": "Crevettes Grises",
+        "mini": 2.0,
+        "name": "Crevettes Grises",
+        "normal": 5.0,
+        "ticketLabel": "Crevettes Grises",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "Crevettes grises fraîches préparées maison, œufs, tomates, salade"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CREVETROSE",
+        "codeTva": "1",
+        "geant": 5.2,
+        "htmlKeyLabel": "Crevettes<br>roses",
+        "id": 28,
+        "image": "null",
+        "label": "Crevettes Roses",
+        "mini": 1.7,
+        "name": "Crevettes Roses",
+        "normal": 3.5,
+        "ticketLabel": "Crevettes Roses",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CROISSANT",
+        "codeTva": "1",
+        "htmlKeyLabel": "Croissant",
+        "id": 29,
+        "image": "null",
+        "label": "Croissant",
+        "name": "Croissant",
+        "normal": 1.2,
+        "ticketLabel": "Croissant",
+        "categoryTags": [
+            {
+                "tag": "viennoiserie"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Poulet chaud servi croustillant dans un sandwich, sauces et crudités au choix ",
+        "canMerge": true,
+        "code": "CROQUANT",
+        "codeTva": "1.0",
+        "geant": 6.5,
+        "htmlKeyLabel": "Croquant",
+        "id": 30,
+        "image": "null",
+        "label": "Croquant",
+        "mini": 2.0,
+        "name": "Croquant",
+        "normal": 4.5,
+        "ticketLabel": "Croquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "Poulet chaud servi croustillant dans un sandwich, sauces et crudités au choix "
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "CUPVINAIG",
+        "codeTva": "1",
+        "htmlKeyLabel": "Cups<br>Vinaigrette",
+        "id": 31,
+        "image": "null",
+        "label": "Cups Vinaigrette",
+        "name": "Cups Vinaigrette",
+        "normal": 0.5,
+        "ticketLabel": "Cups Vinaigrette",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Jambon, fromage, mayo, œufs, tomates, salade, cornichons",
+        "canMerge": true,
+        "code": "DAGO",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Dago",
+        "id": 32,
+        "image": "null",
+        "label": "Dagobert",
+        "mini": 1.7,
+        "name": "Dagobert",
+        "normal": 3.0,
+        "ticketLabel": "Dagobert",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Jambon, fromage, mayo, œufs, tomates, salade, cornichons"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "DAGOFUME",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Dago<br>Fumé",
+        "id": 33,
+        "image": "null",
+        "label": "Dago Fumé",
+        "mini": 2.0,
+        "name": "Dago Fumé",
+        "normal": 4.0,
+        "ticketLabel": "Dago Fumé",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Avec Jambon d’ardenne"
+    },
+    {
+        "afficheDetail": "Avec Jambon d’ardenne et sauce piquante maison",
+        "canMerge": true,
+        "code": "DAGOFUMEPIQUANT",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Dago<br>FuméPQT",
+        "id": 34,
+        "image": "epice",
+        "label": "Dago Fumé Piquant",
+        "mini": 2.0,
+        "name": "Dago Fumé Piquant",
+        "normal": 4.2,
+        "ticketLabel": "Dago Fumé Piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Avec Jambon d’ardenne et sauce piquante maison"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "DAGOPIQUANT",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Dago<br>piquant",
+        "id": 35,
+        "image": "epice",
+        "label": "Dago piquant",
+        "mini": 2.0,
+        "name": "Dago piquant",
+        "normal": 3.3,
+        "ticketLabel": "Dago piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Avec sauce piquante maison"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "EAUPLATE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Eau",
+        "id": 36,
+        "image": "null",
+        "label": "Eau Plate",
+        "name": "Eau Plate",
+        "normal": 1.5,
+        "ticketLabel": "Eau Plate",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "EAUPTIL",
+        "codeTva": "1",
+        "htmlKeyLabel": "Bru",
+        "id": 37,
+        "image": "null",
+        "label": "Eau Pétillante",
+        "name": "Eau Pétillante",
+        "normal": 1.5,
+        "ticketLabel": "Eau Pétillante",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "EMMENTHAL",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Emmenthal",
+        "id": 38,
+        "image": "null",
+        "label": "Emmenthal",
+        "mini": 1.7,
+        "name": "Emmenthal",
+        "normal": 3.5,
+        "ticketLabel": "Emmenthal",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Filet de poulet en tranches, sauce piquante maison, œufs, tomates, cornichons, carottes",
+        "canMerge": true,
+        "code": "FILETPOULET",
+        "codeTva": "1",
+        "geant": 5.8,
+        "htmlKeyLabel": "Filet<br>poulet",
+        "id": 39,
+        "image": "epice",
+        "label": "Filet Poulet",
+        "mini": 2.0,
+        "name": "Filet Poulet",
+        "normal": 4.0,
+        "ticketLabel": "Filet Poulet",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Filet de poulet en tranches, sauce piquante maison, œufs, tomates, cornichons, carottes"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "FROMAGE",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Fromage",
+        "id": 40,
+        "image": "vegetarien",
+        "label": "Fromage (Gouda)",
+        "mini": 1.7,
+        "name": "Fromage (Gouda)",
+        "normal": 3.0,
+        "ticketLabel": "Fromage (Gouda)",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARCAPRES",
+        "codeTva": "1.0",
+        "geant": 0.8,
+        "htmlKeyLabel": "Sup.<br>capres",
+        "id": 41,
+        "image": "null",
+        "label": "Sup. Câpres",
+        "name": "Sup. Câpres",
+        "normal": 0.4,
+        "ticketLabel": "Sup. Câpres",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARCONCOMBRES",
+        "codeTva": "1.0",
+        "geant": 0.8,
+        "htmlKeyLabel": "Sup.<br>concombres",
+        "id": 42,
+        "image": "null",
+        "label": "Sup. Concombres",
+        "name": "Sup. Concombres",
+        "normal": 0.4,
+        "ticketLabel": "Sup. Concombres",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARNITURE1",
+        "codeTva": "1",
+        "geant": 0.8,
+        "htmlKeyLabel": "Supplément",
+        "id": 43,
+        "image": "null",
+        "label": "Supplément 1",
+        "name": "Supplément 1",
+        "normal": 0.4,
+        "ticketLabel": "Supplément 1",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARNITURE2",
+        "codeTva": "1",
+        "geant": 1.0,
+        "htmlKeyLabel": "Supplément",
+        "id": 44,
+        "image": "null",
+        "label": "Supplément 2",
+        "name": "Supplément 2",
+        "normal": 0.5,
+        "ticketLabel": "Supplément 2",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARNITURE3",
+        "codeTva": "1",
+        "geant": 1.5,
+        "htmlKeyLabel": "Supplément",
+        "id": 45,
+        "image": "null",
+        "label": "Supplément 3",
+        "name": "Supplément 3",
+        "normal": 1.0,
+        "ticketLabel": "Supplément 3",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARNITURE4",
+        "codeTva": "1",
+        "geant": 1.5,
+        "htmlKeyLabel": "Supplément",
+        "id": 46,
+        "image": "null",
+        "label": "Supplément 4",
+        "name": "Supplément 4",
+        "normal": 1.0,
+        "ticketLabel": "Supplément 4",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GAROIGNONH",
+        "codeTva": "1",
+        "geant": 0.8,
+        "htmlKeyLabel": "Sup.<br>oignon H.",
+        "id": 47,
+        "image": "null",
+        "label": "Sup. Oignon haché",
+        "name": "Sup. Oignon haché",
+        "normal": 0.4,
+        "ticketLabel": "Sup. Oignon haché",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GAROLIVES",
+        "codeTva": "1",
+        "geant": 1.0,
+        "htmlKeyLabel": "Sup.<br>olives",
+        "id": 48,
+        "image": "null",
+        "label": "Sup. Olives",
+        "name": "Sup. Olives",
+        "normal": 0.5,
+        "ticketLabel": "Sup. Olives",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARPARMESAN",
+        "codeTva": "1",
+        "geant": 1.5,
+        "htmlKeyLabel": "Sup.<br>parmesan",
+        "id": 49,
+        "image": "null",
+        "label": "Sup. Parmesan",
+        "name": "Sup. Parmesan",
+        "normal": 1.0,
+        "ticketLabel": "Sup. Parmesan",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARRAISIN",
+        "codeTva": "1",
+        "geant": 0.8,
+        "htmlKeyLabel": "Sup.<br>raisin",
+        "id": 50,
+        "image": "null",
+        "label": "Sup. Raisin",
+        "name": "Sup. Raisin",
+        "normal": 0.4,
+        "ticketLabel": "Sup. Raisin",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARTARTARETOM",
+        "codeTva": "1",
+        "geant": 1.0,
+        "htmlKeyLabel": "Sup.<br>tartare tom.",
+        "id": 51,
+        "image": "null",
+        "label": "Sup. Tartare Tomates",
+        "name": "Sup. Tartare Tomates",
+        "normal": 0.5,
+        "ticketLabel": "Sup. Tartare Tomates",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GARTOMATES",
+        "codeTva": "1",
+        "geant": 0.8,
+        "htmlKeyLabel": "Sup.<br>tomates",
+        "id": 52,
+        "image": "null",
+        "label": "Sup. Tomates",
+        "name": "Sup. Tomates",
+        "normal": 0.4,
+        "ticketLabel": "Sup. Tomates",
+        "categoryTags": [
+            {
+                "tag": "autre"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "GAUFRES",
+        "codeTva": "1",
+        "htmlKeyLabel": "Gaufres",
+        "id": 53,
+        "image": "null",
+        "label": "Gaufres",
+        "name": "Gaufres",
+        "normal": 1.5,
+        "ticketLabel": "Gaufres",
+        "categoryTags": [
+            {
+                "tag": "viennoiserie"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "JAMBFROMAGE",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "J/F",
+        "id": 54,
+        "image": "null",
+        "label": "Jambon Fromage",
+        "mini": 1.7,
+        "name": "Jambon Fromage",
+        "normal": 3.0,
+        "ticketLabel": "Jambon Fromage",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "JAMBON",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Jambon",
+        "id": 55,
+        "image": "null",
+        "label": "Jambon",
+        "mini": 1.7,
+        "name": "Jambon",
+        "normal": 3.0,
+        "ticketLabel": "Jambon",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "JAMBONFROMAGE",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "J/F",
+        "id": 56,
+        "image": "null",
+        "label": "Jambon Fromage",
+        "mini": 1.7,
+        "name": "Jambon Fromage",
+        "normal": 3.0,
+        "ticketLabel": "Jambon Fromage",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "JAMBONFUME",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Jambon<br>Fumé",
+        "id": 57,
+        "image": "null",
+        "label": "Jambon Fumé",
+        "mini": 2.0,
+        "name": "Jambon Fumé",
+        "normal": 3.5,
+        "ticketLabel": "Jambon Fumé",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "JAMBONPOIR",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Jambon<br>poireau",
+        "id": 58,
+        "image": "null",
+        "label": "Salade Jambon poireau",
+        "mini": 1.7,
+        "name": "Salade Jambon poireau",
+        "normal": 3.0,
+        "ticketLabel": "Salade Jambon poireau",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "JUS",
+        "codeTva": "1",
+        "htmlKeyLabel": "Jus",
+        "id": 59,
+        "image": "null",
+        "label": "Jus",
+        "name": "Jus",
+        "normal": 2.0,
+        "ticketLabel": "Jus",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "KEBAB",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Kebab",
+        "id": 60,
+        "image": "null",
+        "label": "Kebab",
+        "mini": 2.0,
+        "name": "Kebab",
+        "normal": 3.5,
+        "ticketLabel": "Kebab",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Dinde grillée, sauce à l’ail."
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "KEBABPIQUANT",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Kebab<br>Piquant",
+        "id": 61,
+        "image": "epice",
+        "label": "Kebab Piquant",
+        "mini": 2.0,
+        "name": "Kebab Piquant",
+        "normal": 3.5,
+        "ticketLabel": "Kebab Piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Dinde grillée, sauce à l’ail piquante Maison"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tartare tomates, copeaux de parmesan, crème balsamique, roquette",
+        "canMerge": true,
+        "code": "LEPARMA1",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Parma 1",
+        "id": 62,
+        "image": "null",
+        "label": "Le Parma 1",
+        "mini": 2.0,
+        "name": "Le Parma 1",
+        "normal": 4.2,
+        "ticketLabel": "Le Parma 1",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tartare tomates, copeaux de parmesan, crème balsamique, roquette"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tomatade, copeaux de parmesan, huile de truffes, roquette",
+        "canMerge": true,
+        "code": "LEPARMA2",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Parma 2",
+        "id": 63,
+        "image": "null",
+        "label": "Le Parma 2",
+        "mini": 2.0,
+        "name": "Le Parma 2",
+        "normal": 4.2,
+        "ticketLabel": "Le Parma 2",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tomatade, copeaux de parmesan, huile de truffes, roquette"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tomatade, mozzarella fraîche, origan, huile d’olive, roquette",
+        "canMerge": true,
+        "code": "LEPARMA3",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Parma 3",
+        "id": 64,
+        "image": "null",
+        "label": "Le Parma 3",
+        "mini": 2.0,
+        "name": "Le Parma 3",
+        "normal": 4.2,
+        "ticketLabel": "Le Parma 3",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tomatade, mozzarella fraîche, origan, huile d’olive, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "MALIBU",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Malibu",
+        "id": 65,
+        "image": "null",
+        "label": "Crabe Malibu",
+        "mini": 1.7,
+        "name": "Crabe Malibu",
+        "normal": 3.0,
+        "ticketLabel": "Crabe Malibu",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Américain maison épicé, tabasco, moutarde, oignons hachés, cornichons, œufs, tomates",
+        "canMerge": true,
+        "code": "MARTINO",
+        "codeTva": "1",
+        "geant": 5.5,
+        "htmlKeyLabel": "Martino",
+        "id": 66,
+        "image": "null",
+        "label": "Martino",
+        "mini": 2.0,
+        "name": "Martino",
+        "normal": 3.5,
+        "ticketLabel": "Martino",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "Américain maison épicé, tabasco, moutarde, oignons hachés, cornichons, œufs, tomates"
+    },
+    {
+        "afficheDetail": "Tartare de tomates, huile d'olive, ail, poivre, câpres, anchois, olives noires, copeaux de parmesan, roquette",
+        "canMerge": true,
+        "code": "MEDITERRANEEN",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Méditerranéen",
+        "id": 67,
+        "image": "null",
+        "label": "Méditerranéen",
+        "mini": 2.0,
+        "name": "Méditerranéen",
+        "normal": 4.0,
+        "ticketLabel": "Méditerranéen",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Tartare de tomates, huile d'olive, ail, poivre, câpres, anchois, olives noires, copeaux de parmesan, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "MOUSCHOCOLAT",
+        "codeTva": "1",
+        "htmlKeyLabel": "Mousse<br>chocolat",
+        "id": 68,
+        "image": "null",
+        "label": "Mousse Chocolat",
+        "name": "Mousse Chocolat",
+        "normal": 1.8,
+        "ticketLabel": "Mousse Chocolat",
+        "categoryTags": [
+            {
+                "tag": "dessert"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tartare de tomates, copeaux de parmesan, câpres, olives noires, anchois, huile d'olive, ail, poivre, roquette",
+        "canMerge": true,
+        "code": "NAPOLI",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Napoli",
+        "id": 69,
+        "image": "null",
+        "label": "Napoli",
+        "mini": 2.0,
+        "name": "Napoli",
+        "normal": 4.5,
+        "ticketLabel": "Napoli",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tartare de tomates, copeaux de parmesan, câpres, olives noires, anchois, huile d'olive, ail, poivre, roquette"
+    },
+    {
+        "afficheDetail": "Saumon fumé, fromage frais, poivre, aneth, oignons hachés",
+        "canMerge": true,
+        "code": "NORDIQUE",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Nordique",
+        "id": 70,
+        "image": "null",
+        "label": "Nordique",
+        "mini": 2.0,
+        "name": "Nordique",
+        "normal": 4.5,
+        "ticketLabel": "Nordique",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "Saumon fumé, fromage frais, poivre, aneth, oignons hachés"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "NUTELLA",
+        "codeTva": "1",
+        "geant": 4.4,
+        "htmlKeyLabel": "Nutella",
+        "id": 71,
+        "image": "null",
+        "label": "Nutella",
+        "mini": 1.7,
+        "name": "Nutella",
+        "normal": 3.0,
+        "ticketLabel": "Nutella",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Omelette, lardons fumés, oignons hachés, sel, poivre, œufs cuits durs, tomates",
+        "canMerge": true,
+        "code": "OMELETTE",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Omelette<br>lardons",
+        "id": 72,
+        "image": "null",
+        "label": "Omelette Lardons",
+        "mini": 2.0,
+        "name": "Omelette Lardons",
+        "normal": 4.0,
+        "ticketLabel": "Omelette Lardons",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "Omelette, lardons fumés, oignons hachés, sel, poivre, œufs cuits durs, tomates"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PAINCHOC",
+        "codeTva": "1",
+        "htmlKeyLabel": "Pain<br>chocolat",
+        "id": 73,
+        "image": "null",
+        "label": "Pain Chocolat",
+        "name": "Pain Chocolat",
+        "normal": 1.2,
+        "ticketLabel": "Pain Chocolat",
+        "categoryTags": [
+            {
+                "tag": "viennoiserie"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, pecorino, parmesan, emmenthal, huile d'olive",
+        "canMerge": true,
+        "code": "PAN4FROM",
+        "codeTva": "1",
+        "htmlKeyLabel": "4 fromages",
+        "id": 74,
+        "image": "null",
+        "label": "Panini 4 fromages",
+        "name": "Panini 4 fromages",
+        "normal": 4.0,
+        "ticketLabel": "Panini 4 fromages",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, pecorino, parmesan, emmenthal, huile d'olive"
+    },
+    {
+        "afficheDetail": "Sauce bolognaise, emmenthal",
+        "canMerge": true,
+        "code": "PANBOLO",
+        "codeTva": "1",
+        "htmlKeyLabel": "Bolo",
+        "id": 75,
+        "image": "null",
+        "label": "Panini Bolognaise",
+        "name": "Panini Bolognaise",
+        "normal": 4.0,
+        "ticketLabel": "Panini Bolognaise",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Sauce bolognaise, emmenthal"
+    },
+    {
+        "afficheDetail": "Sauce bolognaise, emmenthal, piments",
+        "canMerge": true,
+        "code": "PANBOLOPIQ",
+        "codeTva": "1",
+        "htmlKeyLabel": "Bolo<br>piquant",
+        "id": 76,
+        "image": "null",
+        "label": "Panini Bolo Piquant",
+        "name": "Panini Bolo Piquant",
+        "normal": 4.0,
+        "ticketLabel": "Panini Bolo Piquant",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Sauce bolognaise, emmenthal, piments"
+    },
+    {
+        "afficheDetail": "Viande hachée pur boeuf préparée maison légèrement piquante, emmenthal",
+        "canMerge": true,
+        "code": "PANCHEEZEBURG",
+        "codeTva": "1",
+        "htmlKeyLabel": "Cheese",
+        "id": 77,
+        "image": "null",
+        "label": "Panini Cheeze Burger",
+        "name": "Panini Cheeze Burger",
+        "normal": 4.8,
+        "ticketLabel": "Panini Cheeze Burger",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Viande hachée pur boeuf préparée maison légèrement piquante, emmenthal"
+    },
+    {
+        "afficheDetail": "chèvre frais, bacon, huile de noix, poivre",
+        "canMerge": true,
+        "code": "PANCHEVREBACON",
+        "codeTva": "1",
+        "htmlKeyLabel": "chèvre<br>bacon",
+        "id": 78,
+        "image": "null",
+        "label": "Panini Chèvre Bacon",
+        "name": "Panini Chèvre Bacon",
+        "normal": 4.8,
+        "ticketLabel": "Panini Chèvre Bacon",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "chèvre frais, bacon, huile de noix, poivre"
+    },
+    {
+        "afficheDetail": "Panini chèvre miel",
+        "canMerge": true,
+        "code": "PANCHEVREMIEL",
+        "codeTva": "1",
+        "htmlKeyLabel": "chèvre<br>miel",
+        "id": 79,
+        "image": "vegetarien",
+        "label": "Panini Chèvre Miel",
+        "name": "Panini Chèvre Miel",
+        "normal": 4.8,
+        "ticketLabel": "Panini Chèvre Miel",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Panini chèvre miel"
+    },
+    {
+        "afficheDetail": "chèvre frais, raisins secs, crème balsamique",
+        "canMerge": true,
+        "code": "PANCHEVRERAISIN",
+        "codeTva": "1",
+        "htmlKeyLabel": "chèvre<br>raisin",
+        "id": 80,
+        "image": "vegetarien",
+        "label": "Panini Chèvre Raisin",
+        "name": "Panini Chèvre Raisin",
+        "normal": 4.8,
+        "ticketLabel": "Panini Chèvre Raisin",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "chèvre frais, raisins secs, crème balsamique"
+    },
+    {
+        "afficheDetail": "Poulet grillé, sauce aigre-douce piquante, ananas",
+        "canMerge": true,
+        "code": "PANCHINOIS",
+        "codeTva": "1",
+        "htmlKeyLabel": "chinois",
+        "id": 81,
+        "image": "epice",
+        "label": "Panini Chinois",
+        "name": "Panini Chinois",
+        "normal": 4.8,
+        "ticketLabel": "Panini Chinois",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Poulet grillé, sauce aigre-douce piquante, ananas"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, chorizo piquant, épices, huile d'olive",
+        "canMerge": true,
+        "code": "PANCHORIZO",
+        "codeTva": "1",
+        "htmlKeyLabel": "chorizo",
+        "id": 82,
+        "image": "epice",
+        "label": "Panini Chorizo",
+        "name": "Panini Chorizo",
+        "normal": 4.8,
+        "ticketLabel": "Panini Chorizo",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, chorizo piquant, épices, huile d'olive"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, poulet croquant",
+        "canMerge": true,
+        "code": "PANCROQUANT",
+        "codeTva": "1.0",
+        "htmlKeyLabel": "Croquant",
+        "id": 83,
+        "image": "null",
+        "label": "Panini Croquant",
+        "name": "Panini Croquant",
+        "normal": 5.5,
+        "ticketLabel": "Panini Croquant",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, poulet croquant"
+    },
+    {
+        "afficheDetail": "Jambon, mozzarella, sel, poivre, origan, huile d'olive",
+        "canMerge": true,
+        "code": "PANCROQUE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Croque",
+        "id": 84,
+        "image": "null",
+        "label": "Panini Croque",
+        "name": "Panini Croque",
+        "normal": 4.0,
+        "ticketLabel": "Panini Croque",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon, mozzarella, sel, poivre, origan, huile d'olive"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, poulet, ananas, épices, huile d'olive",
+        "canMerge": true,
+        "code": "PANEXOTIQUE",
+        "codeTva": "1",
+        "htmlKeyLabel": "exotique",
+        "id": 85,
+        "image": "null",
+        "label": "Panini Exotique",
+        "name": "Panini Exotique",
+        "normal": 4.8,
+        "ticketLabel": "Panini Exotique",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, poulet, ananas, épices, huile d'olive"
+    },
+    {
+        "afficheDetail": "Jambon, mozzarella, ananas, sel, poivre, origan, huile d'olive",
+        "canMerge": true,
+        "code": "PANHAWAI",
+        "codeTva": "1",
+        "htmlKeyLabel": "Hawai",
+        "id": 86,
+        "image": "null",
+        "label": "Panini Hawai",
+        "name": "Panini Hawai",
+        "normal": 4.0,
+        "ticketLabel": "Panini Hawai",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon, mozzarella, ananas, sel, poivre, origan, huile d'olive"
+    },
+    {
+        "afficheDetail": "Sauce tomate, mozzarella, jambon italien, copeaux de parmesan, origan, huile d'olive",
+        "canMerge": true,
+        "code": "PANITALIEN",
+        "codeTva": "1",
+        "htmlKeyLabel": "italien",
+        "id": 87,
+        "image": "null",
+        "label": "Panini Italien",
+        "name": "Panini Italien",
+        "normal": 4.8,
+        "ticketLabel": "Panini Italien",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Sauce tomate, mozzarella, jambon italien, copeaux de parmesan, origan, huile d'olive"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, jambon blanc, épices, huile d'olive",
+        "canMerge": true,
+        "code": "PANJAMBON",
+        "codeTva": "1",
+        "htmlKeyLabel": "jambon",
+        "id": 88,
+        "image": "null",
+        "label": "Panini Jambon",
+        "name": "Panini Jambon",
+        "normal": 4.8,
+        "ticketLabel": "Panini Jambon",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, jambon blanc, épices, huile d'olive"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tartare de tomates, copeaux de parmesan, câpres, olives noires, anchois, huile d’olive, ail, poivre, roquette</td>",
+        "canMerge": true,
+        "code": "PANNAPOLI",
+        "codeTva": "1",
+        "htmlKeyLabel": "napoli",
+        "id": 89,
+        "image": "null",
+        "label": "Panini Napoli",
+        "name": "Panini Napoli",
+        "normal": 5.5,
+        "ticketLabel": "Panini Napoli",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tartare de tomates, copeaux de parmesan, câpres, olives noires, anchois, huile d’olive, ail, poivre, roquette</td>"
+    },
+    {
+        "afficheDetail": "Fromage frais, saumon fumé, aneth, poivre",
+        "canMerge": true,
+        "code": "PANNORDIQUE",
+        "codeTva": "1",
+        "htmlKeyLabel": "nordique",
+        "id": 90,
+        "image": "null",
+        "label": "Panini Nordique",
+        "name": "Panini Nordique",
+        "normal": 5.5,
+        "ticketLabel": "Panini Nordique",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Fromage frais, saumon fumé, aneth, poivre"
+    },
+    {
+        "afficheDetail": "Tomates fraîches, mozzarella fraîche, jambon italien, sel, poivre, origan, huile d'olive",
+        "canMerge": true,
+        "code": "PANPARMA",
+        "codeTva": "1",
+        "htmlKeyLabel": "parma",
+        "id": 91,
+        "image": "null",
+        "label": "Panini Parma",
+        "name": "Panini Parma",
+        "normal": 5.2,
+        "ticketLabel": "Panini Parma",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomates fraîches, mozzarella fraîche, jambon italien, sel, poivre, origan, huile d'olive"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tartare tomates, copeaux de parmesan, crème balsamique, roquette",
+        "canMerge": true,
+        "code": "PANPARMA1",
+        "codeTva": "1",
+        "htmlKeyLabel": "parma1",
+        "id": 92,
+        "image": "null",
+        "label": "Panini Parma 1",
+        "name": "Panini Parma 1",
+        "normal": 5.5,
+        "ticketLabel": "Panini Parma 1",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tartare tomates, copeaux de parmesan, crème balsamique, roquette"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tomatade, copeaux de parmesan, huile de truffes, roquette",
+        "canMerge": true,
+        "code": "PANPARMA2",
+        "codeTva": "1",
+        "htmlKeyLabel": "parma2",
+        "id": 93,
+        "image": "null",
+        "label": "Panini Parma 2",
+        "name": "Panini Parma 2",
+        "normal": 5.5,
+        "ticketLabel": "Panini Parma 2",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tomatade, copeaux de parmesan, huile de truffes, roquette"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tomatade, mozzarella fraîche, origan, huile d’olive, roquette",
+        "canMerge": true,
+        "code": "PANPARMA3",
+        "codeTva": "1",
+        "htmlKeyLabel": "parma3",
+        "id": 94,
+        "image": "null",
+        "label": "Panini Parma 3",
+        "name": "Panini Parma 3",
+        "normal": 5.5,
+        "ticketLabel": "Panini Parma 3",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tomatade, mozzarella fraîche, origan, huile d’olive, roquette"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tartare de tomates, mozzarella fraîche, origan, huile d’olive, roquette",
+        "canMerge": true,
+        "code": "PANPARMA4",
+        "codeTva": "1",
+        "htmlKeyLabel": "parma4",
+        "id": 95,
+        "image": "null",
+        "label": "Panini Parma 4",
+        "name": "Panini Parma 4",
+        "normal": 5.5,
+        "ticketLabel": "Panini Parma 4",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tartare de tomates, mozzarella fraîche, origan, huile d’olive, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PANPHILAPARME",
+        "codeTva": "1",
+        "htmlKeyLabel": "Philaparem",
+        "id": 96,
+        "image": "null",
+        "label": "Panini Philaparem",
+        "name": "Panini Philaparem",
+        "normal": 4.5,
+        "ticketLabel": "Panini Philaparem",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, poulet grillé, épices, huile d'olive",
+        "canMerge": true,
+        "code": "PANPOULET",
+        "codeTva": "1",
+        "htmlKeyLabel": "poulet",
+        "id": 97,
+        "image": "null",
+        "label": "Panini Poulet",
+        "name": "Panini Poulet",
+        "normal": 4.8,
+        "ticketLabel": "Panini Poulet",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, poulet grillé, épices, huile d'olive"
+    },
+    {
+        "afficheDetail": "Tomate, mozzarella, ail, huile d'olive, olives noires",
+        "canMerge": true,
+        "code": "PANROMANA",
+        "codeTva": "1",
+        "htmlKeyLabel": "Romana",
+        "id": 98,
+        "image": "null",
+        "label": "Panini Romana",
+        "name": "Panini Romana",
+        "normal": 4.0,
+        "ticketLabel": "Panini Romana",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomate, mozzarella, ail, huile d'olive, olives noires"
+    },
+    {
+        "afficheDetail": "tomate, mozzarella, thon naturel, olives noires, épices, huile d'olive",
+        "canMerge": true,
+        "code": "PANTHON",
+        "codeTva": "1",
+        "htmlKeyLabel": "thon",
+        "id": 99,
+        "image": "null",
+        "label": "Panini Thon",
+        "name": "Panini Thon",
+        "normal": 4.8,
+        "ticketLabel": "Panini Thon",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "tomate, mozzarella, thon naturel, olives noires, épices, huile d'olive"
+    },
+    {
+        "afficheDetail": "Tomates fraîches, mozzarella fraîche, sel, poivre, origan, vinaigre balsamique, huile d'olive",
+        "canMerge": true,
+        "code": "PANTOMATEMOZZA",
+        "codeTva": "1",
+        "htmlKeyLabel": "tomatte<br>mozza",
+        "id": 100,
+        "image": "vegetarien",
+        "label": "Panini Tomatte Mozza.",
+        "name": "Panini Tomatte Mozza.",
+        "normal": 4.5,
+        "ticketLabel": "Panini Tomatte Mozza.",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomates fraîches, mozzarella fraîche, sel, poivre, origan, vinaigre balsamique, huile d'olive"
+    },
+    {
+        "afficheDetail": "Tomates séchées, copeaux de parmesan, huile d’olive, roquette, crudités.",
+        "canMerge": true,
+        "code": "PANVEGETARIEN",
+        "codeTva": "1",
+        "htmlKeyLabel": "Panini<br>Végé",
+        "id": 101,
+        "image": "null",
+        "label": "Panini Végétarien",
+        "name": "Panini Végétarien",
+        "normal": 4.5,
+        "ticketLabel": "Panini Végétarien",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Tomates séchées, copeaux de parmesan, huile d’olive, roquette, crudités."
+    },
+    {
+        "afficheDetail": "Jambon de Parme, tartare de tomates, mozzarella fraîche, origan, huile d’olive, roquette",
+        "canMerge": true,
+        "code": "PARMA4",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Parma 4",
+        "id": 102,
+        "image": "null",
+        "label": "Parma 4",
+        "mini": 2.0,
+        "name": "Parma 4",
+        "normal": 4.2,
+        "ticketLabel": "Parma 4",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Jambon de Parme, tartare de tomates, mozzarella fraîche, origan, huile d’olive, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PATECREME",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Paté<br>Crême",
+        "id": 103,
+        "image": "null",
+        "label": "Paté Crême",
+        "mini": 1.7,
+        "name": "Paté Crême",
+        "normal": 3.3,
+        "ticketLabel": "Paté Crême",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Poulet grillé, sauce Caesar, copeaux de parmesan, roquette",
+        "canMerge": true,
+        "code": "PCAESAR",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Poulet<br>Caesar",
+        "id": 104,
+        "image": "null",
+        "label": "Poulet Caesar",
+        "mini": 2.0,
+        "name": "Poulet Caesar",
+        "normal": 4.2,
+        "ticketLabel": "Poulet Caesar",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Poulet grillé, sauce Caesar, copeaux de parmesan, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PHILADELPHIA",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Philadelphia",
+        "id": 105,
+        "image": "vegetarien",
+        "label": "Philadelphia",
+        "mini": 2.0,
+        "name": "Philadelphia",
+        "normal": 3.3,
+        "ticketLabel": "Philadelphia",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, philadelphia, tomates fraîches, sel, poivre, huile d'olive",
+        "canMerge": true,
+        "code": "PHILAPARME",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Phila<br>parme",
+        "id": 106,
+        "image": "null",
+        "label": "Philaparme",
+        "mini": 2.0,
+        "name": "Philaparme",
+        "normal": 4.2,
+        "ticketLabel": "Philaparme",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, philadelphia, tomates fraîches, sel, poivre, huile d'olive"
+    },
+    {
+        "afficheDetail": "Jambon de Parme, philadelphia, tartare de tomates, sel, poivre, huile d'olive",
+        "canMerge": true,
+        "code": "PHILAPARME2",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Phila<br>parme2",
+        "id": 107,
+        "image": "null",
+        "label": "Philaparme 2",
+        "mini": 2.0,
+        "name": "Philaparme 2",
+        "normal": 4.5,
+        "ticketLabel": "Philaparme 2",
+        "categoryTags": [
+            {
+                "tag": "panini"
+            }
+        ],
+        "webDetail": "Jambon de Parme, philadelphia, tartare de tomates, sel, poivre, huile d'olive"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PIPGAUM",
+        "codeTva": "1",
+        "htmlKeyLabel": "Saucisses",
+        "id": 108,
+        "image": "null",
+        "label": "Pipes Gaumaises",
+        "name": "Pipes Gaumaises",
+        "normal": 1.6,
+        "ticketLabel": "Pipes Gaumaises",
+        "categoryTags": [
+            {
+                "tag": "salaison"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PITA",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Pita",
+        "id": 109,
+        "image": "epice",
+        "label": "Pita",
+        "mini": 2.0,
+        "name": "Pita",
+        "normal": 3.5,
+        "ticketLabel": "Pita",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "PITAPIQUANT",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Pita<br>Piquant",
+        "id": 110,
+        "image": "null",
+        "label": "Pita Piquant",
+        "mini": 2.0,
+        "name": "Pita Piquant",
+        "normal": 3.5,
+        "ticketLabel": "Pita Piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETANDALOU",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Poulet<br>Andalou",
+        "id": 111,
+        "image": "null",
+        "label": "Poulet Andalou",
+        "mini": 1.7,
+        "name": "Poulet Andalou",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Andalou",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Morceaux de poulet chaud",
+        "canMerge": true,
+        "code": "POULETCHAUD",
+        "codeTva": "1.0",
+        "geant": 9.0,
+        "htmlKeyLabel": "Poulet<br>chaud",
+        "id": 112,
+        "image": "null",
+        "label": "Poulet Chaud",
+        "mini": 2.0,
+        "name": "Poulet Chaud",
+        "normal": 6.5,
+        "ticketLabel": "Poulet Chaud",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "Morceaux de poulet chaud"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETCURRY",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Curry",
+        "id": 113,
+        "image": "null",
+        "label": "Poulet Curry",
+        "mini": 1.7,
+        "name": "Poulet Curry",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Curry",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETHAWAI",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Hawaï",
+        "id": 114,
+        "image": "null",
+        "label": "Poulet Hawaï",
+        "mini": 1.7,
+        "name": "Poulet Hawaï",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Hawaï",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETMAYO",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Poulet<br>mayo",
+        "id": 115,
+        "image": "null",
+        "label": "Poulet Mayonnaise",
+        "mini": 1.7,
+        "name": "Poulet Mayonnaise",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Mayonnaise",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETMEXIC",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Mexico",
+        "id": 116,
+        "image": "epice",
+        "label": "Poulet Mexico",
+        "mini": 1.7,
+        "name": "Poulet Mexico",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Mexico",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETMOUT",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Poulet<br>Moutarde",
+        "id": 117,
+        "image": "null",
+        "label": "Poulet Moutarde",
+        "mini": 1.7,
+        "name": "Poulet Moutarde",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Moutarde",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETNAPO",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Napoli",
+        "id": 118,
+        "image": "null",
+        "label": "Poulet Napoli",
+        "mini": 1.7,
+        "name": "Poulet Napoli",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Napoli",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETPIQ",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Poulet<br>maison",
+        "id": 119,
+        "image": "epiceDouble",
+        "label": "Poulet Maison",
+        "mini": 1.7,
+        "name": "Poulet Maison",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Maison",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "POULETPOIVRE",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Poulet<br>Poivre",
+        "id": 120,
+        "image": "null",
+        "label": "Poulet Poivre",
+        "mini": 1.7,
+        "name": "Poulet Poivre",
+        "normal": 3.2,
+        "ticketLabel": "Poulet Poivre",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "poulet"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "RAVIERPESER",
+        "codeTva": "1",
+        "htmlKeyLabel": "Ravier a<br>peser",
+        "id": 121,
+        "image": "null",
+        "label": "Ravier à Peser",
+        "name": "Ravier à Peser",
+        "normal": 2.0,
+        "ticketLabel": "Ravier à Peser",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            },
+            {
+                "tag": "tartiner"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "RAVIERPESERSPEC",
+        "codeTva": "1",
+        "htmlKeyLabel": "Ravier p.<br>spécial",
+        "id": 122,
+        "image": "null",
+        "label": "Ravier à Peser Spécial",
+        "name": "Ravier à Peser Spécial",
+        "normal": 3.0,
+        "ticketLabel": "Ravier à Peser Spécial",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            },
+            {
+                "tag": "tartiner"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Tranche de Rosbif, sauce et crudités au choix",
+        "canMerge": true,
+        "code": "ROSBIF",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Rosbif",
+        "id": 123,
+        "image": "null",
+        "label": "Rosbif",
+        "mini": 2.0,
+        "name": "Rosbif",
+        "normal": 4.5,
+        "ticketLabel": "Rosbif",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "Rôti de boeuf en tranche, sauce et crudités au choix"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "ROSBIFMIELMOUTARDE",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Rosbif miel<br>Moutarde",
+        "id": 124,
+        "image": "null",
+        "label": "Rosbif Miel Moutarde",
+        "mini": 2.0,
+        "name": "Rosbif Miel Moutarde",
+        "normal": 4.5,
+        "ticketLabel": "Rosbif Miel Moutarde",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Tranche de Rosbif, copeaux de parmesan, huile d'olive, sel, poivre, roquette",
+        "canMerge": true,
+        "code": "ROSBIFPARMESAN",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Rosbif<br>Parmesan",
+        "id": 125,
+        "image": "null",
+        "label": "Rosbif Parmesan",
+        "mini": 2.0,
+        "name": "Rosbif Parmesan",
+        "normal": 4.5,
+        "ticketLabel": "Rosbif Parmesan",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "Tranche de Rosbif, copeaux de parmesan, huile d'olive, sel, poivre, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "ROTIMOUTARDE",
+        "codeTva": "1",
+        "geant": 6.0,
+        "htmlKeyLabel": "Roti<br>moutarde",
+        "id": 126,
+        "image": "null",
+        "label": "Roti Moutarde",
+        "mini": 2.0,
+        "name": "Roti Moutarde",
+        "normal": 4.0,
+        "ticketLabel": "Roti Moutarde",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SAL3FROM",
+        "codeTva": "1",
+        "htmlKeyLabel": "3<br>fromages",
+        "id": 127,
+        "image": "null",
+        "label": "Salade 3 Fromages",
+        "name": "Salade 3 Fromages",
+        "normal": 4.6,
+        "ticketLabel": "Salade 3 Fromages",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "salade composée, carottes, chou blanc, tom, concombre",
+        "canMerge": true,
+        "code": "SAL7CRUDITES",
+        "codeTva": "1",
+        "htmlKeyLabel": "7 crudités",
+        "id": 128,
+        "image": "vegetarien",
+        "label": "Salades 7 Crudités",
+        "name": "Salades 7 Crudités",
+        "normal": 4.0,
+        "ticketLabel": "Salades 7 Crudités",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "salade composée, carottes, chou blanc, tom, concombre"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SALADVIAND",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Salade<br>viande",
+        "id": 129,
+        "image": "null",
+        "label": "Salade de Viande",
+        "mini": 1.7,
+        "name": "Salade de Viande",
+        "normal": 3.0,
+        "ticketLabel": "Salade de Viande",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "fromage frais de chèvre, petits lardons, crème balsamique, poivre, lit de salade",
+        "canMerge": true,
+        "code": "SALCHEVREBACON",
+        "codeTva": "1",
+        "htmlKeyLabel": "Chèvre Lardons",
+        "id": 130,
+        "image": "null",
+        "label": "Salade Chèvre Lardons",
+        "name": "Salade Chèvre Lardons",
+        "normal": 5.8,
+        "ticketLabel": "Salade Chèvre Lardons",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "fromage frais de chèvre, petits lardons, crème balsamique, poivre, lit de salade"
+    },
+    {
+        "afficheDetail": "chèvre frais, raisins secs, miel, sal.comp, carottes, chou blanc, œufs, tomates, roquette",
+        "canMerge": true,
+        "code": "SALCHEVREMIEL",
+        "codeTva": "1",
+        "htmlKeyLabel": "chèvre<br>miel",
+        "id": 131,
+        "image": "vegetarien",
+        "label": "Salade Chèvre Miel",
+        "name": "Salade Chèvre Miel",
+        "normal": 4.8,
+        "ticketLabel": "Salade Chèvre Miel",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "chèvre frais, raisins secs, miel, sal.comp, carottes, chou blanc, œufs, tomates, roquette"
+    },
+    {
+        "afficheDetail": "chèvre frais, raisins secs, crème balsamique, sal.comp, carottes, chou blanc, œufs, tomates, roquette",
+        "canMerge": true,
+        "code": "SALCHEVRERAISIN",
+        "codeTva": "1",
+        "htmlKeyLabel": "chèvre<br>raisin",
+        "id": 132,
+        "image": "vegetarien",
+        "label": "Salade Chèvre Raisin",
+        "name": "Salade Chèvre Raisin",
+        "normal": 4.8,
+        "ticketLabel": "Salade Chèvre Raisin",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "chèvre frais, raisins secs, crème balsamique, sal.comp, carottes, chou blanc, œufs, tomates, roquette"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SALCHINOISE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Chinoise",
+        "id": 133,
+        "image": "null",
+        "label": "Salade Chinoise",
+        "name": "Salade Chinoise",
+        "normal": 4.8,
+        "ticketLabel": "Salade Chinoise",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "jambon de Parme, mozzarella fraîche, poivre, origan, huile d’olive, lit de salade",
+        "canMerge": true,
+        "code": "SALCLUBMOZZA",
+        "codeTva": "1",
+        "htmlKeyLabel": "Club<br>mozza",
+        "id": 134,
+        "image": "null",
+        "label": "Salade Club Mozza",
+        "name": "Salade Club Mozza",
+        "normal": 5.8,
+        "ticketLabel": "Salade Club Mozza",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "jambon de Parme, mozzarella fraîche, poivre, origan, huile d’olive, lit de salade"
+    },
+    {
+        "afficheDetail": "crevettes roses, maïs, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALCREVROSE",
+        "codeTva": "1",
+        "htmlKeyLabel": "crevettes<br>roses",
+        "id": 135,
+        "image": "null",
+        "label": "Salade Crevettes Roses",
+        "name": "Salade Crevettes Roses",
+        "normal": 5.8,
+        "ticketLabel": "Salade Crevettes Roses",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "crevettes roses, maïs, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "petits lardons, jambon braisé, emmenthal, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALFERMIERE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Fermière",
+        "id": 136,
+        "image": "null",
+        "label": "Salade Fermière",
+        "name": "Salade Fermière",
+        "normal": 4.8,
+        "ticketLabel": "Salade Fermière",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "petits lardons, jambon braisé, emmenthal, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "crabe, crevettes roses, thon au naturel ,sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALGOURM",
+        "codeTva": "1",
+        "htmlKeyLabel": "Gourmande",
+        "id": 137,
+        "image": "null",
+        "label": "Salade Gourmande",
+        "name": "Salade Gourmande",
+        "normal": 5.4,
+        "ticketLabel": "Salade Gourmande",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "crabe, crevettes roses, thon au naturel ,sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "feta fromage de brebis, concombre, olives noires, origan, huile d’olive, sal.comp, carottes, chou blanc, œufs, tomates, épices",
+        "canMerge": true,
+        "code": "SALGREC",
+        "codeTva": "1",
+        "htmlKeyLabel": "Grecque",
+        "id": 138,
+        "image": "vegetarien",
+        "label": "Salade Grecque",
+        "name": "Salade Grecque",
+        "normal": 5.4,
+        "ticketLabel": "Salade Grecque",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "feta fromage de brebis, concombre, olives noires, origan, huile d’olive, sal.comp, carottes, chou blanc, œufs, tomates, épices"
+    },
+    {
+        "afficheDetail": "Dés de poulet grillés, maïs, ananas, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALHAWAY",
+        "codeTva": "1",
+        "htmlKeyLabel": "Hawaienne",
+        "id": 139,
+        "image": "null",
+        "label": "Salade Hawaienne",
+        "name": "Salade Hawaienne",
+        "normal": 4.8,
+        "ticketLabel": "Salade Hawaienne",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "Dés de poulet grillés, maïs, ananas, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "jambon de Parme, copeaux de parmesan, crème balsamique, roquette, huile d’olive, lit de salade",
+        "canMerge": true,
+        "code": "SALITALIENNE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Italienne",
+        "id": 140,
+        "image": "null",
+        "label": "Salade Italienne",
+        "name": "Salade Italienne",
+        "normal": 5.8,
+        "ticketLabel": "Salade Italienne",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "jambon de Parme, copeaux de parmesan, crème balsamique, roquette, huile d’olive, lit de salade"
+    },
+    {
+        "afficheDetail": "Dés de poulet grillés, maïs, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALLOUISIANE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Louisiane",
+        "id": 141,
+        "image": "null",
+        "label": "Salade Louisiane",
+        "name": "Salade Louisiane",
+        "normal": 4.8,
+        "ticketLabel": "Salade Louisiane",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "Dés de poulet grillés, maïs, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SALMEXICAINE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Mexicaine",
+        "id": 142,
+        "image": "null",
+        "label": "Salade Mexicaine",
+        "name": "Salade Mexicaine",
+        "normal": 5.6,
+        "ticketLabel": "Salade Mexicaine",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "mozzarella fraîche, concombre, olives noires, origan, huile d’olive , sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALMOZZA",
+        "codeTva": "1",
+        "htmlKeyLabel": "Mozzarella",
+        "id": 143,
+        "image": "vegetarien",
+        "label": "Salade Tomates Mozzarella",
+        "name": "Salade Tomates Mozzarella",
+        "normal": 4.8,
+        "ticketLabel": "Salade Tomates Mozzarella",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "mozzarella fraîche, concombre, olives noires, origan, huile d’olive , sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SALNICOISE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Niçoise",
+        "id": 144,
+        "image": "null",
+        "label": "Salade Niçoise",
+        "name": "Salade Niçoise",
+        "normal": 5.4,
+        "ticketLabel": "Salade Niçoise",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "jambon de Parme, copeaux de parmesan, crème balsamique, roquette, huile d’olive, lit de salade",
+        "canMerge": true,
+        "code": "SALPARMA",
+        "codeTva": "1",
+        "htmlKeyLabel": "Parma 1",
+        "id": 145,
+        "image": "null",
+        "label": "Salade Parme 1",
+        "name": "Salade Parme 1",
+        "normal": 5.8,
+        "ticketLabel": "Salade Parme 1",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "jambon de Parme, copeaux de parmesan, crème balsamique, roquette, huile d’olive, lit de salade"
+    },
+    {
+        "afficheDetail": "mélange de pâtes-jambon dans une sauce préparée maison, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALPATEJAMB",
+        "codeTva": "1",
+        "htmlKeyLabel": "Pates<br>jambon",
+        "id": 146,
+        "image": "null",
+        "label": "Salade Pâtes Jambon",
+        "name": "Salade Pâtes Jambon",
+        "normal": 4.8,
+        "ticketLabel": "Salade Pâtes Jambon",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "mélange de pâtes-jambon dans une sauce préparée maison, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "mélange de pâtes, crabe et crevettes roses dans une sauce cocktail au crabe préparée maison, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALPATFRUITMER",
+        "codeTva": "1",
+        "htmlKeyLabel": "Pates<br>fr mer",
+        "id": 147,
+        "image": "null",
+        "label": "Salade Pâtes Fruits de Mer",
+        "name": "Salade Pâtes Fruits de Mer",
+        "normal": 4.8,
+        "ticketLabel": "Salade Pâtes Fruits de Mer",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "mélange de pâtes, crabe et crevettes roses dans une sauce cocktail au crabe préparée maison, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "mélange de salade composée, œufs, tomates",
+        "canMerge": true,
+        "code": "SALPELEMELE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Pêle<br>mêle",
+        "id": 148,
+        "image": "vegetarien",
+        "label": "Salade Pêle Mêle",
+        "name": "Salade Pêle Mêle",
+        "normal": 3.8,
+        "ticketLabel": "Salade Pêle Mêle",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "mélange de salade composée, œufs, tomates"
+    },
+    {
+        "afficheDetail": "pommes de terre, lardons, sauce moutardée maison, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALPOMTERRE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Pomme<br>de terre",
+        "id": 149,
+        "image": "null",
+        "label": "Salade Pommes de Terre",
+        "name": "Salade Pommes de Terre",
+        "normal": 4.4,
+        "ticketLabel": "Salade Pommes de Terre",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "pommes de terre, lardons, sauce moutardée maison, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "maïs, cubes d’emmenthal, salade composée, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALPRINTANIERE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Printanière",
+        "id": 150,
+        "image": "vegetarien",
+        "label": "Salade Printanière",
+        "name": "Salade Printanière",
+        "normal": 4.4,
+        "ticketLabel": "Salade Printanière",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "maïs, cubes d’emmenthal, salade composée, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "saumon fumé, câpres, oignons frais, aneth, lit de salade",
+        "canMerge": true,
+        "code": "SALSAUMFUME",
+        "codeTva": "1",
+        "htmlKeyLabel": "Saumon<br>fumé",
+        "id": 151,
+        "image": "null",
+        "label": "Salade Saumon Fumé",
+        "name": "Salade Saumon Fumé",
+        "normal": 6.5,
+        "ticketLabel": "Salade Saumon Fumé",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "saumon fumé, câpres, oignons frais, aneth, lit de salade"
+    },
+    {
+        "afficheDetail": "préparation maison de taboulé et raisins secs, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALTABOULE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Taboulé",
+        "id": 152,
+        "image": "vegetarien",
+        "label": "Salade Taboulé",
+        "name": "Salade Taboulé",
+        "normal": 4.8,
+        "ticketLabel": "Salade Taboulé",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "préparation maison de taboulé et raisins secs, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "préparation maison de taboulé aux légumes et raisins secs, dés de poulet grillés, lit de salade",
+        "canMerge": true,
+        "code": "SALTABOULEPOULET",
+        "codeTva": "1",
+        "htmlKeyLabel": "Taboulé<br>Poulet",
+        "id": 153,
+        "image": "null",
+        "label": "Salade Taboulé Poulet",
+        "name": "Salade Taboulé Poulet",
+        "normal": 5.8,
+        "ticketLabel": "Salade Taboulé Poulet",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "préparation maison de taboulé aux légumes et raisins secs, dés de poulet grillés, lit de salade"
+    },
+    {
+        "afficheDetail": "thon au naturel, maïs, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALTHON",
+        "codeTva": "1",
+        "htmlKeyLabel": "thon",
+        "id": 154,
+        "image": "null",
+        "label": "Salade Thon",
+        "name": "Salade Thon",
+        "normal": 5.4,
+        "ticketLabel": "Salade Thon",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "thon au naturel, maïs, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "thon au naturel ou préparé, pêches, maïs, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALTHONPECHE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Sal Thon<br>Pêche",
+        "id": 155,
+        "image": "null",
+        "label": "Salade Thon Pêche",
+        "name": "Salade Thon Pêche",
+        "normal": 5.4,
+        "ticketLabel": "Salade Thon Pêche",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "thon au naturel ou préparé, pêches, maïs, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "thon piquant au naturel ou préparé, pêches, maïs, sal.comp, carottes, chou blanc, œufs, tomates",
+        "canMerge": true,
+        "code": "SALTHONPECHPIQ",
+        "codeTva": "1.0",
+        "htmlKeyLabel": "Sal Thon<br>Pêche Piq",
+        "id": 156,
+        "image": "epice",
+        "label": "Salade Pêche au Thon Piquant",
+        "name": "Salade Pêche au Thon Piquant",
+        "normal": 5.4,
+        "ticketLabel": "Salade Pêche au Thon Piquant",
+        "categoryTags": [
+            {
+                "tag": "salade"
+            }
+        ],
+        "webDetail": "thon piquant au naturel ou préparé, pêches, maïs, sal.comp, carottes, chou blanc, œufs, tomates"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SAUCISSON",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Saucisson",
+        "id": 157,
+        "image": "null",
+        "label": "Saucisson",
+        "mini": 1.7,
+        "name": "Saucisson",
+        "normal": 3.5,
+        "ticketLabel": "Saucisson",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Saumon fumé en tranches, beurre, oignons hachés, câpres",
+        "canMerge": true,
+        "code": "SAUMONFUME",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Saumon<br>fumé",
+        "id": 158,
+        "image": "null",
+        "label": "Saumon Fumé",
+        "mini": 2.0,
+        "name": "Saumon Fumé",
+        "normal": 4.5,
+        "ticketLabel": "Saumon Fumé",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "Saumon fumé en tranches, beurre, oignons hachés, câpres"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SCAMPIAIL",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Scampi<br>ail",
+        "id": 159,
+        "image": "null",
+        "label": "Scampi à l'Ail",
+        "mini": 2.0,
+        "name": "Scampi à l'Ail",
+        "normal": 4.5,
+        "ticketLabel": "Scampi à l'Ail",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "Grosses crevettes tigrées dans une délicieuse sauce à l'ail"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SCAMPIPIQ",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Scampi<br>piquant",
+        "id": 160,
+        "image": "epice",
+        "label": "Scampi à l'Ail Piquant",
+        "mini": 2.0,
+        "name": "Scampi à l'Ail Piquant",
+        "normal": 4.5,
+        "ticketLabel": "Scampi à l'Ail Piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "Grosses crevettes tigrées dans une délicieuse sauce à l'ail pimentée maison"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SOFTBOUTEILLE",
+        "codeTva": "1",
+        "htmlKeyLabel": "0.5l",
+        "id": 161,
+        "image": "null",
+        "label": "Soft Bouteille",
+        "name": "Soft Bouteille",
+        "normal": 2.0,
+        "ticketLabel": "Soft Bouteille",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "SOFTCANETTE",
+        "codeTva": "1",
+        "htmlKeyLabel": "Canette",
+        "id": 162,
+        "image": "null",
+        "label": "Soft Canette",
+        "name": "Soft Canette",
+        "normal": 1.5,
+        "ticketLabel": "Soft Canette",
+        "categoryTags": [
+            {
+                "tag": "boisson"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Tartare de boeuf, huiled'olive, moutarde, sel, poivre, tomates, copeaux de parmesan",
+        "canMerge": true,
+        "code": "TARTAREITALIEN",
+        "codeTva": "1",
+        "geant": 6.5,
+        "htmlKeyLabel": "Tartare<br>Italien",
+        "id": 163,
+        "image": "null",
+        "label": "Tartare Italien",
+        "mini": 2.0,
+        "name": "Tartare Italien",
+        "normal": 4.5,
+        "ticketLabel": "Tartare Italien",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Tartare de boeuf, huiled'olive, moutarde, sel, poivre, tomates, copeaux de parmesan"
+    },
+    {
+        "afficheDetail": "Tartare de boeuf, tartare de tomates, huile d'olive, sel, poivre, copeaux de parmesan",
+        "canMerge": true,
+        "code": "TARTAREITALIEN2",
+        "codeTva": "1",
+        "geant": 7.0,
+        "htmlKeyLabel": "Tartare<br>Italien 2",
+        "id": 164,
+        "image": "null",
+        "label": "Tartare Italien 2",
+        "mini": 2.0,
+        "name": "Tartare Italien 2",
+        "normal": 4.8,
+        "ticketLabel": "Tartare Italien 2",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Tartare de boeuf, tartare de tomates, huile d'olive, sel, poivre, copeaux de parmesan"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "THONCOCK",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Thon<br>cocktail",
+        "id": 165,
+        "image": "null",
+        "label": "Thon Cocktail",
+        "mini": 1.7,
+        "name": "Thon Cocktail",
+        "normal": 3.3,
+        "ticketLabel": "Thon Cocktail",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "THONCOCKPIQ",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Thon cock<br>piquant",
+        "id": 166,
+        "image": "null",
+        "label": "Thon Cocktail Piquant",
+        "mini": 1.7,
+        "name": "Thon Cocktail Piquant",
+        "normal": 3.3,
+        "ticketLabel": "Thon Cocktail Piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "THONMAYO",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Thon",
+        "id": 167,
+        "image": "null",
+        "label": "Thon Mayo",
+        "mini": 1.7,
+        "name": "Thon Mayo",
+        "normal": 3.3,
+        "ticketLabel": "Thon Mayo",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "THONPIQ",
+        "codeTva": "1",
+        "geant": 4.6,
+        "htmlKeyLabel": "Thon<br>piquant",
+        "id": 168,
+        "image": "epice",
+        "label": "Thon Piquant",
+        "mini": 1.7,
+        "name": "Thon Piquant",
+        "normal": 3.3,
+        "ticketLabel": "Thon Piquant",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "mer"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "null",
+        "canMerge": true,
+        "code": "THONPORT",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Thon<br>Portugais",
+        "id": 169,
+        "image": "null",
+        "label": "Thon Portugais",
+        "mini": 1.7,
+        "name": "Thon Portugais",
+        "normal": 3.0,
+        "ticketLabel": "Thon Portugais",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "null"
+    },
+    {
+        "afficheDetail": "Tomates, mozzarella fraîche, sel, poivre, origan, huile d'olive, vinaigre balsamique",
+        "canMerge": true,
+        "code": "TOMATMOZZA",
+        "codeTva": "1",
+        "geant": 5.8,
+        "htmlKeyLabel": "Tomates<br>mozza1",
+        "id": 170,
+        "image": "vegetarien",
+        "label": "Tomates Mozzarella",
+        "mini": 2.0,
+        "name": "Tomates Mozzarella",
+        "normal": 3.8,
+        "ticketLabel": "Tomates Mozzarella",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Tomates, mozzarella fraîche, sel, poivre, origan, huile d'olive, vinaigre balsamique"
+    },
+    {
+        "afficheDetail": "Tartare de tomates, mozzarella fraîche, olives noires, huile de Truffes, sel, poivre, origan",
+        "canMerge": true,
+        "code": "TOMATMOZZA2",
+        "codeTva": "1",
+        "geant": 6.2,
+        "htmlKeyLabel": "Tomates<br>mozza2",
+        "id": 171,
+        "image": "vegetarien",
+        "label": "Tomates Mozzarella 2",
+        "mini": 2.0,
+        "name": "Tomates Mozzarella 2",
+        "normal": 4.2,
+        "ticketLabel": "Tomates Mozzarella 2",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "suggestion"
+            },
+            {
+                "tag": "sud"
+            }
+        ],
+        "webDetail": "Tartare de tomates, mozzarella fraîche, olives noires, huile de Truffes, sel, poivre, origan"
+    },
+    {
+        "afficheDetail": "100% pur boeuf",
+        "canMerge": true,
+        "code": "USADOUX",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "USA<br>doux",
+        "id": 172,
+        "image": "boeuf",
+        "label": "Américain Doux",
+        "mini": 1.7,
+        "name": "Américain Doux",
+        "normal": 3.5,
+        "ticketLabel": "Américain Doux",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "100% pur boeuf"
+    },
+    {
+        "afficheDetail": "100% pur boeuf",
+        "canMerge": true,
+        "code": "USAEPICE",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "USA<br>épicé",
+        "id": 173,
+        "image": "epice",
+        "label": "Américain Epicé",
+        "mini": 1.7,
+        "name": "Américain Epicé",
+        "normal": 3.3,
+        "ticketLabel": "Américain Epicé",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "100% pur boeuf"
+    },
+    {
+        "afficheDetail": "Crudités fraîches et sauce au choix",
+        "canMerge": true,
+        "code": "VEGETARIEN",
+        "codeTva": "1",
+        "geant": 4.5,
+        "htmlKeyLabel": "Végétarien",
+        "id": 174,
+        "image": "vegetarien",
+        "label": "Végétarien",
+        "mini": 1.7,
+        "name": "Végétarien",
+        "normal": 3.0,
+        "ticketLabel": "Végétarien",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Crudités fraîches et sauce au choix"
+    },
+    {
+        "afficheDetail": "Tomates séchées, copeaux de parmesan, huile d’olive, roquette, crudités.",
+        "canMerge": true,
+        "code": "VEGETARIEN2",
+        "codeTva": "1",
+        "geant": 4.8,
+        "htmlKeyLabel": "Végétarien 2",
+        "id": 175,
+        "image": "vegetarien",
+        "label": "Végétarien Italien",
+        "mini": 2.0,
+        "name": "Végétarien Italien",
+        "normal": 4.0,
+        "ticketLabel": "Végétarien Italien",
+        "categoryTags": [
+            {
+                "tag": "sandwich"
+            },
+            {
+                "tag": "classique"
+            }
+        ],
+        "webDetail": "Tomates séchées, copeaux de parmesan, huile d’olive, roquette, crudités."
+    }
+]
