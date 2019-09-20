@@ -1,0 +1,163 @@
+<div class="container">
+  <div class="form-horizontal">
+    <div>
+      <h1>Fiche produit - {{product.name}}</h1>
+    </div>
+    <form #productForm="ngForm" (ngSubmit)="onSubmit()" appIdentityRevealed>
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>face</mat-icon>Identification
+          </ng-template>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="identifiant">Identifiant 1</label>
+            <div class="col-sm-6">
+              <input type=" text" class="form-control" id="identifiant" [(ngModel)]="product.id" name="identifiant"
+                required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="code">Code</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="code" [(ngModel)]="product.code" name="code" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name" required>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>money</mat-icon> Prix
+          </ng-template>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Product tags</label>
+            <div class="col-sm-6">
+              <mat-form-field class="chip-list">
+                <mat-chip-list #chipList aria-label="Product category tag selection">
+                  <mat-chip *ngFor="let categoryTag of product.categoryTags">
+                    {{categoryTag.tag}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="Catégories ..." [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="vatRateOnPlace">TVA sur place</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="vatRateOnPlace" [(ngModel)]="product.vatRateOnPlace"
+                name="vatRateOnPlace">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="vatRateTakeAway">TVA à emporter</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="vatRateTakeAway" [(ngModel)]="product.vatRateTakeAway"
+                name="vatRateTakeAway">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="mini">Mini</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="mini" [(ngModel)]="product.mini" name="mini">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="normal">Normal</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="normal" [(ngModel)]="product.normal" name="normal">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="geant">Géant</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="geant" [(ngModel)]="product.geant" name="geant">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fitmini">Fit. mini</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="fitmini" [(ngModel)]="product.fitmini" name="fitmini">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fitnormal">Fit. norm.</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="fitnormal" [(ngModel)]="product.fitnormal" name="fitnormal">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fitgeant">Fit. geant</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="fitgeant" [(ngModel)]="product.fitgeant" name="fitgeant">
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>description</mat-icon> Descriptions
+          </ng-template>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="image">Image</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="image" [(ngModel)]="product.image" name="image">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="label">Etiquette</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="label" [(ngModel)]="product.label" name="label" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="ticketLabel ">Etiquette ticket</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="ticketLabel" [(ngModel)]="product.ticketLabel"
+                name="ticketLabel" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="htmlKeyLabel">Etiquette touche (html)</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="htmlKeyLabel" [(ngModel)]="product.htmlKeyLabel"
+                name="htmlKeyLabel" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="webDetail">Web description</label>
+            <div class="col-sm-6">
+              <textarea type="text" class="form-control" id="webDetail" [(ngModel)]="product.webDetail"
+                name="webDetail"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="afficheDetail">Affiche détail</label>
+            <div class="col-sm-6">
+              <textarea type="text" class="form-control" id="afficheDetail" [(ngModel)]="product.afficheDetail"
+                name="afficheDetail"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="canMerge">Peut être groupé</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="canMerge" [(ngModel)]="product.canMerge" name="canMerge">
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+      <div class="row">
+        <button type="submit" class="btn btn-success col-sm-2" [disabled]="!productForm.valid">Submit</button>
+        <button class="btn btn-fail col-sm-2" (click)="goBack()">go back</button>
+      </div>
+    </form>
+    {{diagnostic}}
+  </div>
+</div>
