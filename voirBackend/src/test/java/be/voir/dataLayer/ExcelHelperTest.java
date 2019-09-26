@@ -2,7 +2,6 @@ package be.voir.dataLayer;
 
 import static org.junit.Assert.fail;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,7 @@ import be.voir.dataLayer.ProductCategoryTagDAO.ProductCategoryTagEnum;
 
 public class ExcelHelperTest {
 
-	Logger logger = LoggerFactory.getLogger(ExcelHelperTest.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ExcelHelperTest.class);
 
 	private static CodeTVADAO codeTVADAO;
 	private static ProductCategoryTagDAO productCategoryTagDAO;
@@ -31,7 +30,7 @@ public class ExcelHelperTest {
 	@Test
 	public void testWriteAndReadFile() {
 
-		String fileName = "CATALOGTest.xlsx";
+		String fileName = "CATALOG-testWriteAndReadFile.xlsx";
 		String sheetName = "CATALOG";
 
 		List<Product> products = new ArrayList<Product>();
@@ -43,9 +42,9 @@ public class ExcelHelperTest {
 		try {
 			ExcelHelper.writeFile(fileName, sheetName, products);
 			List<Product> productsReaded = ExcelHelper.readFile(fileName, sheetName);
-			logger.info("" + productsReaded);
-		} catch (IOException e) {
-			e.printStackTrace();
+			LOG.info("" + productsReaded);
+		} catch (Throwable e) {
+			LOG.error("[PRODUCTS READED:" + products + "]", e);
 			fail(e.getMessage());
 		}
 
@@ -57,19 +56,22 @@ public class ExcelHelperTest {
 		// INJECTION
 		ExcelHelper.injectDAO(new CodeTVADAO(), new ProductCategoryTagDAO());
 
-		String CATALOGOriginal = "/home/tote/Desktop/jee-workspace/voirBackend/src/main/resources/POSproducts20180402.xlsx";
-		String fileName = "CATALOGTest.xlsx";
+		String CATALOGOriginal = "/home/tote/git/repository2/voirBackend/src/main/resources/POSproducts20180402.xlsx";
+		String fileName = "CATALOG-testReadFullOrignalandTestReadWriteFile.xlsx";
 		String sheetName = "CATALOG";
+
+		List<Product> products = null;
+		List<Product> productsReaded = null;
 
 		try {
 			// read catalog original
-			List<Product> products = ExcelHelper.readFile(CATALOGOriginal, sheetName);
-			System.out.println(products);
+			products = ExcelHelper.readFile(CATALOGOriginal, sheetName);
+			LOG.info("" + products);
 			ExcelHelper.writeFile(fileName, sheetName, products);
-			List<Product> productsReaded = ExcelHelper.readFile(fileName, sheetName);
-			System.out.println(productsReaded);
-		} catch (IOException e) {
-			e.printStackTrace();
+			productsReaded = ExcelHelper.readFile(fileName, sheetName);
+			LOG.info("" + productsReaded);
+		} catch (Throwable e) {
+			LOG.error("[PRODUCTS:" + products + "][READED:" + productsReaded + "]", e);
 			fail(e.getMessage());
 		}
 

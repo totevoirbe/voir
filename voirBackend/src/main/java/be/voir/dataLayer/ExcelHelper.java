@@ -18,10 +18,14 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import be.voir.dataLayer.ProductDAO.ProductXlsField;
 
 public class ExcelHelper {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ExcelHelper.class);
 
 	private static CodeTVADAO codeTVADAO;
 	private static ProductCategoryTagDAO productCategoryTagDAO;
@@ -141,72 +145,149 @@ public class ExcelHelper {
 
 	public static void setCell(Product product, ProductXlsField productXlsField, Row row) {
 
-		Cell cell = row.createCell(productXlsField.ordinal());
+		try {
+			Cell cell = row.createCell(productXlsField.ordinal());
 
-		switch (productXlsField) {
+			switch (productXlsField) {
 
-		case CODE:
-			cell.setCellValue(product.getCode());
-			return;
-		case NAME:
-			cell.setCellValue(product.getName());
-			return;
-		case PRODUCTVATEGORYTAGS:
-			String tagList = null;
-			if (product.getProductCategoryTags() != null && product.getProductCategoryTags().length > 0) {
-				for (ProductCategoryTag productCategoryTag : product.getProductCategoryTags()) {
-					if (tagList == null) {
-						tagList = "";
-					} else {
-						tagList += ",";
-					}
-					tagList += productCategoryTag.getCode();
+			case CODE:
+				if (product.getCode() != null) {
+					cell.setCellValue(product.getCode());
+				} else {
+					cell.setBlank();
 				}
-				cell.setCellValue(tagList);
+				return;
+			case NAME:
+				if (product.getName() != null) {
+					cell.setCellValue(product.getName());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case PRODUCTVATEGORYTAGS:
+				String tagList = null;
+				if (product.getProductCategoryTags() != null && product.getProductCategoryTags().length > 0) {
+					for (ProductCategoryTag productCategoryTag : product.getProductCategoryTags()) {
+						if (productCategoryTag != null) {
+							if (tagList == null) {
+								tagList = "";
+							} else {
+								tagList += ",";
+							}
+							tagList += productCategoryTag.getCode();
+
+						} else {
+							LOG.warn("Illegal tag value [PRODUCTXLSFIELD:" + productXlsField + "][PRODUCT:" + product
+									+ "]");
+						}
+					}
+					cell.setCellValue(tagList);
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case VATRATEONPLACE:
+				if (product.getVatRateOnPlace() != null) {
+					cell.setCellValue(product.getVatRateOnPlace().getCode());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case VATRATETAKEAWAY:
+				if (product.getVatRateTakeAway() != null) {
+					cell.setCellValue(product.getVatRateTakeAway().getCode());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case MINI:
+				if (product.getMini() != null) {
+					cell.setCellValue(cellValueAsString(product.getMini()));
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case NORMAL:
+				if (product.getNormal() != null) {
+					cell.setCellValue(cellValueAsString(product.getNormal()));
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case GEANT:
+				if (product.getGeant() != null) {
+					cell.setCellValue(cellValueAsString(product.getGeant()));
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case FITMINI:
+				if (product.getFitmini() != null) {
+					cell.setCellValue(cellValueAsString(product.getFitmini()));
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case FITNORMAL:
+				if (product.getFitnormal() != null) {
+					cell.setCellValue(cellValueAsString(product.getFitnormal()));
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case FITGEANT:
+				if (product.getFitgeant() != null) {
+					cell.setCellValue(cellValueAsString(product.getFitgeant()));
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case IMAGE:
+				if (product.getImage() != null) {
+					cell.setCellValue(product.getImage());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case HTMLKEYLABEL:
+				if (product.getHtmlKeyLabel() != null) {
+					cell.setCellValue(product.getHtmlKeyLabel());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case TICKETLABEL:
+				if (product.getTicketLabel() != null) {
+					cell.setCellValue(product.getTicketLabel());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case WEBDETAIL:
+				if (product.getWebDetail() != null) {
+					cell.setCellValue(product.getWebDetail());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case AFFICHEDETAIL:
+				if (product.getAfficheDetail() != null) {
+					cell.setCellValue(product.getAfficheDetail());
+				} else {
+					cell.setBlank();
+				}
+				return;
+			case CANMERGE:
+				if (product.getCanMerge() != null) {
+					cell.setCellValue(product.getCanMerge());
+				} else {
+					cell.setBlank();
+				}
+				return;
 			}
-			return;
-		case VATRATEONPLACE:
-			cell.setCellValue(product.getVatRateOnPlace().getCode());
-			return;
-		case VATRATETAKEAWAY:
-			cell.setCellValue(product.getVatRateTakeAway().getCode());
-			return;
-		case MINI:
-			cell.setCellValue(cellValueAsString(product.getMini()));
-			return;
-		case NORMAL:
-			cell.setCellValue(cellValueAsString(product.getNormal()));
-			return;
-		case GEANT:
-			cell.setCellValue(cellValueAsString(product.getGeant()));
-			return;
-		case FITMINI:
-			cell.setCellValue(cellValueAsString(product.getFitmini()));
-			return;
-		case FITNORMAL:
-			cell.setCellValue(cellValueAsString(product.getFitnormal()));
-			return;
-		case FITGEANT:
-			cell.setCellValue(cellValueAsString(product.getFitgeant()));
-			return;
-		case IMAGE:
-			cell.setCellValue(product.getImage());
-			return;
-		case HTMLKEYLABEL:
-			cell.setCellValue(product.getHtmlKeyLabel());
-			return;
-		case TICKETLABEL:
-			cell.setCellValue(product.getTicketLabel());
-			return;
-		case WEBDETAIL:
-			cell.setCellValue(product.getWebDetail());
-			return;
-		case AFFICHEDETAIL:
-			cell.setCellValue(product.getAfficheDetail());
-			return;
-		case CANMERGE:
-			cell.setCellValue(product.getCanMerge());
-			return;
+		} catch (Throwable e) {
+			LOG.error("[PRODUCTXLSFIELD:" + productXlsField + "][PRODUCT:" + product + "]", e);
+			throw e;
 		}
 		throw new IllegalArgumentException("[" + productXlsField + "][" + product + "]");
 
@@ -216,93 +297,113 @@ public class ExcelHelper {
 
 		Cell cell = row.getCell(productXlsField.ordinal());
 
-		if (cell == null) {
-			return;
-		}
+		try {
 
-		String cellValueAsString = getCellValueAsString(cell);
+			if (cell == null) {
+				return;
+			}
 
-		switch (productXlsField) {
+			String cellValueAsString = getCellValueAsString(cell);
 
-		case CODE:
-			product.setCode(cellValueAsString);
-			break;
-		case NAME:
-			product.setName(cellValueAsString);
-			break;
-		case PRODUCTVATEGORYTAGS:
+			switch (productXlsField) {
 
-			List<ProductCategoryTag> productCategoryTags = null;
-			String productCategoryTagsAsString = cellValueAsString;
-			if (productCategoryTagsAsString != null && productCategoryTagsAsString.trim().length() > 0) {
-				productCategoryTagsAsString.trim();
-				String[] productCategoryTagsAsArray = productCategoryTagsAsString.split(",");
-				for (String productCategoryTagCode : productCategoryTagsAsArray) {
-					productCategoryTagCode = productCategoryTagCode.trim();
-
-					if (productCategoryTagCode.length() > 0) {
-
-						if (productCategoryTags == null) {
-							productCategoryTags = new ArrayList<>();
+			case CODE:
+				product.setCode(cellValueAsString);
+				break;
+			case NAME:
+				product.setName(cellValueAsString);
+				break;
+			case PRODUCTVATEGORYTAGS:
+				List<ProductCategoryTag> productCategoryTags = null;
+				String productCategoryTagsAsString = cellValueAsString;
+				if (productCategoryTagsAsString != null && productCategoryTagsAsString.trim().length() > 0) {
+					productCategoryTagsAsString.trim();
+					String[] productCategoryTagsAsArray = productCategoryTagsAsString.split(",");
+					for (String productCategoryTagCode : productCategoryTagsAsArray) {
+						productCategoryTagCode = productCategoryTagCode.trim();
+						if (productCategoryTagCode.length() > 0 && !"null".equals(productCategoryTagCode)) {
+							if (productCategoryTags == null) {
+								productCategoryTags = new ArrayList<>();
+							}
+							ProductCategoryTag productCategoryTag = productCategoryTagDAO.get(productCategoryTagCode);
+							if (productCategoryTag == null) {
+								LOG.warn("Illegal tag value [PRODUCTXLSFIELD:" + productXlsField
+										+ "][PRODUCTCATEGORYTAGCODE:" + productCategoryTagCode + "]" + "][PRODUCT:"
+										+ product + "]");
+							}
+							productCategoryTags.add(productCategoryTag);
 						}
-
-						ProductCategoryTag productCategoryTag = productCategoryTagDAO.get(productCategoryTagCode);
-						productCategoryTags.add(productCategoryTag);
+					}
+					product.setProductCategoryTags(null);
+					if (productCategoryTags != null) {
+						ProductCategoryTag[] p = new ProductCategoryTag[] {};
+						product.setProductCategoryTags(productCategoryTags.toArray(p));
 					}
 				}
-				product.setProductCategoryTags(null);
-				if (productCategoryTags != null) {
-					ProductCategoryTag[] p = new ProductCategoryTag[] {};
-					product.setProductCategoryTags(productCategoryTags.toArray(p));
+				break;
+			case VATRATEONPLACE:
+				String code = cellValueAsString;
+				CodeTVA codeTVA = codeTVADAO.get(code);
+				product.setVatRateOnPlace(codeTVA);
+				break;
+			case VATRATETAKEAWAY:
+				code = cellValueAsString;
+				codeTVA = codeTVADAO.get(code);
+				product.setVatRateTakeAway(codeTVA);
+				break;
+			case MINI:
+				product.setMini(cellValueAsBigdecimal(cell));
+				break;
+			case NORMAL:
+				product.setNormal(cellValueAsBigdecimal(cell));
+				break;
+			case GEANT:
+				product.setGeant(cellValueAsBigdecimal(cell));
+				break;
+			case FITMINI:
+				product.setFitmini(cellValueAsBigdecimal(cell));
+				break;
+			case FITNORMAL:
+				product.setFitnormal(cellValueAsBigdecimal(cell));
+				break;
+			case FITGEANT:
+				product.setFitgeant(cellValueAsBigdecimal(cell));
+				break;
+			case IMAGE:
+				product.setImage(cellValueAsString);
+				break;
+			case HTMLKEYLABEL:
+				product.setHtmlKeyLabel(cellValueAsString);
+				break;
+			case TICKETLABEL:
+				product.setTicketLabel(cellValueAsString);
+				break;
+			case WEBDETAIL:
+				product.setWebDetail(cellValueAsString);
+				break;
+			case AFFICHEDETAIL:
+				product.setAfficheDetail(cellValueAsString);
+				break;
+			case CANMERGE:
+				CellType cellType = cell.getCellType();
+				if (cellType == CellType.STRING) {
+					String canMergeCellValueAsString = cell.getStringCellValue();
+					if (cellValueAsString != null) {
+						product.setCanMerge(new Boolean(canMergeCellValueAsString));
+					}
+				} else if (cellType == CellType.BOOLEAN) {
+					product.setCanMerge(cell.getBooleanCellValue());
+				} else if (cellType == CellType.BLANK) {
+					product.setCanMerge(false);
+				} else {
+					throw new IllegalArgumentException("Cell type not legal for CANMERGE column :  [CELLTYPE:"
+							+ cellType.name() + "][PRODUCT:" + product + "]");
 				}
+				break;
 			}
-			break;
-		case VATRATEONPLACE:
-			String code = cellValueAsString;
-			CodeTVA codeTVA = codeTVADAO.get(code);
-			product.setVatRateOnPlace(codeTVA);
-			break;
-		case VATRATETAKEAWAY:
-			code = cellValueAsString;
-			codeTVA = codeTVADAO.get(code);
-			product.setVatRateTakeAway(codeTVA);
-			break;
-		case MINI:
-			product.setMini(cellValueAsBigdecimal(cell));
-			break;
-		case NORMAL:
-			product.setNormal(cellValueAsBigdecimal(cell));
-			break;
-		case GEANT:
-			product.setGeant(cellValueAsBigdecimal(cell));
-			break;
-		case FITMINI:
-			product.setFitmini(cellValueAsBigdecimal(cell));
-			break;
-		case FITNORMAL:
-			product.setFitnormal(cellValueAsBigdecimal(cell));
-			break;
-		case FITGEANT:
-			product.setFitgeant(cellValueAsBigdecimal(cell));
-			break;
-		case IMAGE:
-			product.setImage(cellValueAsString);
-			break;
-		case HTMLKEYLABEL:
-			product.setHtmlKeyLabel(cellValueAsString);
-			break;
-		case TICKETLABEL:
-			product.setTicketLabel(cellValueAsString);
-			break;
-		case WEBDETAIL:
-			product.setWebDetail(cellValueAsString);
-			break;
-		case AFFICHEDETAIL:
-			product.setAfficheDetail(cellValueAsString);
-			break;
-		case CANMERGE:
-			product.setCanMerge(new Boolean(getCellValueAsString(cell)));
-			break;
+		} catch (Throwable e) {
+			LOG.error("[PRODUCTXLSFIELD:" + productXlsField + "][PRODUCT:" + product + "]", e);
+			throw e;
 		}
 	}
 }
