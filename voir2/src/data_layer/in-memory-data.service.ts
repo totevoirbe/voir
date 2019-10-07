@@ -15,10 +15,12 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
 
-    console.log('create DB');
-    const products = this.readingJsonFiles.getProductList();
-    console.log('Db created');
-    return { products };
+//    console.log('create DB');
+    // const products = this.readingJsonFiles.getProductList();
+    // console.log('Db created');
+    // return { products };
+
+    return null;
 
   }
 

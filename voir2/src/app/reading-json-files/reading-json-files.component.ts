@@ -17,10 +17,10 @@ export class ReadingJsonFilesComponent implements OnInit {
   ngOnInit() {
   }
 
-  getProductList() {
-    console.log('getProductList');
-    return ProductListJson;
-  }
+  // getProductList() {
+  //   console.log('getProductList');
+  //   return ProductListJson;
+  // }
 
 
 }

@@ -1,6 +1,7 @@
 package be.voir.dataLayer;
 
 import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +63,10 @@ public class CodeTVADAO {
 		} else {
 			return null;
 		}
+	}
+
+	public Collection<CodeTVA> getCodeTVAs() {
+		return codeTVAs.values();
 	}
 
 }

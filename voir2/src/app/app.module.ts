@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule, MatSortModule, MatInputModule, MatFormFieldModule, MatChipsModule, MatIconModule, MatTabsModule } from '@angular/material';
+import { MatPaginatorModule, MatSortModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule, MatChipsModule, MatIconModule, MatTabsModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ProductFormComponent } from './product-form/product-form.component';
@@ -17,6 +18,8 @@ import { InMemoryDataService } from 'src/data_layer/in-memory-data.service';
 import { ReadingJsonFilesComponent } from './reading-json-files/reading-json-files.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductListComponent,
     MessagesComponent,
     ReadingJsonFilesComponent,
-    ProductTableComponent
+    ProductTableComponent,
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,

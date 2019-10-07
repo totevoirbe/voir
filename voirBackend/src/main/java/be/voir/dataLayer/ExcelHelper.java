@@ -389,7 +389,7 @@ public class ExcelHelper {
 				if (cellType == CellType.STRING) {
 					String canMergeCellValueAsString = cell.getStringCellValue();
 					if (cellValueAsString != null) {
-						product.setCanMerge(new Boolean(canMergeCellValueAsString));
+						product.setCanMerge(Boolean.valueOf(canMergeCellValueAsString));
 					}
 				} else if (cellType == CellType.BOOLEAN) {
 					product.setCanMerge(cell.getBooleanCellValue());
