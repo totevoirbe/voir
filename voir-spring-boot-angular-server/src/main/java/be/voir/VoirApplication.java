@@ -13,10 +13,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import be.voir.helper.ExcelHelper;
-import be.voir.referential.model.CodeTVA;
+import be.voir.referential.model.VatRate;
 import be.voir.referential.model.ProductCategoryTag;
-import be.voir.referential.service.CodeTVAService;
-import be.voir.referential.service.CodeTVAService.CodeTVAEnum;
+import be.voir.referential.service.VatRateService;
+import be.voir.referential.service.VatRateService.VatRateEnum;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductCategoryTagService.ProductCategoryTagEnum;
 import be.voir.referential.service.ProductService;
@@ -55,13 +55,13 @@ public class VoirApplication {
 	}
 
 	@Bean
-	CommandLineRunner initCodeTVA(CodeTVAService codeTVAService) {
+	CommandLineRunner initCodeTVA(VatRateService codeTVAService) {
 		return args -> {
-			for (CodeTVAEnum codeTVAEnum : CodeTVAEnum.values()) {
+			for (VatRateEnum codeTVAEnum : VatRateEnum.values()) {
 				String code = codeTVAEnum.name();
 				String label = codeTVAEnum.getLabel();
 				BigDecimal rate = codeTVAEnum.getRate();
-				CodeTVA codeTVA = new CodeTVA(code, label, rate);
+				VatRate codeTVA = new VatRate(code, label, rate);
 				codeTVAService.save(codeTVA);
 			}
 			LOG.info("" + codeTVAService.getAll());
@@ -70,7 +70,7 @@ public class VoirApplication {
 
 	@Bean
 	CommandLineRunner initProduct(ProductService productService, ProductCategoryTagService productCategoryTagService,
-			CodeTVAService codeTVAService) {
+			VatRateService codeTVAService) {
 		return args -> {
 			ExcelHelper.readFile(fileName, sheetName, productService, codeTVAService, productCategoryTagService);
 			LOG.info("Number of products : " + IterableUtils.size(productService.getAll()));

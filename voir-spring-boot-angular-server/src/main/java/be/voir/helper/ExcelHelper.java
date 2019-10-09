@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 
 import be.voir.referential.model.Product;
 import be.voir.referential.model.ProductCategoryTag;
-import be.voir.referential.service.CodeTVAService;
+import be.voir.referential.service.VatRateService;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductService;
 
@@ -104,7 +104,7 @@ public class ExcelHelper {
 	}
 
 	public static void readFile(String fileName, String SHEET_NAME, ProductService productService,
-			CodeTVAService codeTVAService, ProductCategoryTagService productCategoryTagService) throws IOException {
+			VatRateService codeTVAService, ProductCategoryTagService productCategoryTagService) throws IOException {
 		FileInputStream excelInputStream = null;
 		Workbook workbook = null;
 		try {
@@ -217,7 +217,7 @@ public class ExcelHelper {
 	}
 
 	private static void readCell(Product product, ProductXlsField productXlsField, Row row,
-			CodeTVAService codeTVAService, ProductCategoryTagService productCategoryTagService) {
+			VatRateService codeTVAService, ProductCategoryTagService productCategoryTagService) {
 		try {
 			switch (productXlsField) {
 			case CODE:

@@ -6,18 +6,18 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class CodeTVA {
+public class VatRate {
 
 	@Id
 	private String code;
 	private String label;
 	private BigDecimal rate;
 
-	public CodeTVA() {
+	public VatRate() {
 		super();
 	}
 
-	public CodeTVA(String code, String label, BigDecimal rate) {
+	public VatRate(String code, String label, BigDecimal rate) {
 		super();
 		this.code = code;
 		this.label = label;
@@ -26,7 +26,7 @@ public class CodeTVA {
 
 	@Override
 	public String toString() {
-		return "CodeTVA [code=" + code + ", label=" + label + ", rate=" + rate + "]";
+		return "VatRate [code=" + code + ", label=" + label + ", rate=" + rate + "]";
 	}
 
 	public String getCode() {

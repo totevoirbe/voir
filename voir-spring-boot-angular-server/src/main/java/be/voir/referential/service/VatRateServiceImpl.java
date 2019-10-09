@@ -6,40 +6,40 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import be.voir.exception.ResourceNotFoundException;
-import be.voir.referential.dao.CodeTVARepository;
-import be.voir.referential.model.CodeTVA;
+import be.voir.referential.dao.VatRateRepository;
+import be.voir.referential.model.VatRate;
 
 @Service
 @Transactional
-public class CodeTVAServiceImpl implements CodeTVAService {
+public class VatRateServiceImpl implements VatRateService {
 
-	private CodeTVARepository codeTVARepository;
+	private VatRateRepository codeTVARepository;
 
-	public CodeTVAServiceImpl(CodeTVARepository codeTVARepository) {
+	public VatRateServiceImpl(VatRateRepository codeTVARepository) {
 		this.codeTVARepository = codeTVARepository;
 	}
 
 	@Override
-	public Iterable<CodeTVA> getAll() {
+	public Iterable<VatRate> getAll() {
 		return codeTVARepository.findAll();
 	}
 
 	@Override
-	public CodeTVA get(long id) {
+	public VatRate get(long id) {
 		return codeTVARepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Code TVA not found"));
 	}
 
 	@Override
-	public CodeTVA save(CodeTVA product) {
+	public VatRate save(VatRate product) {
 		return codeTVARepository.save(product);
 	}
 
 	@Override
-	public CodeTVA getByCode(@NotNull(message = "CODE code TVA ne peut pas être null.") String code) {
+	public VatRate getByCode(@NotNull(message = "CODE code TVA ne peut pas être null.") String code) {
 
-		Iterable<CodeTVA> codeTVAs = getAll();
+		Iterable<VatRate> codeTVAs = getAll();
 
-		for (CodeTVA codeTVA : codeTVAs) {
+		for (VatRate codeTVA : codeTVAs) {
 			if (codeTVA.getCode().equalsIgnoreCase(code)) {
 				return codeTVA;
 			}

@@ -19,7 +19,6 @@ public class ProductCategoryTag implements Serializable {
 
 	public ProductCategoryTag() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public ProductCategoryTag(String code, String label) {

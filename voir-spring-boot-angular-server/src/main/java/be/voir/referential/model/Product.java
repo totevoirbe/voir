@@ -23,9 +23,9 @@ public class Product {
 	private List<ProductCategoryTag> productCategoryTags = new ArrayList<ProductCategoryTag>();
 
 	@OneToOne
-	private CodeTVA vatRateOnPlace;
+	private VatRate vatRateOnPlace;
 	@OneToOne
-	private CodeTVA vatRateTakeAway;
+	private VatRate vatRateTakeAway;
 
 	private BigDecimal mini;
 	private BigDecimal normal;
@@ -43,11 +43,10 @@ public class Product {
 
 	public Product() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Product(Long id, String code, String name, List<ProductCategoryTag> productCategoryTags,
-			CodeTVA vatRateOnPlace, CodeTVA vatRateTakeAway, BigDecimal mini, BigDecimal normal, BigDecimal geant,
+			VatRate vatRateOnPlace, VatRate vatRateTakeAway, BigDecimal mini, BigDecimal normal, BigDecimal geant,
 			BigDecimal fitmini, BigDecimal fitnormal, BigDecimal fitgeant, String image, String htmlKeyLabel,
 			String ticketLabel, String webDetail, String afficheDetail, Boolean canMerge) {
 		super();
@@ -113,19 +112,19 @@ public class Product {
 		this.productCategoryTags = productCategoryTags;
 	}
 
-	public CodeTVA getVatRateOnPlace() {
+	public VatRate getVatRateOnPlace() {
 		return vatRateOnPlace;
 	}
 
-	public void setVatRateOnPlace(CodeTVA vatRateOnPlace) {
+	public void setVatRateOnPlace(VatRate vatRateOnPlace) {
 		this.vatRateOnPlace = vatRateOnPlace;
 	}
 
-	public CodeTVA getVatRateTakeAway() {
+	public VatRate getVatRateTakeAway() {
 		return vatRateTakeAway;
 	}
 
-	public void setVatRateTakeAway(CodeTVA vatRateTakeAway) {
+	public void setVatRateTakeAway(VatRate vatRateTakeAway) {
 		this.vatRateTakeAway = vatRateTakeAway;
 	}
 

@@ -7,12 +7,12 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.validation.annotation.Validated;
 
-import be.voir.referential.model.CodeTVA;
+import be.voir.referential.model.VatRate;
 
 @Validated
-public interface CodeTVAService {
+public interface VatRateService {
 
-	public enum CodeTVAEnum {
+	public enum VatRateEnum {
 
 		VATONPLACENORMAL("TVA sur place", new BigDecimal("12")),
 		VATONPLACEBOISSONS("TVA boissons sur place", new BigDecimal("21")),
@@ -22,7 +22,7 @@ public interface CodeTVAService {
 		private final String label;
 		private final BigDecimal rate;
 
-		private CodeTVAEnum(String label, BigDecimal rate) {
+		private VatRateEnum(String label, BigDecimal rate) {
 			this.label = label;
 			this.rate = rate;
 		}
@@ -38,12 +38,12 @@ public interface CodeTVAService {
 	};
 
 	@NotNull
-	Iterable<CodeTVA> getAll();
+	Iterable<VatRate> getAll();
 
-	CodeTVA get(@Min(value = 1L, message = "ID code TVA invalide.") long id);
+	VatRate get(@Min(value = 1L, message = "ID code TVA invalide.") long id);
 
-	CodeTVA getByCode(@NotNull(message = "CODE code TVA ne peut pas être null.") String code);
+	VatRate getByCode(@NotNull(message = "CODE code TVA ne peut pas être null.") String code);
 
-	CodeTVA save(CodeTVA product);
+	VatRate save(VatRate product);
 
 }

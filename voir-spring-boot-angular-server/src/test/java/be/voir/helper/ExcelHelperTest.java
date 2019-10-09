@@ -17,11 +17,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import be.voir.VoirApplication;
-import be.voir.referential.model.CodeTVA;
+import be.voir.referential.model.VatRate;
 import be.voir.referential.model.Product;
 import be.voir.referential.model.ProductCategoryTag;
-import be.voir.referential.service.CodeTVAService;
-import be.voir.referential.service.CodeTVAService.CodeTVAEnum;
+import be.voir.referential.service.VatRateService;
+import be.voir.referential.service.VatRateService.VatRateEnum;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductCategoryTagService.ProductCategoryTagEnum;
 import be.voir.referential.service.ProductService;
@@ -36,7 +36,7 @@ public class ExcelHelperTest {
 	private ProductService productService;
 
 	@Autowired
-	private CodeTVAService codeTVAService;
+	private VatRateService codeTVAService;
 
 	@Autowired
 	private ProductCategoryTagService productCategoryTagService;
@@ -97,7 +97,7 @@ public class ExcelHelperTest {
 	}
 
 	private static Product getProduct1(ProductCategoryTagService productCategoryTagService,
-			CodeTVAService codeTVAService) {
+			VatRateService codeTVAService) {
 
 		ProductCategoryTag productCategoryTag1 = productCategoryTagService
 				.getByCode(ProductCategoryTagEnum.SANDWICH.name());
@@ -112,8 +112,8 @@ public class ExcelHelperTest {
 		List<ProductCategoryTag> productCategoryTags = new ArrayList<>(
 				Arrays.asList(productCategoryTag1, productCategoryTag2));
 		String image = "image1";
-		CodeTVA vatRateOnPlace = codeTVAService.getByCode(CodeTVAEnum.VATONPLACENORMAL.name());
-		CodeTVA vatRateTakeAway = codeTVAService.getByCode(CodeTVAEnum.VATTAKEAWAYNORMAL.name());
+		VatRate vatRateOnPlace = codeTVAService.getByCode(VatRateEnum.VATONPLACENORMAL.name());
+		VatRate vatRateTakeAway = codeTVAService.getByCode(VatRateEnum.VATTAKEAWAYNORMAL.name());
 		BigDecimal mini = new BigDecimal(11.11);
 		BigDecimal normal = new BigDecimal(21.12);
 		BigDecimal geant = new BigDecimal(31.31);
@@ -130,7 +130,7 @@ public class ExcelHelperTest {
 	}
 
 	private static Product getProduct2(ProductCategoryTagService productCategoryTagService,
-			CodeTVAService codeTVAService) {
+			VatRateService codeTVAService) {
 
 		ProductCategoryTag productCategoryTag1 = productCategoryTagService
 				.getByCode(ProductCategoryTagEnum.ASSIETTE.name());
@@ -144,8 +144,8 @@ public class ExcelHelperTest {
 		List<ProductCategoryTag> productCategoryTags = new ArrayList<>(
 				Arrays.asList(productCategoryTag1, productCategoryTag2));
 		String image = "image2";
-		CodeTVA vatRateOnPlace = codeTVAService.getByCode(CodeTVAEnum.VATONPLACEBOISSONS.name());
-		CodeTVA vatRateTakeAway = codeTVAService.getByCode(CodeTVAEnum.VATTAKEAWAYLUX.name());
+		VatRate vatRateOnPlace = codeTVAService.getByCode(VatRateEnum.VATONPLACEBOISSONS.name());
+		VatRate vatRateTakeAway = codeTVAService.getByCode(VatRateEnum.VATTAKEAWAYLUX.name());
 		BigDecimal mini = new BigDecimal(12.12);
 		BigDecimal normal = new BigDecimal(22.22);
 		BigDecimal geant = new BigDecimal(32.32);
