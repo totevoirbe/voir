@@ -13,18 +13,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import be.voir.helper.ExcelHelper;
-import be.voir.referential.model.VatRate;
 import be.voir.referential.model.ProductCategoryTag;
-import be.voir.referential.service.VatRateService;
-import be.voir.referential.service.VatRateService.VatRateEnum;
+import be.voir.referential.model.VatRate;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductCategoryTagService.ProductCategoryTagEnum;
 import be.voir.referential.service.ProductService;
+import be.voir.referential.service.VatRateService;
+import be.voir.referential.service.VatRateService.VatRateEnum;
 
 @SpringBootApplication
 public class VoirApplication {
 
 	private Logger LOG = LoggerFactory.getLogger(VoirApplication.class);
+
+	private static final String version = "v0.01";
 
 	String fileName = "CATALOG-testReadFullOrignalandTestReadWriteFile.xlsx";
 	String sheetName = "CATALOG";
@@ -38,7 +40,7 @@ public class VoirApplication {
 
 	@RequestMapping(value = "/")
 	public String name() {
-		return name;
+		return name + version;
 	}
 
 	@Bean
