@@ -60,7 +60,7 @@ public class ExcelHelperTest {
 
 		try {
 			ExcelHelper.writeFile(fileName, sheetName, products);
-			ExcelHelper.readFile(fileName, sheetName, productService, codeTVAService, productCategoryTagService);
+			ExcelHelper.readProductFile(fileName, sheetName, productService, codeTVAService, productCategoryTagService);
 			LOG.info("" + productService.getAll());
 		} catch (Throwable e) {
 			LOG.error("[PRODUCTS READED:" + products + "]", e);
@@ -80,14 +80,14 @@ public class ExcelHelperTest {
 
 		try {
 			// read catalog original
-			ExcelHelper.readFile(CATALOGOriginal, sheetName, productService, codeTVAService, productCategoryTagService);
+			ExcelHelper.readProductFile(CATALOGOriginal, sheetName, productService, codeTVAService, productCategoryTagService);
 			LOG.info("" + productService.getAll());
 			products = new ArrayList<Product>();
 			for (Product product : productService.getAll()) {
 				products.add(product);
 			}
 			ExcelHelper.writeFile(fileName, sheetName, products);
-			ExcelHelper.readFile(fileName, sheetName, productService, codeTVAService, productCategoryTagService);
+			ExcelHelper.readProductFile(fileName, sheetName, productService, codeTVAService, productCategoryTagService);
 			LOG.info("" + productService.getAll());
 		} catch (Throwable e) {
 			LOG.error("[PRODUCTS:" + products + "]", e);

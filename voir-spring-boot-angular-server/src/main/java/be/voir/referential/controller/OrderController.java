@@ -29,7 +29,7 @@ import be.voir.referential.service.OrderProductService;
 import be.voir.referential.service.OrderService;
 import be.voir.referential.service.ProductService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:4201" })
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {

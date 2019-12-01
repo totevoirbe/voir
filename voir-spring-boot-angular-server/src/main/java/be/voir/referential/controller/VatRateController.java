@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import be.voir.referential.model.VatRate;
 import be.voir.referential.service.VatRateService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:4201" })
 @RestController
 @RequestMapping("/api/vat-rate")
 public class VatRateController {

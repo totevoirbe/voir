@@ -21,9 +21,11 @@ import org.slf4j.LoggerFactory;
 
 import be.voir.referential.model.Product;
 import be.voir.referential.model.ProductCategoryTag;
-import be.voir.referential.service.VatRateService;
+import be.voir.referential.model.ScreenMenu;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductService;
+import be.voir.referential.service.ScreenMenuService;
+import be.voir.referential.service.VatRateService;
 
 public class ExcelHelper {
 
@@ -103,7 +105,42 @@ public class ExcelHelper {
 		return workbook;
 	}
 
-	public static void readFile(String fileName, String SHEET_NAME, ProductService productService,
+	public static void readScreenMenuFile(String fileName, String SHEET_NAME, ScreenMenuService screenMenuService,
+			ProductService productService) throws IOException {
+		FileInputStream excelInputStream = null;
+		Workbook workbook = null;
+		try {
+			excelInputStream = new FileInputStream(new File(fileName));
+			workbook = new XSSFWorkbook(excelInputStream);
+			Sheet sheet = workbook.getSheet(SHEET_NAME);
+			Iterator<Row> rowItr = sheet.iterator();
+			if (rowItr.hasNext()) {
+				rowItr.next();
+			}
+			while (rowItr.hasNext()) {
+				Row row = rowItr.next();
+				if (row.getCell(0) != null && row.getCell(1) != null) {
+					ScreenMenu screenMenu = new ScreenMenu();
+					screenMenu.setPage(row.getCell(0).getStringCellValue());
+
+					String productCode = row.getCell(1).getStringCellValue();
+					Product product = productService.getByCode(productCode);
+					screenMenu.setProduct(product);
+					screenMenuService.save(screenMenu);
+					LOG.info("" + screenMenu);
+				}
+			}
+		} finally {
+			if (workbook != null) {
+				workbook.close();
+			}
+			if (excelInputStream != null) {
+				excelInputStream.close();
+			}
+		}
+	}
+
+	public static void readProductFile(String fileName, String SHEET_NAME, ProductService productService,
 			VatRateService codeTVAService, ProductCategoryTagService productCategoryTagService) throws IOException {
 		FileInputStream excelInputStream = null;
 		Workbook workbook = null;

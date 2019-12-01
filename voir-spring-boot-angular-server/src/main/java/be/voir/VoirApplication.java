@@ -18,6 +18,7 @@ import be.voir.referential.model.VatRate;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductCategoryTagService.ProductCategoryTagEnum;
 import be.voir.referential.service.ProductService;
+import be.voir.referential.service.ScreenMenuService;
 import be.voir.referential.service.VatRateService;
 import be.voir.referential.service.VatRateService.VatRateEnum;
 
@@ -28,8 +29,11 @@ public class VoirApplication {
 
 	private static final String version = "v0.01";
 
-	String fileName = "CATALOG-testReadFullOrignalandTestReadWriteFile.xlsx";
-	String sheetName = "CATALOG";
+	String productFileName = "CATALOG-testReadFullOrignalandTestReadWriteFile.xlsx";
+	String productSheetName = "CATALOG";
+
+	String screenMenuFileName = "CATALOG-screenMenu.xlsx";
+	String screenMenuSheetName = "SCREEN_MENU";
 
 	public static void main(String[] args) {
 		SpringApplication.run(VoirApplication.class, args);
@@ -74,8 +78,18 @@ public class VoirApplication {
 	CommandLineRunner initProduct(ProductService productService, ProductCategoryTagService productCategoryTagService,
 			VatRateService codeTVAService) {
 		return args -> {
-			ExcelHelper.readFile(fileName, sheetName, productService, codeTVAService, productCategoryTagService);
+			ExcelHelper.readProductFile(productFileName, productSheetName, productService, codeTVAService,
+					productCategoryTagService);
 			LOG.info("Number of products : " + IterableUtils.size(productService.getAll()));
+
+		};
+	}
+
+	@Bean
+	CommandLineRunner initScreenMenu(ScreenMenuService screenMenuService, ProductService productService) {
+		return args -> {
+			ExcelHelper.readScreenMenuFile(screenMenuFileName, screenMenuSheetName, screenMenuService, productService);
+			LOG.info("Number of products : " + IterableUtils.size(screenMenuService.getAll()));
 
 		};
 	}
