@@ -1,0 +1,31 @@
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>img</th>
+			<th>Sandwiches Classiques, Traditions</th>
+			<th class="normalCharPrice">
+				<pre> Normal </pre>
+			</th>
+			<th class="smallCharPrice">
+				<pre> Géant </pre>
+			</th>
+		</tr>
+	</thead>
+	<tbody *ngFor="let screenMenuItem of screenMenuItems; let rowNumber = index" >
+		<tr  *ngIf="screenMenuItem.product" class="product">
+			<td>{{rowNumber}}</td>
+			<td><img *ngIf="screenMenuItem.product.image" style="height: 8px"
+					src="../../assets/images/{{screenMenuItem.product.image}}.png"></td>
+			<td>{{screenMenuItem.product.name}}</td>
+			<td class="normalCharPrice">{{screenMenuItem.product.normal}}</td>
+			<td class="smallCharPrice">{{screenMenuItem.product.geant}}</td>
+		</tr>
+		<tr *ngIf="screenMenuItem.product && screenMenuItem.product.afficheDetail">
+			<td class="description" colspan="4">{{screenMenuItem.product.afficheDetail}}</td>
+		</tr>
+		<tr *ngIf="!screenMenuItem.product">
+			<td class="message_info" colspan="4">{{screenMenuItem.title}}</td>
+		</tr>
+	</tbody>
+</table>
