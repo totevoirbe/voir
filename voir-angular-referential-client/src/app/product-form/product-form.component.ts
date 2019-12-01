@@ -8,6 +8,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { ProductService } from 'src/product-service/product.service';
 import { Product } from 'src/product-service/model/product';
 import { ProductCategoryTag } from 'src/product-service/model/product-category-tag';
+import { VatRate } from 'src/product-service/model/vat-rate';
 
 @Component({
   selector: 'app-product-form',
@@ -17,6 +18,8 @@ import { ProductCategoryTag } from 'src/product-service/model/product-category-t
 export class ProductFormComponent implements OnInit {
 
   product: Product;
+  productCategoryTags: string;
+  vatRates: VatRate[];
   submitted = false;
 
   visible = true;
@@ -29,7 +32,7 @@ export class ProductFormComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private productService: ProductService
-  ) { }
+  ) { this.productCategoryTagAsoptions(); }
 
   ngOnInit(): void {
     this.getProduct();
@@ -42,21 +45,38 @@ export class ProductFormComponent implements OnInit {
 
   getProduct(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log('getProduct('+id+')');
+    console.log('getProduct(' + id + ')');
     this.productService.getProduct(id).subscribe(product => { this.product = product; });
   }
 
-  getProductCategoryTagAsoptions(): string {
-    console.log('getProductCategoryTagAsoptions()');
-    let productCategoryTagAsoptions = '';
-    this.productService.getProductCategoryTags().subscribe(productCategoryCats => {
-      productCategoryCats.forEach(productCategoryCat => {
-        if (productCategoryTagAsoptions.length > 0) { productCategoryTagAsoptions += ','; }
-        productCategoryTagAsoptions += productCategoryCat.code;
+
+  getRates(): VatRate[] {
+    console.log('getRates()');
+    if (!this.vatRates) {
+      this.vatRates = new Array();
+      this.productService.getVatRates().subscribe(vatRates => {
+        vatRates.forEach(vatRate => {
+          this.vatRates.push(vatRate);
+        });
       });
-    });
-    console.log('[productCategoryTagAsoptions]' + productCategoryTagAsoptions);
-    return productCategoryTagAsoptions;
+      console.log('[vatRates]' + this.vatRates);
+    }
+    return this.vatRates;
+  }
+
+  productCategoryTagAsoptions(): string {
+    console.log('getProductCategoryTagAsoptions()');
+    if (!this.productCategoryTags) {
+      this.productCategoryTags = '';
+      this.productService.getProductCategoryTags().subscribe(productCategoryTags => {
+        productCategoryTags.forEach(productCategoryCat => {
+          if (this.productCategoryTags.length > 0) { this.productCategoryTags += ','; }
+          this.productCategoryTags += productCategoryCat.code;
+        });
+      });
+      console.log('[productCategoryTagAsoptions]' + this.productCategoryTags);
+    }
+    return this.productCategoryTags;
   }
 
   goBack(): void {

@@ -55,8 +55,11 @@ export class ProductFormComponent implements OnInit {
   }
 
   add(event: MatChipInputEvent): void {
+
     const input = event.input;
     const value = event.value;
+
+    console.log('Add : ' + event.input + '/' + event.value);
 
     // Add our fruit
     if ((value || '').trim()) {
@@ -74,6 +77,7 @@ export class ProductFormComponent implements OnInit {
   }
 
   remove(productCategoryTag: ProductCategoryTag): void {
+    console.log('Remove : ' + productCategoryTag);
     const index = this.product.categoryTags.indexOf(productCategoryTag);
     if (index >= 0) {
       this.product.categoryTags.splice(index, 1);

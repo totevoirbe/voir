@@ -11,9 +11,9 @@
           </ng-template>
           <div class="row"><br></div>
           <div class="row form-group">
-            <label class="control-label col-sm-2" for="identifiant">Identifiant</label>
+            <label class="control-label col-sm-2" for="id">Identifiant</label>
             <div class="col-sm-6">
-              <input type=" text" class="form-control" id="identifiant" [(ngModel)]="product.id" name="identifiant"
+              <input type=" text" class="form-control" id="id" [(ngModel)]="product.id" name="identifiant"
                 required>
             </div>
           </div>
@@ -34,9 +34,9 @@
           <ng-template mat-tab-label>
             <mat-icon>money</mat-icon> Prix
           </ng-template>
-          <div class="row"><br></div>
+          <div class="row">{{productCategoryTags}}<br></div>
           <div class="row form-group">
-            <label class="control-label col-sm-2">{{productCategoryTagAsoptions}}</label>
+            <label class="control-label col-sm-2">Tags</label>
             <div class="col-sm-6">
               <mat-form-field class="chip-list">
                 <mat-chip-list #chipList aria-label="Product category tag selection">
@@ -51,6 +51,14 @@
               </mat-form-field>
             </div>
           </div>
+
+  <!-- <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+
           <div class="row form-group">
             <label class="control-label col-sm-2" for="vatRateOnPlace">TVA sur place</label>
             <div class="col-sm-6">
