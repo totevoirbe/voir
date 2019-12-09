@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { Product } from './data-layer/model/product';
 import { ProductDaoService } from './data-layer/product-dao.service';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { ProductDaoService } from './data-layer/product-dao.service';
 
 export class AppComponent {
 
-  index;
+  title = 'voir-angular-referential-client';
 
   images = [
     '../../assets/imgSalades/salade-cesar.jpg',
@@ -21,9 +22,9 @@ export class AppComponent {
     '../../assets/imgSalades/fresh-greek-salad-plastic-package-to-take-away-lunch-white-marble-background-fresh-greek-salad-plastic-package-to-153833376.jpg',
   ];
 
-  onChange(idx) {
-    console.log(idx);
-    this.index = idx;
-  }
+  constructor(
+    public dataService: DataService
+  ) { }
+
 
 }

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  font-family: 'Arial';
+  background-color: darkseagreen;
+  color: brown;
+  font-size: 40px;
+}
+
+.titleColumn {
+  flex: 80%;
+}
+
+.normalPriceColumn {
+  flex: 10%;
+  text-align: center;
+}
+
+.geantPriceColumn {
+  flex: 10%;
+  font-size: 70%;
+  text-align: center;
+}

@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "data-library": [
+        "dist/data-library"
+      ],
+      "data-library/*": [
+        "dist/data-library/*"
+      ]
+    }
   }
 }

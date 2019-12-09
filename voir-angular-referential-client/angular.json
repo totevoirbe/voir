@@ -132,6 +132,41 @@
           }
         }
       }
+    },
+    "data-library": {
+      "projectType": "library",
+      "root": "projects/data-library",
+      "sourceRoot": "projects/data-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/data-library/tsconfig.lib.json",
+            "project": "projects/data-library/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/data-library/src/test.ts",
+            "tsConfig": "projects/data-library/tsconfig.spec.json",
+            "karmaConfig": "projects/data-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/data-library/tsconfig.lib.json",
+              "projects/data-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "voir-angular-referential-client"

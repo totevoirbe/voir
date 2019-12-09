@@ -29,7 +29,7 @@ public class VoirApplication {
 
 	private static final String version = "v0.01";
 
-	String productFileName = "CATALOG-testReadFullOrignalandTestReadWriteFile.xlsx";
+	String productFileName = "CATALOG-products.xlsx";
 	String productSheetName = "CATALOG";
 
 	String screenMenuFileName = "CATALOG-screenMenu.xlsx";

@@ -1,18 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { Product } from '../data-layer/model/product';
-import { ProductDaoService } from '../data-layer/product-dao.service';
-import { ScreenMenuItem } from '../data-layer/model/screenMenuItem';
-import { ScreenMenuDaoService } from '../data-layer/screen-menu-dao.service';
+import { ActivatedRoute } from '@angular/router';
 
-export interface ProductElement {
-  position: number;
-  image: string;
-  label: string;
-  normal: number;
-  geant: number;
-  afficheDetail: string;
-}
 
 /**
  * @title Basic use of `<table mat-table>`
@@ -25,18 +13,27 @@ export interface ProductElement {
 })
 export class TarifOnScreenComponent implements OnInit {
 
-  screenMenuItems: ScreenMenuItem[];
+  page1: boolean;
+  page2: boolean;
+  page3: boolean;
+  page4: boolean;
 
   constructor(
-    private screenMenuDaoService: ScreenMenuDaoService
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
-    console.log('INIT product table');
-    this.screenMenuDaoService.getScreenMenuList()
-      .subscribe(screenMenuItems => {
-        this.screenMenuItems = screenMenuItems; console.log(this.screenMenuItems);
-      });
+    const pageSelector = this.route.snapshot.paramMap.get('pageSelector');
+    if ('P1' === pageSelector) {
+      this.page1 = true;
+    } else if ('P2' === pageSelector) {
+      this.page2 = true;
+    } else if ('P3' === pageSelector) {
+      this.page3 = true;
+    } else if ('P4' === pageSelector) {
+      this.page4 = true;
+    } else {
+      console.error('Illegal page selecture : [' + pageSelector + ']');
+    }
   }
 }
-

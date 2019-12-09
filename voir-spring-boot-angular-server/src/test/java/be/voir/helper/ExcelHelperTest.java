@@ -17,14 +17,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import be.voir.VoirApplication;
-import be.voir.referential.model.VatRate;
 import be.voir.referential.model.Product;
 import be.voir.referential.model.ProductCategoryTag;
-import be.voir.referential.service.VatRateService;
-import be.voir.referential.service.VatRateService.VatRateEnum;
+import be.voir.referential.model.VatRate;
 import be.voir.referential.service.ProductCategoryTagService;
 import be.voir.referential.service.ProductCategoryTagService.ProductCategoryTagEnum;
 import be.voir.referential.service.ProductService;
+import be.voir.referential.service.VatRateService;
+import be.voir.referential.service.VatRateService.VatRateEnum;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { VoirApplication.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -50,7 +50,7 @@ public class ExcelHelperTest {
 	@Test
 	public void testWriteAndReadFile() {
 
-		String fileName = "CATALOG-testWriteAndReadFile.xlsx";
+		String fileName = "CATALOG-products.xlsx";
 		String sheetName = "CATALOG";
 
 		List<Product> products = new ArrayList<Product>();
@@ -80,7 +80,8 @@ public class ExcelHelperTest {
 
 		try {
 			// read catalog original
-			ExcelHelper.readProductFile(CATALOGOriginal, sheetName, productService, codeTVAService, productCategoryTagService);
+			ExcelHelper.readProductFile(CATALOGOriginal, sheetName, productService, codeTVAService,
+					productCategoryTagService);
 			LOG.info("" + productService.getAll());
 			products = new ArrayList<Product>();
 			for (Product product : productService.getAll()) {

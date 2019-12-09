@@ -34,7 +34,6 @@ public class ProductController {
 	@GetMapping(value = { "", "/" })
 	public @NotNull Iterable<Product> getProducts() {
 		Iterable<Product> products = productService.getAll();
-		;
 		LOG.info("" + products);
 		return products;
 	}

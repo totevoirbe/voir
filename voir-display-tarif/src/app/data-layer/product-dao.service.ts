@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, observable, Subscriber } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -19,6 +19,8 @@ export class ProductDaoService {
   private productsUrl = this.datalayerCommonService.getBaseURL() + '/api/products';
   private productCategoryCatsUrl = this.datalayerCommonService.getBaseURL() + '/api/product-category-tag';
   private vatRatesUrl = this.datalayerCommonService.getBaseURL() + '/api/vat-rate';
+
+  products: Product[];
 
   constructor(
     private http: HttpClient,
@@ -44,12 +46,24 @@ export class ProductDaoService {
   }
 
   getProducts(): Observable<Product[]> {
-    console.log('getProducts()');
-    return this.http.get<Product[]>(this.productsUrl)
-      .pipe(
-        tap(_ => this.datalayerCommonService.log('fetched products')),
-        catchError(this.datalayerCommonService.handleError<Product[]>('getProducts', []))
-      );
+    if (this.products) {
+      console.log('return Products');
+      return new Observable(observer => {
+        observer.next(this.products);
+        console.log('am done');
+        observer.complete();
+      });
+    } else {
+      console.log('load Products');
+      return this.http.get<Product[]>(this.productsUrl)
+        .pipe(
+          tap(products => {
+            this.products = products;
+            this.datalayerCommonService.log('fetched products');
+          }),
+          catchError(this.datalayerCommonService.handleError<Product[]>('getProducts', []))
+        );
+    }
   }
 
   /** GET product by id. Will 404 if id not found */
@@ -59,6 +73,28 @@ export class ProductDaoService {
       tap(_ => this.datalayerCommonService.log(`fetched product id=${id}`)),
       catchError(this.datalayerCommonService.handleError<Product>(`getProduct id=${id}`))
     );
+  }
+
+  /** GET product by code. Will 404 if id not found */
+  getProductByCode(code: string): Observable<Product> {
+    return new Observable(observer => {
+      setTimeout(() => {
+        let productSelected: Product;
+        this.getProducts()
+          .subscribe(products => {
+            let index = 0;
+            do {
+              if (code.toUpperCase() === products[index].code.toUpperCase()) {
+                productSelected = products[index];
+              }
+              index++;
+            } while (!productSelected);
+            observer.next(productSelected);
+            observer.complete();
+            observer.error(this.datalayerCommonService.handleError<Product>('getProductByCode'));
+          });
+      }, 2000);
+    });
   }
 
   /** PUT: update the product on the server */
