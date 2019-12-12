@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SESSION_STORAGE, StorageService } from 'ngx-webstorage-service';
 
 import { AppComponent } from './app.component';
-import { LearnComponent } from './learn/learn.component';
-import { TextRollComponent } from './text-roll/text-roll.component';
 import { CarouselPhotoComponent } from './carousel-photo/carousel-photo.component';
 import { TarifOnScreenComponent } from './tarif-on-screen/tarif-on-screen.component';
 import { FilterPagePipe } from './tarif-on-screen/filter-page.pipe';
@@ -22,8 +22,6 @@ import { RowProducttitleOnScreenComponent } from './tarif-on-screen/row-productt
 @NgModule({
   declarations: [
     AppComponent,
-    LearnComponent,
-    TextRollComponent,
     CarouselPhotoComponent,
     TarifOnScreenComponent,
     FilterPagePipe,
@@ -35,12 +33,12 @@ import { RowProducttitleOnScreenComponent } from './tarif-on-screen/row-productt
     RowProducttitleOnScreenComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     FormsModule,
     ScreenRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
-  ],
+    HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

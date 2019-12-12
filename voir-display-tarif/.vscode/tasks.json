@@ -4,9 +4,8 @@
  * generated to facilitate usage.  To learn more about the tasks.json format, 
  * see: https://www.genuitec.com/go/about-tasks.json
  */
- 
 {
-	"version": "2.0.0",
+    "version": "2.0.0",
     "tasks": [
         {
             "type": "typescript",

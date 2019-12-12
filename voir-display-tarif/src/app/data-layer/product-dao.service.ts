@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, observable, Subscriber } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 import { Product } from './model/product';
 import { ProductCategoryTag } from './model/product-category-tag';
 import { VatRate } from './model/vat-rate';
 import { DatalayerCommonService } from './datalayer-common.service';
 import { PriceCategory } from './model/enumValues';
+import { LocalStorageService } from './local-storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
-
 
 export class ProductDaoService {
 
@@ -24,8 +24,13 @@ export class ProductDaoService {
 
   constructor(
     private http: HttpClient,
-    private datalayerCommonService: DatalayerCommonService
+    private datalayerCommonService: DatalayerCommonService,
+    private localStorageService: LocalStorageService
   ) { }
+
+  setProducts(products: Product[]) {
+    this.products = products;
+  }
 
   getVatRates(): Observable<VatRate[]> {
     console.log('getVatRates()');
@@ -57,10 +62,13 @@ export class ProductDaoService {
       console.log('load Products');
       return this.http.get<Product[]>(this.productsUrl)
         .pipe(
-          tap(products => {
-            this.products = products;
-            this.datalayerCommonService.log('fetched products');
-          }),
+          tap(
+            products => {
+              console.log('fetched products');
+              this.products = products;
+              this.localStorageService.pushProducts(products);
+              this.datalayerCommonService.log('fetched products');
+            }),
           catchError(this.datalayerCommonService.handleError<Product[]>('getProducts', []))
         );
     }

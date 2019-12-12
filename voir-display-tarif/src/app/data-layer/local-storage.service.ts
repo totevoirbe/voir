@@ -1,79 +1,32 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
+import { Product } from './model/product';
+
+const PRODUCT_LIST_KEY = 'producs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class LocalStorageService {
 
-  operationKeyPrefix = 'operation';
+  constructor(@Inject(LOCAL_STORAGE) private storage: StorageService) { }
 
-  constructor() { }
-
-  pushLocalStorage(operation, postError) {
-
-    localStorage.setItem(this.operationKeyPrefix + localStorage.length, JSON.stringify(operation));
-    this.submitLocalStorage(this.removeLocalStorage, postError);
-
+  pushProducts(products: Product[]) {
+    this.storage.set(PRODUCT_LIST_KEY, JSON.stringify(products));
   }
 
-  submitLocalStorage(postAction, postError) {
-
-    for (let index = 0; index < localStorage.length; index++) {
-
-      const key: string = localStorage.key(index);
-      if (key.startsWith(this.operationKeyPrefix)) {
-        const jsonMessage: string = localStorage.getItem(key);
-        guiDao.writeCashSale(jsonMessage, postAction, index, postError);
-      }
+  getProducts(): Product[] {
+    let products: Product[];
+    const productsValue = this.storage.get(PRODUCT_LIST_KEY);
+    if (productsValue) {
+      products = JSON.parse(productsValue);
     }
-  }
-
-  removeLocalStorage(posIndex) {
-
-    localStorage.removeItem('action' + posIndex);
-    localStorage.removeItem('sent' + posIndex);
-
-    var storedAction = null;
-    for (var index = localStorageQueue.maxSize - 1; index >= 5
-      && storedAction == null; index--) {
-      storedAction = localStorage.getItem('action' + index);
-      if (storedAction == null) {
-        localStorage.removeItem('sent' + index);
-        localStorageQueue.maxSize = index + 1;
-        localStorage.setItem('maxSize', localStorageQueue.maxSize);
-      }
-    }
-
+    return products;
   }
 
   clearLocalStorage() {
-    localStorage.clear();
-    localStorageQueue.maxSize = 5;
-    localStorage.setItem('maxSize', localStorageQueue.maxSize);
+    this.storage.clear();
   }
 
-  getAll() {
-
-    var actionList = new Array();
-
-    for (var i = 0; i < localStorageQueue.maxSize; i++) {
-      var action = localStorage.getItem('action' + i) + " / sent : "
-        + localStorage.getItem('sent' + i);
-      actionList.push(action);
-    }
-
-    return actionList;
-  }
-
-  listLocalStorageQueue() {
-
-    var actionList = this.getAll();
-    console.log("html.listLocalStorageQueue]action list size "
-      + actionList.length);
-
-    for (var i = 0; i < actionList.length; i++) {
-      var action = actionList[i];
-      console.log("local storage " + i + " : " + action);
-    }
-  }
 }

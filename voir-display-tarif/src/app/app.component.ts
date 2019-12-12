@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { Product } from './data-layer/model/product';
 import { ProductDaoService } from './data-layer/product-dao.service';
-import { DataService } from './data.service';
+import { LocalStorageService } from './data-layer/local-storage.service';
+import { Product } from './data-layer/model/product';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { DataService } from './data.service';
   encapsulation: ViewEncapsulation.None
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   title = 'voir-angular-referential-client';
 
@@ -23,8 +23,30 @@ export class AppComponent {
   ];
 
   constructor(
-    public dataService: DataService
+    private productDaoService: ProductDaoService,
+    private localStorageService: LocalStorageService
   ) { }
 
-
+  ngOnInit(): void {
+    this.productDaoService.getProducts()
+      .subscribe(
+        productList => {
+          console.log('Products on app init:');
+          console.log(productList);
+          if (!productList || productList.length <= 0) {
+            console.log('Products from local storage on app init:');
+            const products: Product[] = this.localStorageService.getProducts();
+            console.log(products);
+            this.productDaoService.setProducts(products);
+          }
+        },
+        err => {
+          console.log('Products read server error:' + err);
+          console.log('Products from local storage on app init:');
+          const products: Product[] = this.localStorageService.getProducts();
+          console.log(products);
+          this.productDaoService.setProducts(products);
+        }
+      );
+  }
 }

@@ -11,9 +11,11 @@ export class RowProducttitleOnScreenComponent implements OnInit {
   @Input() title: string;
   @Input() hasGeant: string;
 
+  displayGeant: boolean;
+
   constructor() { }
 
   ngOnInit() {
-    console.log(this.title);
+    this.displayGeant = this.hasGeant === 'true';
   }
 }

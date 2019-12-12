@@ -5,13 +5,8 @@
 .row {
   display: flex;
   font-family: 'Arial';
-  color: whitesmoke;
+  color: gold;
   font-size: 34px;
-}
-
-.numberColumn {
-  flex: 5%;
-  font-size: 70%;
 }
 
 .imageColumn {
@@ -19,7 +14,7 @@
 }
 
 .productColumn {
-  flex: 70%;
+  flex: 75%;
 }
 
 .normalPriceColumn {

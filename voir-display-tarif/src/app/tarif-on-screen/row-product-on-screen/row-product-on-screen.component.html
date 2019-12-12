@@ -1,10 +1,9 @@
-<div class="row">
-	<div class="numberColumn">{{product.id}}</div>
+<div class="row" *ngIf="product">
 	<div class="imageColumn"><img *ngIf="product.image" style="height: 24px"
 			src="../../assets/images/{{product.image}}.png">
 	</div>
 	<div class="productColumn">{{product.name}}</div>
 	<div class="normalPriceColumn">{{product.normal}}</div>
-	<div class="geantPriceColumn">{{product.geant}}</div>
+	<div *ngIf="product.geant" class="geantPriceColumn">{{product.geant}}</div>
 </div>
 <div *ngIf="product && product.afficheDetail" class="description">{{product.afficheDetail}}</div>
