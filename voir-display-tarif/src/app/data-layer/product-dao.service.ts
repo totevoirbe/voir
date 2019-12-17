@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Product } from './model/product';
 import { ProductCategoryTag } from './model/product-category-tag';
@@ -10,11 +10,14 @@ import { DatalayerCommonService } from './datalayer-common.service';
 import { PriceCategory } from './model/enumValues';
 import { LocalStorageService } from './local-storage.service';
 
+const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class ProductDaoService {
+
 
   private productsUrl = this.datalayerCommonService.getBaseURL() + '/api/products';
   private productCategoryCatsUrl = this.datalayerCommonService.getBaseURL() + '/api/product-category-tag';
@@ -60,7 +63,7 @@ export class ProductDaoService {
       });
     } else {
       console.log('load Products');
-      return this.http.get<Product[]>(this.productsUrl)
+      return this.http.get<Product[]>(this.productsUrl, { headers })
         .pipe(
           tap(
             products => {

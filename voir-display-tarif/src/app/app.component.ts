@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     this.productDaoService.getProducts()
       .subscribe(
         productList => {
-          console.log('Products on app init:');
+          console.log('Products from server on app init:');
           console.log(productList);
           if (!productList || productList.length <= 0) {
             console.log('Products from local storage on app init:');

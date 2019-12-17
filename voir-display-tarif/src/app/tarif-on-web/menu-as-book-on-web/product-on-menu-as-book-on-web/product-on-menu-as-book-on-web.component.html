@@ -1,5 +1,5 @@
 <div class="row" *ngIf="product">
-	<div class="imageColumn"><img *ngIf="product.image" style="height: 24px"
+	<div class="imageColumn"><img *ngIf="product.image" style="height: 12px"
 			src="../../assets/images/product-specificity/{{product.image}}.png">
 	</div>
 	<div class="productColumn">{{product.name}}</div>
@@ -9,3 +9,4 @@
 <div class="row" *ngIf="product && product.afficheDetail">
 	<div class="description">{{product.afficheDetail}}</div>
 </div>
+<mat-divider></mat-divider>

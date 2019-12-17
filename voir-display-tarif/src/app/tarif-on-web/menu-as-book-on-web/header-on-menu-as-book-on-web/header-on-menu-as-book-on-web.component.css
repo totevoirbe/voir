@@ -5,17 +5,13 @@
 .row {
   display: flex;
   font-family: 'Arial';
-  color: gold;
-  font-size: 34px;
-  background-color: black;
+  background-color: antiquewhite;
+  color: brown;
+  font-size: 12px;
 }
 
-.imageColumn {
-  flex: 5%;
-}
-
-.productColumn {
-  flex: 75%;
+.titleColumn {
+  flex: 80%;
 }
 
 .normalPriceColumn {
@@ -27,10 +23,4 @@
   flex: 10%;
   font-size: 70%;
   text-align: center;
-}
-
-.description {
-  font-family: 'Arial';
-  font-size: 25px;
-  color: cadetblue;
 }

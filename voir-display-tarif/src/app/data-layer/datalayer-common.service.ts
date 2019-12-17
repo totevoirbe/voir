@@ -8,8 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DatalayerCommonService {
 
-  private baseURL = 'http://localhost:8080';
-  //  private baseURL = 'http://192.168.231.132:8080';
+  // private baseURL = 'http://localhost:8080';
+  private baseURL = 'http://192.168.231.136:8080';
 
 
   private httpOptions = {

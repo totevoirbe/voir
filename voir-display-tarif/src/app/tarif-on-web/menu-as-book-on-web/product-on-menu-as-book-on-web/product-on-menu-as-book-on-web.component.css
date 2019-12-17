@@ -5,9 +5,8 @@
 .row {
   display: flex;
   font-family: 'Arial';
-  color: gold;
-  font-size: 34px;
-  background-color: black;
+  color: darksalmon;
+  font-size: 12px;
 }
 
 .imageColumn {
@@ -31,6 +30,5 @@
 
 .description {
   font-family: 'Arial';
-  font-size: 25px;
   color: cadetblue;
 }
