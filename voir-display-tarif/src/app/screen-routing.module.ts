@@ -7,7 +7,7 @@ import { Page4OnScreenComponent } from './tarif-on-screen/page4-on-screen/page4-
 import { MenuAsBookOnWebComponent } from './tarif-on-web/menu-as-book-on-web/menu-as-book-on-web.component';
 import { TarifOnWebComponent } from './tarif-on-web/tarif-on-web.component';
 
-const routes: Routes = [
+const screenRoutes: Routes = [
   // { path: 'screen/:pageSelector', component: TarifOnScreenComponent },
   { path: 'screen/P1', component: Page1OnScreenComponent },
   { path: 'screen/P2', component: Page2OnScreenComponent },
@@ -22,7 +22,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(
+      screenRoutes,
+      { enableTracing: true }
+    ),
+  ],
   exports: [RouterModule]
 })
 

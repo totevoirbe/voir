@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SESSION_STORAGE, StorageService } from 'ngx-webstorage-service';
@@ -11,11 +11,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { ScreenRoutingModule } from './screen-routing.module';
+
 import { AppComponent } from './app.component';
 import { CarouselPhotoComponent } from './carousel-photo/carousel-photo.component';
 import { TarifOnScreenComponent } from './tarif-on-screen/tarif-on-screen.component';
-import { FilterPagePipe } from './tarif-on-screen/filter-page.pipe';
-import { ScreenRoutingModule } from './screen-routing.module';
 import { RowProductOnScreenComponent } from './tarif-on-screen/row-product-on-screen/row-product-on-screen.component';
 import { Page1OnScreenComponent } from './tarif-on-screen/page1-on-screen/page1-on-screen.component';
 import { Page2OnScreenComponent } from './tarif-on-screen/page2-on-screen/page2-on-screen.component';
@@ -27,13 +27,13 @@ import { MenuAsBookOnWebComponent } from './tarif-on-web/menu-as-book-on-web/men
 import { ProductOnMenuAsBookOnWebComponent } from './tarif-on-web/menu-as-book-on-web/product-on-menu-as-book-on-web/product-on-menu-as-book-on-web.component';
 import { HeaderOnMenuAsBookOnWebComponent } from './tarif-on-web/menu-as-book-on-web/header-on-menu-as-book-on-web/header-on-menu-as-book-on-web.component';
 import { HomeTarifOnWebComponent } from './tarif-on-web/home-tarif-on-web/home-tarif-on-web.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselPhotoComponent,
     TarifOnScreenComponent,
-    FilterPagePipe,
     RowProductOnScreenComponent,
     Page1OnScreenComponent,
     Page2OnScreenComponent,
@@ -53,14 +53,14 @@ import { HomeTarifOnWebComponent } from './tarif-on-web/home-tarif-on-web/home-t
     RouterModule,
     BrowserModule,
     FormsModule,
-    ScreenRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatTabsModule,
     MatDividerModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ScreenRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/voir-display-tarif/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

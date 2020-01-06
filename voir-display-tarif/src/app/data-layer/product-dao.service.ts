@@ -8,7 +8,6 @@ import { ProductCategoryTag } from './model/product-category-tag';
 import { VatRate } from './model/vat-rate';
 import { DatalayerCommonService } from './datalayer-common.service';
 import { PriceCategory } from './model/enumValues';
-import { LocalStorageService } from './local-storage.service';
 
 const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
@@ -18,21 +17,21 @@ const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
 export class ProductDaoService {
 
-
   private productsUrl = this.datalayerCommonService.getBaseURL() + '/api/products';
   private productCategoryCatsUrl = this.datalayerCommonService.getBaseURL() + '/api/product-category-tag';
   private vatRatesUrl = this.datalayerCommonService.getBaseURL() + '/api/vat-rate';
 
-  products: Product[];
+  productsCache: Product[];
+
+  private _DEFAULT_PRODUCT_JSON_URL = '../../assets/default-products/products.json';
 
   constructor(
     private http: HttpClient,
-    private datalayerCommonService: DatalayerCommonService,
-    private localStorageService: LocalStorageService
+    private datalayerCommonService: DatalayerCommonService
   ) { }
 
   setProducts(products: Product[]) {
-    this.products = products;
+    this.productsCache = products;
   }
 
   getVatRates(): Observable<VatRate[]> {
@@ -53,23 +52,32 @@ export class ProductDaoService {
       );
   }
 
+  getDefaultProductList(): Observable<Product[]> {
+    console.log('getProducts()');
+    return this.http.get<Product[]>(this._DEFAULT_PRODUCT_JSON_URL)
+      .pipe(
+        tap(_ => this.datalayerCommonService.log('fetched products')),
+        catchError(this.datalayerCommonService.handleError<Product[]>('getProducts', []))
+      );
+  }
+
   getProducts(): Observable<Product[]> {
-    if (this.products) {
+    if (this.productsCache) {
       console.log('return Products');
       return new Observable(observer => {
-        observer.next(this.products);
+        observer.next(this.productsCache);
         console.log('am done');
         observer.complete();
       });
     } else {
+      console.log('init with default product list');
       console.log('load Products');
       return this.http.get<Product[]>(this.productsUrl, { headers })
         .pipe(
           tap(
             products => {
               console.log('fetched products');
-              this.products = products;
-              this.localStorageService.pushProducts(products);
+              this.productsCache = products;
               this.datalayerCommonService.log('fetched products');
             }),
           catchError(this.datalayerCommonService.handleError<Product[]>('getProducts', []))
