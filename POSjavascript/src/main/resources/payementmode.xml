@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<root>
+	<payments index="3">
+		<payment id="10">
+			<code>JETE</code>
+			<description>Jeté</description>
+			<htmlKeyLabel />
+			<needSomeValue>false</needSomeValue>
+			<maxQuantity>100</maxQuantity>
+			<maxTotalAmount>20000</maxTotalAmount>
+			<beAlone>true</beAlone>
+			<paymentMethodComputation>TRASH</paymentMethodComputation>
+		</payment>
+		<payment id="20">
+			<code>GRATUIT</code>
+			<description>Gratuit</description>
+			<htmlKeyLabel />
+			<needSomeValue>false</needSomeValue>
+			<maxQuantity>-100</maxQuantity>
+			<maxTotalAmount>5000</maxTotalAmount>
+			<beAlone>false</beAlone>
+			<paymentMethodComputation>FREE</paymentMethodComputation>
+		</payment>
+		<payment id="30">
+			<code>IMPAYE</code>
+			<description>Impayé</description>
+			<htmlKeyLabel />
+			<needSomeValue>false</needSomeValue>
+			<maxQuantity>-100</maxQuantity>
+			<maxTotalAmount>5000</maxTotalAmount>
+			<beAlone>false</beAlone>
+			<paymentMethodComputation>LOST</paymentMethodComputation>
+		</payment>
+		<payment id="40">
+			<code>FIDELITE</code>
+			<description>Carte de fidélité</description>
+			<htmlKeyLabel />
+			<needSomeValue>true</needSomeValue>
+			<maxQuantity>-100</maxQuantity>
+			<maxTotalAmount>1000</maxTotalAmount>
+			<beAlone>false</beAlone>
+			<paymentMethodComputation>FREE</paymentMethodComputation>
+		</payment>
+		<payment id="50">
+			<code>T_RESTAURANT</code>
+			<description>Cheque repas</description>
+			<htmlKeyLabel />
+			<needSomeValue>true</needSomeValue>
+			<maxQuantity>-100</maxQuantity>
+			<maxTotalAmount>5000</maxTotalAmount>
+			<beAlone>false</beAlone>
+			<paymentMethodComputation>ADD</paymentMethodComputation>
+		</payment>
+		<payment id="60">
+			<code>CASH</code>
+			<description>Cash</description>
+			<htmlKeyLabel />
+			<needSomeValue>false</needSomeValue>
+			<maxQuantity>-100</maxQuantity>
+			<maxTotalAmount>11000</maxTotalAmount>
+			<beAlone>false</beAlone>
+			<paymentMethodComputation>ADD</paymentMethodComputation>
+		</payment>
+		<payment id="70">
+			<code>FACTURE</code>
+			<description>Facture</description>
+			<htmlKeyLabel />
+			<needSomeValue>false</needSomeValue>
+			<maxQuantity>-100</maxQuantity>
+			<maxTotalAmount>10000</maxTotalAmount>
+			<beAlone>true</beAlone>
+			<paymentMethodComputation>ADD</paymentMethodComputation>
+		</payment>
+	</payments>
+</root>

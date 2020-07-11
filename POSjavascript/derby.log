@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Sat Jul 04 17:50:43 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0173-1a85-ce30-0000035df3b0 
+on database directory /home/tote/Desktop/derbyTest  with class loader sun.misc.Launcher$AppClassLoader@232204a1 
+Loaded from file:/home/tote/.m2/repository/org/apache/derby/derby/10.8.2.2/derby-10.8.2.2.jar
+java.vendor=Private Build
+java.runtime.version=1.8.0_252-8u252-b09-1~18.04-b09
+user.dir=/home/tote/Desktop/jee-workspace/POSjavascript
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

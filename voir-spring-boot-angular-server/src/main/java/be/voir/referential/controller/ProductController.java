@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import be.voir.referential.model.Product;
 import be.voir.referential.service.ProductService;
 
-@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:4201" })
+@CrossOrigin(origins = { "http://localhost:4200", "http://localhost:4201", "http://192.168.231.137:4201" })
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {

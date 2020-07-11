@@ -56,7 +56,7 @@ public class ExcelHelperTest {
 		// INJECTION
 		ExcelHelper.injectDAO(new CodeTVADAO(), new ProductCategoryTagDAO());
 
-		String CATALOGOriginal = "/home/tote/git/repository2/voirBackend/src/main/resources/POSproducts20180402.xlsx";
+		String CATALOGOriginal = "/home/tote/git/repository2/voirBackend/src/main/resources/CATALOG-products.xlsx";
 		String fileName = "CATALOG-testReadFullOrignalandTestReadWriteFile.xlsx";
 		String sheetName = "CATALOG";
 

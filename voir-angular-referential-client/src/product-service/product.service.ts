@@ -23,7 +23,7 @@ export enum PriceCategory {
 export class ProductService {
 
   private baseURL = 'http://localhost:8080';
-//  private baseURL = 'http://192.168.231.132:8080';
+//  private baseURL = 'http://192.168.231.137:8080';
 
   private productsUrl = this.baseURL + '/api/products';
   private productCategoryCatsUrl = this.baseURL + '/api/product-category-tag';

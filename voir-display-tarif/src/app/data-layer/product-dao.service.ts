@@ -23,7 +23,7 @@ export class ProductDaoService {
 
   productsCache: Product[];
 
-  private _DEFAULT_PRODUCT_JSON_URL = '../../assets/default-products/products.json';
+  private _DEFAULT_PRODUCT_JSON_URL = '../../assets/default-products/products2.json';
 
   constructor(
     private http: HttpClient,

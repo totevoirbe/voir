@@ -39,6 +39,19 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.localStorageStatus = this.localStorageService.isStorageServiceValid();
+    this.selectProduct();
+  }
+
+  selectDefaultProduct(): void {
+    this.productDaoService.getDefaultProductList().subscribe(defaultProducts => {
+      console.log('get Default products:');
+      console.log(defaultProducts);
+      this.productDaoService.setProducts(defaultProducts);
+      this.dataOrigin = DATA_ORIGIN.Default;
+    });
+  }
+
+  selectProduct(): void {
     this.productDaoService.getProducts()
       .subscribe(
         productList => {
@@ -53,12 +66,7 @@ export class AppComponent implements OnInit {
               this.productDaoService.setProducts(products);
               this.dataOrigin = DATA_ORIGIN.Local;
             } else {
-              this.productDaoService.getDefaultProductList().subscribe(defaultProducts => {
-                console.log('get Default products:');
-                console.log(defaultProducts);
-                this.productDaoService.setProducts(defaultProducts);
-                this.dataOrigin = DATA_ORIGIN.Default;
-              });
+              this.selectDefaultProduct();
             }
           }
         },

@@ -1,0 +1,33 @@
+[POS ADMIN GUI MAIN]Heap utilization 8% / max use 8% - Used[9], Free[109], Total[119], Max[1764]
+[0/POS_EMBEDDED]
+[START Select persist unit]Heap utilization 18% / max use 18% - Used[21], Free[97], Total[119], Max[1764]
+Logging initialized @4366ms to org.eclipse.jetty.util.log.Slf4jLog
+Persistence type : JDBC
+Db connection spec : /home/tote/Desktop/jee-workspace/Servers/Tomcat v9.0 Server at localhost-config/server.xml
+Server [globalNamingResources=GlobalNamingResources [resources=[Resource [auth=Container, driverClassName=org.apache.derby.jdbc.EmbeddedDriver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/posEmbedded, password=root, type=javax.sql.DataSource, url=jdbc:derby:/home/tote/Desktop/derbyTest;create=false, username=root], Resource [auth=Container, driverClassName=org.apache.derby.jdbc.EmbeddedDriver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/createPosEmbedded, password=root, type=javax.sql.DataSource, url=jdbc:derby:/home/tote/Desktop/derbyTest;create=true, username=root], Resource [auth=Container, driverClassName=com.mysql.cj.jdbc.Driver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/posRecette, password=81b3020db331c0a9ba051ac0a2a9fdd0, type=javax.sql.DataSource, url=jdbc:mysql://37.59.98.85:3306/posRecette?autoReconnect=true&useSSL=false&serverTimezone=UTC, username=posRecetteUser], Resource [auth=Container, driverClassName=com.mysql.cj.jdbc.Driver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/posProd, password=81b3020db331c0a9ba051ac0a2a9fdd0, type=javax.sql.DataSource, url=jdbc:mysql://37.59.98.85:3306/posRecette?autoReconnect=true&useSSL=false&serverTimezone=UTC, username=posProdUser], Resource [auth=Container, driverClassName=null, maxIdle=null, maxTotal=null, maxWaitMillis=null, name=UserDatabase, password=null, type=org.apache.catalina.UserDatabase, url=null, username=null]]]]
+[END Select persist unit]Heap utilization 21% / max use 21% - Used[25], Free[93], Total[119], Max[1764]
+[0/POS_EMBEDDED]
+[START Select persist unit]Heap utilization 21% / max use 21% - Used[25], Free[93], Total[119], Max[1764]
+[END Select persist unit]Heap utilization 21% / max use 21% - Used[25], Free[93], Total[119], Max[1764]
+[START GEN affiche body]Heap utilization 21% / max use 21% - Used[25], Free[93], Total[119], Max[1764]
+Write Affiche Catalog.
+Persistence : posEmbedded-JDBC
+HHH000204: Processing PersistenceUnitInfo [
+	name: posEmbedded
+	...]
+HHH000412: Hibernate Core {5.2.6.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+HHH10001005: using driver [null] at URL [jdbc:derby:/home/tote/Desktop/derbyTest;create=false;create=false]
+HHH10001001: Connection properties: {user=root, password=****, autocommit=false}
+HHH10001003: Autocommit mode: false
+HHH000115: Hibernate connection pool size: 20 (min=1)
+HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39cfcc73] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH000397: Using ASTQueryTranslatorFactory
+clubparma is null
+gartomatade is null
+panclubparma is null
+Write Affiche Catalog DONE.
+[END GEN affiche body]Heap utilization 20% / max use 21% - Used[60], Free[233], Total[294], Max[1764]
