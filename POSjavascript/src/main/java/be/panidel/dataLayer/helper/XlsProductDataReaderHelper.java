@@ -74,10 +74,10 @@ public class XlsProductDataReaderHelper {
 			String htmlKeyLabel = parseXlsCellAsString("htmlKeyLabel", row, headers);
 			String type = parseXlsCellAsString("type", row, headers);
 			String image = parseXlsCellAsString("image", row, headers);
-			String vatAway = "" + parseCell(row.getCell(headers.indexOf("codeTva")));
-			String vatOnplace = "" + parseCell(row.getCell(headers.indexOf("codeTva")));
-//			String vatAway = "" + parseCell(row.getCell(headers.indexOf("vatAway")));
-//			String vatOnplace = "" + parseCell(row.getCell(headers.indexOf("vatOnPlace")));
+//			String vatAway = "" + parseCell(row.getCell(headers.indexOf("codeTva")));
+//			String vatOnplace = "" + parseCell(row.getCell(headers.indexOf("codeTva")));
+			String vatAway = parseCell(row.getCell(headers.indexOf("vatAway"))).toString().substring(0, 1);
+			String vatOnplace = parseCell(row.getCell(headers.indexOf("vatOnPlace"))).toString().substring(0, 1);
 			BigDecimal mini = parseXlsCellAsBigDecimal("mini", row, headers);
 			BigDecimal normal = parseXlsCellAsBigDecimal("normal", row, headers);
 			BigDecimal geant = parseXlsCellAsBigDecimal("geant", row, headers);

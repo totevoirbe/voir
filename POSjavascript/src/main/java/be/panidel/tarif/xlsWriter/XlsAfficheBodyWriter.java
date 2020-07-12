@@ -4,15 +4,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.math.BigDecimal;
 import java.util.Collection;
 
 import javax.xml.bind.JAXBException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +22,7 @@ import be.panidel.dataLayer.model.ProductModel;
 import be.panidel.tarif.exception.IllegalTypeException;
 import be.panidel.tarif.model.PageAfficheDef;
 import be.panidel.tarif.model.RootAfficheDef;
+import be.panidel.tarif.xlsWriter.XslAfficheBodyA3.ColDef;
 
 public class XlsAfficheBodyWriter {
 
@@ -61,37 +59,35 @@ public class XlsAfficheBodyWriter {
 
 		XSSFWorkbook xssfWorkbook = new XSSFWorkbook();
 
-		Sheet sheet = xssfWorkbook.createSheet("products");
-		int rowIndex = 0;
+//		Sheet sheet = xssfWorkbook.createSheet("products");
+//		int rowIndex = 0;
 
 		for (PageAfficheDef pageAfficheDef : rootAfficheDef.getPage()) {
 
-//			Sheet sheet = xssfWorkbook.createSheet(pageAfficheDef.getName());
-//			int rowIndex = 0;
+			Sheet sheet = xssfWorkbook.createSheet(pageAfficheDef.getName());
+			int rowIndex = 0;
 
-			XlsAfficheBodyWriterHelper.setColumnsWith(sheet);
+			sheet.setColumnWidth(ColDef.MARGE.getColIndex(), ColDef.MARGE.getColumnWidth());
+			sheet.setColumnWidth(ColDef.LOGO.getColIndex(), ColDef.LOGO.getColumnWidth());
+			sheet.setColumnWidth(ColDef.LABEL.getColIndex(), ColDef.LABEL.getColumnWidth());
+			sheet.setColumnWidth(ColDef.PRICE_1.getColIndex(), ColDef.PRICE_1.getColumnWidth());
+			sheet.setColumnWidth(ColDef.PRICE_2.getColIndex(), ColDef.PRICE_2.getColumnWidth());
 
-			Row rowHeader = XlsAfficheBodyWriterHelper.createRow(sheet, rowIndex++,
-					XlsAfficheBodyWriterHelper.HEADER_ROW_HEIGHT_IN_POINTS);
-			XlsAfficheBodyWriterHelper.setHeader(xssfWorkbook, rowHeader);
+			XlsAfficheBodyWriterHelper.createHeaderRow(xssfWorkbook, sheet, rowIndex++);
 
 			for (String productCode : pageAfficheDef.getTr()) {
 
 				if (productCode.trim().isEmpty()) {
 
 					// add empty row
-					Row row = XlsAfficheBodyWriterHelper.createRow(sheet, rowIndex++,
-							XlsAfficheBodyWriterHelper.EMPTY_ROW_HEIGHT_IN_POINTS);
-					XlsAfficheBodyWriterHelper.setEmptyRow(xssfWorkbook, sheet, row);
+					XlsAfficheBodyWriterHelper.createEmptyRow(xssfWorkbook, sheet, rowIndex++);
 
 					continue;
 
 				} else if (productCode.startsWith("[")) {
 
 					// add title row
-					Row rowTitle = XlsAfficheBodyWriterHelper.createRow(sheet, rowIndex++,
-							XlsAfficheBodyWriterHelper.TITLE_ROW_HEIGHT_IN_POINTS);
-					XlsAfficheBodyWriterHelper.setTitle(xssfWorkbook, sheet, rowTitle, productCode);
+					XlsAfficheBodyWriterHelper.createTitleRow(xssfWorkbook, sheet, rowIndex++, productCode);
 					continue;
 
 				}
@@ -105,47 +101,14 @@ public class XlsAfficheBodyWriter {
 				} else {
 
 					// add product row
-					Row rowProduct = XlsAfficheBodyWriterHelper.createRow(sheet, rowIndex++,
-							XlsAfficheBodyWriterHelper.PRODUCT_ROW_HEIGHT_IN_POINTS);
-
-					XlsAfficheBodyWriterHelper.setMarge(xssfWorkbook, rowProduct);
-
-					XlsAfficheBodyWriterHelper.setLogo(xssfWorkbook, sheet, rowProduct, productModel.getImage());
-
-					XlsAfficheBodyWriterHelper.setLabelCell(xssfWorkbook, rowProduct, productModel.getName());
-
-					if (productModel.getGeant() == null || productModel.getGeant().compareTo(BigDecimal.ZERO) <= 0) {
-						XlsAfficheBodyWriterHelper.setPrice1Cell(xssfWorkbook, rowProduct, null);
-
-						try {
-							XlsAfficheBodyWriterHelper.setPrice2Cell(xssfWorkbook, rowProduct,
-									productModel.getNormal());
-						} catch (Exception e) {
-							LOG.error("", e);
-						}
-
-						sheet.addMergedRegion(new CellRangeAddress(rowProduct.getRowNum(), rowProduct.getRowNum(),
-								XlsAfficheBodyWriterHelper.LABEL_COL_INDEX,
-								XlsAfficheBodyWriterHelper.PRICE_1_COL_INDEX));
-					} else {
-						XlsAfficheBodyWriterHelper.setPrice1Cell(xssfWorkbook, rowProduct, productModel.getNormal());
-						XlsAfficheBodyWriterHelper.setPrice2Cell(xssfWorkbook, rowProduct, productModel.getGeant());
-					}
+					XlsAfficheBodyWriterHelper.createProductRow(xssfWorkbook, sheet, rowIndex++, productModel);
 
 					if (productModel.getAfficheDetail() != null && productModel.getAfficheDetail().trim().length() > 0
 							&& (!"NULL".equals(productModel.getAfficheDetail().trim().toUpperCase()))) {
 
 						// add detail row
-						Row rowDescription = XlsAfficheBodyWriterHelper.createRow(sheet, rowIndex++,
-								XlsAfficheBodyWriterHelper.DESCRIPTION_ROW_HEIGHT_IN_POINTS);
-
-						XlsAfficheBodyWriterHelper.setMarge(xssfWorkbook, rowDescription);
-
-						XlsAfficheBodyWriterHelper.setLogo(xssfWorkbook, sheet, rowDescription, null);
-
-						XlsAfficheBodyWriterHelper.setDescriptionCell(xssfWorkbook, sheet, rowDescription,
+						XlsAfficheBodyWriterHelper.createDescriptionRow(xssfWorkbook, sheet, rowIndex++,
 								productModel.getAfficheDetail());
-						rowDescription.setHeightInPoints(0);
 
 					}
 				}

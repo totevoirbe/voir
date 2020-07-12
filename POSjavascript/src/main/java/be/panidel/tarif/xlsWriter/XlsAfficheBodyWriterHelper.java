@@ -24,224 +24,103 @@ import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFDataFormat;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class XlsAfficheBodyWriterHelper {
+import be.panidel.dataLayer.model.ProductModel;
 
-	enum ItalicFont {
+public class XlsAfficheBodyWriterHelper implements XslAfficheBodyA3 {
 
-		ITALIC_FONT(true), NOT_ITALIC_FONT(false);
+	private final static Logger LOG = LoggerFactory.getLogger(XlsAfficheBodyWriterHelper.class);
 
-		private boolean value;
-
-		ItalicFont(boolean value) {
-			this.value = value;
-		}
-
-		public boolean istrue() {
-			return value;
-		}
-	};
-
-	private final static String GENERIC_FONT_NAME = "Times New Roman";
-	private final static String DESCRIPTION_FONT_NAME = "Times New Roman";
-
-	public static final int MARGE_COL_INDEX = 0;
-
-	public static final int LOGO_COL_INDEX = 1;
-
-	public static final int LABEL_COL_INDEX = 2;
-	public static final double LABEL_FONT_HEIGHT = 30;
-
-	public static final int TITLE_COL_INDEX = 2;
-	public static final double TITLE_FONT_HEIGHT = 44;
-	public static final float TITLE_ROW_HEIGHT_IN_POINTS = new Float(TITLE_FONT_HEIGHT) + 5;
-	public static final XSSFColor TITLE_COLOR = new XSSFColor(new Color(127, 127, 127));
-
-	public static final int PRICE_1_COL_INDEX = 3;
-	public static final double PRICE_1_FONT_HEIGHT = 20;
-
-	public static final int PRICE_2_COL_INDEX = 4;
-	public static final double PRICE_2_FONT_HEIGHT = 18;
-
-	public static final int DESCRIPTION_COL_INDEX = 2;
-	public static final double DESCRIPTION_FONT_HEIGHT = 18;
-	public static final float DESCRIPTION_ROW_HEIGHT_IN_POINTS = new Float(DESCRIPTION_FONT_HEIGHT) + 5;
-	public static final XSSFColor DESCRPTION_COLOR = new XSSFColor(new Color(0, 0, 0));
-	public static final float DESCRIPTION_ROW_HEIGHT_IN_POINTS_BYLINE = new Float(DESCRIPTION_FONT_HEIGHT) + 5;
-
-	public static final float HEADER_ROW_HEIGHT_IN_POINTS = 26;
-	public static final XSSFColor HEADER_COLOR = new XSSFColor(new Color(127, 127, 127));
-
-	public static final float PRODUCT_ROW_HEIGHT_IN_POINTS = new Float(LABEL_FONT_HEIGHT) + 5;
-	public static final XSSFColor PRODUCT_COLOR = new XSSFColor(new Color(56, 87, 35));
-
-	public static final float EMPTY_ROW_HEIGHT_IN_POINTS = new Float(PRODUCT_ROW_HEIGHT_IN_POINTS) + 5;
-
-	public static void setColumnsWith(Sheet sheet) {
-		sheet.setColumnWidth(MARGE_COL_INDEX, 1500 * 1);
-		sheet.setColumnWidth(LOGO_COL_INDEX, 1500 * 1);
-		sheet.setColumnWidth(LABEL_COL_INDEX, 20000 * 1);
-		sheet.setColumnWidth(PRICE_1_COL_INDEX, 5000 * 1);
-		sheet.setColumnWidth(PRICE_2_COL_INDEX, 4000 * 1);
-	}
-
-	public static Row createRow(Sheet sheet, int rowIndex, float rowHeightInPoints) {
+	public static void createHeaderRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex) throws IOException {
 
 		Row row = sheet.createRow(rowIndex);
-		row.setHeightInPoints(rowHeightInPoints);
+		row.setHeightInPoints(RowDef.HEADER.getHeight());
 
-		return row;
-	}
-
-	public static void setHeader(XSSFWorkbook xssfWorkbook, Row row) throws IOException {
-
-		XlsAfficheBodyWriterHelper.setMarge(xssfWorkbook, row);
+		formatCell(xssfWorkbook, row, ColDef.MARGE);
 		XlsAfficheBodyWriterHelper.setLogo(xssfWorkbook, null, row, null);
-		XlsAfficheBodyWriterHelper.setLabelCell(xssfWorkbook, row, "");
-
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, 30.0f, ItalicFont.NOT_ITALIC_FONT, HEADER_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
-		Cell cell = row.createCell(PRICE_1_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-		cell.setCellValue("normal");
-
-		xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, 25.0f, ItalicFont.ITALIC_FONT, HEADER_COLOR);
-		xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
-		cell = row.createCell(PRICE_2_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-		cell.setCellValue("géant");
+		formatCell(xssfWorkbook, row, ColDef.LABEL).setCellValue("");
+		formatCell(xssfWorkbook, row, ColDef.PRICE_1_HEADER).setCellValue("normal");
+		formatCell(xssfWorkbook, row, ColDef.PRICE_2_HEADER).setCellValue("géant");
 
 	}
 
-	public static void setTitle(XSSFWorkbook xssfWorkbook, Sheet sheet, Row row, String value) {
+	public static void createProductRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex, ProductModel productModel)
+			throws IOException {
 
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, TITLE_FONT_HEIGHT, ItalicFont.ITALIC_FONT,
-				TITLE_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
+		Row row = sheet.createRow(rowIndex);
+		row.setHeightInPoints(RowDef.PRODUCT.getHeight());
 
-		xssfCellStyle.setWrapText(true);
+		formatCell(xssfWorkbook, row, ColDef.MARGE);
+		setLogo(xssfWorkbook, sheet, row, productModel.getImage());
+		formatCell(xssfWorkbook, row, ColDef.LABEL).setCellValue(productModel.getName());
 
-		setBorder(xssfCellStyle);
+		if (productModel.getGeant() == null || productModel.getGeant().compareTo(BigDecimal.ZERO) <= 0) {
+			setPriceCell(xssfWorkbook, row, ColDef.PRICE_1, null);
+			try {
+				setPriceCell(xssfWorkbook, row, ColDef.PRICE_2, productModel.getNormal());
+			} catch (Exception e) {
+				LOG.error("", e);
+			}
+			sheet.addMergedRegion(
+					new CellRangeAddress(rowIndex, rowIndex, ColDef.LABEL.getColIndex(), ColDef.PRICE_1.getColIndex()));
+		} else {
+			setPriceCell(xssfWorkbook, row, ColDef.PRICE_1, productModel.getNormal());
+			setPriceCell(xssfWorkbook, row, ColDef.PRICE_2, productModel.getGeant());
+		}
 
-		Cell cell = row.createCell(TITLE_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
+	}
 
+	public static void createTitleRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex, String value) {
+
+		Row row = sheet.createRow(rowIndex);
+		row.setHeightInPoints(RowDef.TITLE.getHeight());
+		Cell cell = formatCell(xssfWorkbook, row, ColDef.TITLE);
 		value = value.substring(1, value.length() - 1);
 		cell.setCellValue(value);
-
 		sheet.addMergedRegion(
-				new CellRangeAddress(row.getRowNum(), row.getRowNum(), TITLE_COL_INDEX, PRICE_2_COL_INDEX));
+				new CellRangeAddress(rowIndex, rowIndex, ColDef.TITLE.getColIndex(), ColDef.PRICE_2.getColIndex()));
 
 	}
 
-	public static void setEmptyRow(XSSFWorkbook xssfWorkbook, Sheet sheet, Row row) {
+	public static void createDescriptionRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex, String text)
+			throws IOException {
 
-		XSSFFont xssfFont = setFont(xssfWorkbook, DESCRIPTION_FONT_NAME, DESCRIPTION_FONT_HEIGHT,
-				ItalicFont.NOT_ITALIC_FONT, DESCRPTION_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.LEFT);
+		Row row = sheet.createRow(rowIndex);
+		row.setHeightInPoints(RowDef.DESCRIPTION.getHeight());
 
-		Cell cell = row.createCell(0);
-		cell.setCellStyle(xssfCellStyle);
-
-		sheet.addMergedRegion(new CellRangeAddress(row.getRowNum(), row.getRowNum(), 0, PRICE_2_COL_INDEX));
-
-	}
-
-	public static void setLabelCell(XSSFWorkbook xssfWorkbook, Row row, String value) {
-
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, LABEL_FONT_HEIGHT, ItalicFont.ITALIC_FONT,
-				PRODUCT_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.LEFT);
-
-		xssfCellStyle.setWrapText(true);
-
-		setBorder(xssfCellStyle);
-
-		Cell cell = row.createCell(LABEL_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-		cell.setCellValue(value);
+		formatCell(xssfWorkbook, row, ColDef.MARGE);
+		setLogo(xssfWorkbook, sheet, row, null);
+		Cell cell = formatCell(xssfWorkbook, row, ColDef.DESCRIPTION);
+		text = text.substring(1, text.length() - 1);
+		cell.setCellValue(text);
+		sheet.addMergedRegion(new CellRangeAddress(rowIndex, rowIndex, ColDef.DESCRIPTION.getColIndex(),
+				ColDef.PRICE_2.getColIndex()));
 
 	}
 
-	public static void setDescriptionCell(XSSFWorkbook xssfWorkbook, Sheet sheet, Row row, String value) {
+	public static void createEmptyRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex) {
 
-		XSSFFont xssfFont = setFont(xssfWorkbook, DESCRIPTION_FONT_NAME, DESCRIPTION_FONT_HEIGHT,
-				ItalicFont.NOT_ITALIC_FONT, DESCRPTION_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.LEFT);
-
-		Cell cell = row.createCell(0);
-		cell.setCellStyle(xssfCellStyle);
-
-		xssfFont = setFont(xssfWorkbook, DESCRIPTION_FONT_NAME, DESCRIPTION_FONT_HEIGHT, ItalicFont.NOT_ITALIC_FONT,
-				DESCRPTION_COLOR);
-		xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.LEFT);
-
-		xssfCellStyle.setWrapText(true);
-
-		setBorder(xssfCellStyle);
-
-		cell = row.createCell(DESCRIPTION_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-		cell.setCellValue(value);
-
-		sheet.addMergedRegion(
-				new CellRangeAddress(row.getRowNum(), row.getRowNum(), DESCRIPTION_COL_INDEX, PRICE_2_COL_INDEX));
+		Row row = sheet.createRow(rowIndex);
+		row.setHeightInPoints(RowDef.EMPTY.getHeight());
+		formatCell(xssfWorkbook, row, ColDef.DESCRIPTION);
+		sheet.addMergedRegion(new CellRangeAddress(rowIndex, rowIndex, 0, ColDef.PRICE_2.getColIndex()));
 
 	}
 
-	public static void setPrice1Cell(XSSFWorkbook xssfWorkbook, Row row, BigDecimal value) {
-
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, PRICE_1_FONT_HEIGHT, ItalicFont.NOT_ITALIC_FONT,
-				PRODUCT_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
-		setBorder(xssfCellStyle);
-		Cell cell = row.createCell(PRICE_1_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-
+	public static void setPriceCell(XSSFWorkbook xssfWorkbook, Row row, ColDef colDef, BigDecimal value) {
+		Cell cell = formatCell(xssfWorkbook, row, colDef);
 		if (value != null && value.compareTo(BigDecimal.ZERO) > 0) {
 			cell.setCellValue(value.doubleValue());
 			XSSFDataFormat xssfDataFormat = xssfWorkbook.createDataFormat();
-			xssfCellStyle.setDataFormat(xssfDataFormat.getFormat("#,##0.00"));
+			cell.getCellStyle().setDataFormat(xssfDataFormat.getFormat("#,##0.00"));
 		}
-
-	}
-
-	public static void setPrice2Cell(XSSFWorkbook xssfWorkbook, Row row, BigDecimal value) {
-
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, PRICE_2_FONT_HEIGHT, ItalicFont.ITALIC_FONT,
-				PRODUCT_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
-		setBorder(xssfCellStyle);
-		Cell cell = row.createCell(PRICE_2_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-
-		if (value != null && value.compareTo(BigDecimal.ZERO) > 0) {
-			cell.setCellValue(value.doubleValue());
-			XSSFDataFormat xssfDataFormat = xssfWorkbook.createDataFormat();
-			xssfCellStyle.setDataFormat(xssfDataFormat.getFormat("#,##0.00"));
-		}
-
-	}
-
-	public static void setMarge(XSSFWorkbook xssfWorkbook, Row row) throws IOException {
-
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, PRICE_2_FONT_HEIGHT, ItalicFont.ITALIC_FONT,
-				PRODUCT_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
-
-		Cell cell = row.createCell(MARGE_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
-
 	}
 
 	public static void setLogo(XSSFWorkbook xssfWorkbook, Sheet sheet, Row row, String imagePath) throws IOException {
 
-		XSSFFont xssfFont = setFont(xssfWorkbook, GENERIC_FONT_NAME, PRICE_2_FONT_HEIGHT, ItalicFont.ITALIC_FONT,
-				PRODUCT_COLOR);
-		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, HorizontalAlignment.CENTER);
-
-		Cell cell = row.createCell(LOGO_COL_INDEX);
-		cell.setCellStyle(xssfCellStyle);
+		formatCell(xssfWorkbook, row, ColDef.LOGO);
 
 		if (imagePath != null && !imagePath.isEmpty() && !"NULL".equals(imagePath.toUpperCase())) {
 
@@ -256,8 +135,8 @@ public class XlsAfficheBodyWriterHelper {
 
 			final int pictureIndex = xssfWorkbook.addPicture(IOUtils.toByteArray(stream), Workbook.PICTURE_TYPE_PNG);
 
-			anchor.setCol1(LOGO_COL_INDEX);
-			anchor.setCol2(LOGO_COL_INDEX);
+			anchor.setCol1(ColDef.LOGO.getColIndex());
+			anchor.setCol2(ColDef.LOGO.getColIndex());
 			anchor.setRow1(row.getRowNum());
 			anchor.setRow2(row.getRowNum());
 
@@ -267,13 +146,25 @@ public class XlsAfficheBodyWriterHelper {
 		}
 	}
 
+	private static Cell formatCell(XSSFWorkbook xssfWorkbook, Row row, ColDef colDef) {
+		Cell cell = row.createCell(colDef.getColIndex());
+		XSSFFont xssfFont = setFont(xssfWorkbook, colDef.getFontName(), colDef.getFontHeight(), colDef.getItalicFont(),
+				colDef.getFontColor());
+		XSSFCellStyle xssfCellStyle = setBackground(xssfWorkbook, xssfFont, colDef.getHorizontalAlignment());
+		xssfCellStyle.setWrapText(true);
+		setBorder(xssfCellStyle);
+		setBorder(xssfCellStyle);
+		cell.setCellStyle(xssfCellStyle);
+		return cell;
+	}
+
 	public static XSSFFont setFont(XSSFWorkbook xssfWorkbook, String fontName, double fontHeight, ItalicFont italicFont,
 			XSSFColor xssfColor) {
 		XSSFFont xssfFont = xssfWorkbook.createFont();
 		xssfFont.setFontHeight(fontHeight);
 		xssfFont.setFontName(fontName);
 		xssfFont.setColor(xssfColor);
-		xssfFont.setItalic(italicFont.value);
+		xssfFont.setItalic(italicFont.istrue());
 		return xssfFont;
 	}
 
