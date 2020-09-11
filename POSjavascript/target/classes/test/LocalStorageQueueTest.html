@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+
+<title>Local storage queue</title>
+<meta charset="utf-8">
+
+<link rel="icon" href="../img/favicon.ico">
+<link href="../assets/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../assets/bootstrap/dist/css/bootstrap-theme.min.css"
+	rel="stylesheet">
+<link href="../css/theme.css" rel="stylesheet">
+
+<script src="../assets/jquery-2.2.1.min.js"></script>
+<script src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="../js/jsonLibrary.js"></script>
+<script src="../js/gui_tools.js"></script>
+<script src="../js/gui_model.js"></script>
+<script src="../js/gui_dao.js"></script>
+<script src="../js/gui_view.js"></script>
+<script src="../js/gui_command.js"></script>
+<script src="../test/createModel.js"></script>
+<script src="../test/test.js"></script>
+<script src="../js/gui_init.js"></script>
+
+<script>
+	function testPageCheck() {
+		var myWindow = window.open(SERVER_BASE + "check", "testPageCheck",
+				"width=200,height=100");
+	}
+	function testPageSimpleRestCheck() {
+		var myWindow = window.open(SERVER_BASE + "rest/simpleCheck",
+				"testPageSimpleRestCheck", "width=500,height=300");
+	}
+	function testPagePosRestServeActif() {
+		var myWindow = window.open(SERVER_BASE + "rest/pos/check",
+				"testPagePosRestServeActif", "width=200,height=100");
+	}
+	function testPageGetProducts() {
+		var myWindow = window.open(SERVER_BASE + "rest/pos/products",
+				"testPageGetProducts", "width=1000,height=1000");
+	}
+	function testPageGetPaymentMethods() {
+		var myWindow = window.open(SERVER_BASE + "rest/pos/paymentMethods",
+				"testPageGetProducts", "width=1000,height=1000");
+	}
+	function urlExists(testUrl) {
+		var http = $.ajax({
+			type : "HEAD",
+			url : testUrl,
+			async : false
+		})
+		return http.status;
+	}
+</script>
+
+</head>
+<body>
+	<div class="content">
+		<h1>
+			Local storage queue mngt (
+			<script type="text/javascript">
+				document.write(SERVER_BASE)
+			</script>
+			)
+		</h1>
+		<input type="button" value="Ajouter" onclick="addButton()"> <input
+			type="button" value="Clear all" onclick="clearButton()"> <input
+			type="button" value="List all" onclick="listButton()"> <input
+			type="button" value="Test vente" onclick="testSale()"> <input
+			type="button" value="Read XML" onclick="readXml()"> <br>
+
+		<input type="button" value="testPageCheck" onclick="testPageCheck()">
+		<script type="text/javascript">
+			document.write(urlExists(SERVER_BASE + "check") + " / ")
+		</script>
+
+		<input type="button" value="testPageSimpleRestCheck"
+			onclick="testPageSimpleRestCheck()">
+		<script type="text/javascript">
+			document.write(urlExists(SERVER_BASE + "rest/simpleCheck") + " / ")
+		</script>
+
+		<input type="button" value="testPagePosRestServeActif"
+			onclick="testPagePosRestServeActif()">
+		<script type="text/javascript">
+			document.write(urlExists(SERVER_BASE + "rest/pos/check") + " / ")
+		</script>
+
+		<input type="button" value="testPageGetProducts"
+			onclick="testPageGetProducts()">
+		<script type="text/javascript">
+			document.write(urlExists(SERVER_BASE + "rest/pos/products"))
+		</script>
+
+		<input type="button" value="testPageGetPaymentMethods"
+			onclick="testPageGetPaymentMethods()">
+		<script type="text/javascript">
+			document.write(urlExists(SERVER_BASE + "rest/pos/paymentMethods"))
+		</script>
+
+		<div id="messageDiv">EMPTY</div>
+		<div id="ticket_body" class="panel-body">
+			<table class="table" id="ticket_table">
+				<thead>
+					<tr>
+						<th>qté</th>
+						<th>produit</th>
+						<th>prix</th>
+					</tr>
+				</thead>
+				<tbody class="display-items">
+				</tbody>
+			</table>
+		</div>
+		<div id="calc_result" class="panel-body"></div>
+
+	</div>
+</body>
+</html>

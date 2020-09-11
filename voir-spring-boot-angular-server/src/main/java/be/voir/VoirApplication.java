@@ -28,8 +28,8 @@ public class VoirApplication {
 
 	private static final String version = "v0.01";
 
-	String productFileName = "CATALOG-products.xlsx";
-	String productSheetName = "CATALOG";
+	String productFileName = "POSproducts.xlsx";
+	String productSheetName = "pos";
 
 	public static void main(String[] args) {
 		SpringApplication.run(VoirApplication.class, args);

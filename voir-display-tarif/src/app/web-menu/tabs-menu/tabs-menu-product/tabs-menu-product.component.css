@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  font-family: 'Calibri';
+  color: white;
+  font-size: 16px;
+}
+
+mat-divider {
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgreen;
+}
+
+.imageColumn {
+  flex: 5%;
+}
+
+.productColumn {
+  flex: 75%;
+}
+
+.normalPriceColumn {
+  flex: 10%;
+  text-align: center;
+}
+
+.geantPriceColumn {
+  flex: 10%;
+  font-size: 70%;
+  padding-left: 16px;
+  text-align: center;
+}
+
+.description {
+  flex: 90%;
+  font-family: 'Arial';
+  font-size: 70%;
+  color: beige;
+}

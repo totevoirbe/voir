@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd-MM-yyyy} %d{HH:mm:ss} - \(%F:%L\) %p %m - at %C.%M%n" />
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="org.apache.log4j.FileAppender">
+		<param name="file" value="log.out" />
+		<param name="immediateFlush" value="true" />
+		<param name="threshold" value="debug" />
+		<param name="append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%m%n" />
+		</layout>
+	</appender>
+
+	<logger name="log4j.rootLogger" additivity="false">
+		<level value="info" />
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<logger name="be.panidel">
+		<level value="info" />  
+	</logger>
+	
+	<root>
+		<priority value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</log4j:configuration>

@@ -67,11 +67,17 @@ public class XlsAfficheBodyWriter {
 			Sheet sheet = xssfWorkbook.createSheet(pageAfficheDef.getName());
 			int rowIndex = 0;
 
-			sheet.setColumnWidth(ColDef.MARGE.getColIndex(), ColDef.MARGE.getColumnWidth());
-			sheet.setColumnWidth(ColDef.LOGO.getColIndex(), ColDef.LOGO.getColumnWidth());
-			sheet.setColumnWidth(ColDef.LABEL.getColIndex(), ColDef.LABEL.getColumnWidth());
-			sheet.setColumnWidth(ColDef.PRICE_1.getColIndex(), ColDef.PRICE_1.getColumnWidth());
-			sheet.setColumnWidth(ColDef.PRICE_2.getColIndex(), ColDef.PRICE_2.getColumnWidth());
+//			sheet.setColumnWidth(ColDef.MARGE.getColIndex(), ColDef.MARGE.getColumnWidth());
+//			sheet.setColumnWidth(ColDef.LOGO.getColIndex(), ColDef.LOGO.getColumnWidth());
+//			sheet.setColumnWidth(ColDef.LABEL.getColIndex(), ColDef.LABEL.getColumnWidth());
+//			sheet.setColumnWidth(ColDef.PRICE_1.getColIndex(), ColDef.PRICE_1.getColumnWidth());
+//			sheet.setColumnWidth(ColDef.PRICE_2.getColIndex(), ColDef.PRICE_2.getColumnWidth());
+
+			sheet.setColumnWidth(ColDef.MARGE.getColIndex(), 100);
+			sheet.setColumnWidth(ColDef.LOGO.getColIndex(), 1300);
+			sheet.setColumnWidth(ColDef.LABEL.getColIndex(), 10000);
+			sheet.setColumnWidth(ColDef.PRICE_1.getColIndex(), 1800);
+			sheet.setColumnWidth(ColDef.PRICE_2.getColIndex(), 1600);
 
 			XlsAfficheBodyWriterHelper.createHeaderRow(xssfWorkbook, sheet, rowIndex++);
 

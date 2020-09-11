@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<root>
+	<vatrates>
+		<vatrate>
+			<code>0</code>
+			<fromDate>1999-12-31T00:00:00+01:00</fromDate>
+			<id>0</id>
+			<rate>0</rate>
+			<toDate>2049-12-31T00:00:00+01:00</toDate>
+		</vatrate>
+		<vatrate>
+			<code>1</code>
+			<fromDate>1999-12-31T00:00:00+01:00</fromDate>
+			<id>1</id>
+			<rate>6</rate>
+			<toDate>2049-12-31T00:00:00+01:00</toDate>
+		</vatrate>
+		<vatrate>
+			<code>2</code>
+			<fromDate>1999-12-31T00:00:00+01:00</fromDate>
+			<id>2</id>
+			<rate>12</rate>
+			<toDate>2049-12-31T00:00:00+01:00</toDate>
+		</vatrate>
+		<vatrate>
+			<code>3</code>
+			<fromDate>1999-12-31T00:00:00+01:00</fromDate>
+			<id>3</id>
+			<rate>21</rate>
+			<toDate>2049-12-31T00:00:00+01:00</toDate>
+		</vatrate>
+		<vatrate>
+			<code>4</code>
+			<fromDate>1999-12-31T00:00:00+01:00</fromDate>
+			<id>4</id>
+			<rate>33</rate>
+			<toDate>2049-12-31T00:00:00+01:00</toDate>
+		</vatrate>
+	</vatrates>
+</root>

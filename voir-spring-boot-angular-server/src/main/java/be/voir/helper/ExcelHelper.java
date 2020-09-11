@@ -108,6 +108,7 @@ public class ExcelHelper {
 		FileInputStream excelInputStream = null;
 		Workbook workbook = null;
 		try {
+			LOG.info(new File(fileName).getAbsolutePath());
 			excelInputStream = new FileInputStream(new File(fileName));
 			workbook = new XSSFWorkbook(excelInputStream);
 			Sheet sheet = workbook.getSheet(SHEET_NAME);

@@ -24,25 +24,25 @@ public interface XslAfficheBodyA3 {
 
 	enum ColDef {
 
-		LABEL(2, 12, "Times New Roman", new XSSFColor(new Color(127, 127, 127)), 5000, ItalicFont.NOT_ITALIC_FONT,
+		LABEL(2, 20, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 10000, ItalicFont.NOT_ITALIC_FONT,
 				HorizontalAlignment.LEFT),
-		PRICE_1(3, 10, "Times New Roman", new XSSFColor(new Color(127, 127, 127)), 500, ItalicFont.NOT_ITALIC_FONT,
+		PRICE_1(3, 16, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 1000, ItalicFont.NOT_ITALIC_FONT,
 				HorizontalAlignment.CENTER),
-		PRICE_2(4, 8, "Times New Roman", new XSSFColor(new Color(127, 127, 127)), 500, ItalicFont.ITALIC_FONT,
+		PRICE_2(4, 14, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 1000, ItalicFont.ITALIC_FONT,
 				HorizontalAlignment.CENTER),
-		PRICE_1_HEADER(3, 12, "Times New Roman", new XSSFColor(new Color(127, 127, 127)), 500,
+		PRICE_1_HEADER(3, 16, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 1000,
 				ItalicFont.NOT_ITALIC_FONT, HorizontalAlignment.CENTER),
-		PRICE_2_HEADER(4, 10, "Times New Roman", new XSSFColor(new Color(127, 127, 127)), 500, ItalicFont.ITALIC_FONT,
+		PRICE_2_HEADER(4, 14, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 1000, ItalicFont.ITALIC_FONT,
 				HorizontalAlignment.CENTER),
 
-		TITLE(2, 14, "Times New Roman", new XSSFColor(new Color(127, 127, 127)), 5000, ItalicFont.NOT_ITALIC_FONT,
+		TITLE(2, 20, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 10000, ItalicFont.NOT_ITALIC_FONT,
 				HorizontalAlignment.LEFT),
-		DESCRIPTION(2, 10, "Times New Roman", new XSSFColor(new Color(0, 0, 0)), 5000, ItalicFont.NOT_ITALIC_FONT,
-				HorizontalAlignment.LEFT),
+		DESCRIPTION(2, 14, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 10000,
+				ItalicFont.NOT_ITALIC_FONT, HorizontalAlignment.LEFT),
 
-		MARGE(0, 18, "Times New Roman", new XSSFColor(new Color(0, 0, 0)), 100, ItalicFont.NOT_ITALIC_FONT,
+		MARGE(0, 20, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 100, ItalicFont.NOT_ITALIC_FONT,
 				HorizontalAlignment.LEFT),
-		LOGO(1, 18, "Times New Roman", new XSSFColor(new Color(0, 0, 0)), 100, ItalicFont.NOT_ITALIC_FONT,
+		LOGO(1, 20, "Times New Roman", new XSSFColor(new Color(255, 255, 255)), 100, ItalicFont.NOT_ITALIC_FONT,
 				HorizontalAlignment.LEFT);
 
 		private int colIndex;
@@ -95,9 +95,9 @@ public interface XslAfficheBodyA3 {
 
 	enum RowDef {
 
-		HEADER(16, new XSSFColor(new Color(127, 127, 127))), TITLE(14, new XSSFColor(new Color(127, 127, 127))),
-		DESCRIPTION(10, new XSSFColor(new Color(127, 127, 127))), PRODUCT(14, new XSSFColor(new Color(56, 87, 35))),
-		EMPTY(5, new XSSFColor(new Color(127, 127, 127)));
+		HEADER(16, new XSSFColor(new Color(255, 255, 255))), TITLE(14, new XSSFColor(new Color(255, 255, 255))),
+		DESCRIPTION(10, new XSSFColor(new Color(255, 255, 255))), PRODUCT(14, new XSSFColor(new Color(255, 255, 255))),
+		EMPTY(5, new XSSFColor(new Color(255, 255, 255)));
 
 		private float height;
 		private XSSFColor color;

@@ -1,16 +1,9 @@
 <router-outlet></router-outlet>
+<br><br><br><br>
+
 <span>
 	Product list origine : {{dataOrigin}} / Local storage status : {{localStorageStatus}}
-	<a [routerLink]="['/screen/P1']" routerLinkActive="router-link-active">P1</a>
-	<a [routerLink]="['/screen/P2']" routerLinkActive="router-link-active">P2</a>
-	<a [routerLink]="['/screen/P3']" routerLinkActive="router-link-active">P3</a>
-	<a [routerLink]="['/screen/P4']" routerLinkActive="router-link-active">P4</a>
-	<a [routerLink]="['/web/menu']" routerLinkActive="router-link-active">W1</a>
-	<a [routerLink]="['/web/menu2']" routerLinkActive="router-link-active">w2</a>
+	- / - <a [routerLink]="['/web/menu']" routerLinkActive="router-link-active">web</a>
+	- / - <a [routerLink]="['/screen/menu']" routerLinkActive="router-link-active">screen</a>
 </span>
-
-
-
-
-<!-- <app-text-roll></app-text-roll>
-<app-carousel-photo [images]="images" (change)="onChange($event)"></app-carousel-photo> -->
+<span class="version-info">Current build: 2.0.0</span>

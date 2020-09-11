@@ -100,12 +100,17 @@ public class XlsAfficheBodyWriterHelper implements XslAfficheBodyA3 {
 
 	}
 
-	public static void createEmptyRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex) {
+	public static void createEmptyRow(XSSFWorkbook xssfWorkbook, Sheet sheet, int rowIndex) throws IOException {
 
 		Row row = sheet.createRow(rowIndex);
 		row.setHeightInPoints(RowDef.EMPTY.getHeight());
-		formatCell(xssfWorkbook, row, ColDef.DESCRIPTION);
-		sheet.addMergedRegion(new CellRangeAddress(rowIndex, rowIndex, 0, ColDef.PRICE_2.getColIndex()));
+
+		formatCell(xssfWorkbook, row, ColDef.MARGE);
+		setLogo(xssfWorkbook, sheet, row, null);
+		Cell cell = formatCell(xssfWorkbook, row, ColDef.DESCRIPTION);
+		cell.setCellValue("");
+		sheet.addMergedRegion(new CellRangeAddress(rowIndex, rowIndex, ColDef.DESCRIPTION.getColIndex(),
+				ColDef.PRICE_2.getColIndex()));
 
 	}
 
@@ -175,21 +180,23 @@ public class XlsAfficheBodyWriterHelper implements XslAfficheBodyA3 {
 		xssfCellStyle.setAlignment(horizontalAlignment);
 		xssfCellStyle.setFont(xssfFont);
 		xssfCellStyle.setVerticalAlignment(VerticalAlignment.CENTER);
-		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(252, 238, 228)));
-		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(252, 238, 228)));
+//		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(252, 238, 228)));
+//		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(252, 238, 228)));
+		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(0, 0, 0)));
+		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(0, 0, 0)));
 		return xssfCellStyle;
 	}
 
 	public static void setBorder(XSSFCellStyle xssfCellStyle) {
 
-		xssfCellStyle.setBorderBottom(BorderStyle.MEDIUM);
-		xssfCellStyle.setBorderTop(BorderStyle.MEDIUM);
-		xssfCellStyle.setBorderRight(BorderStyle.MEDIUM);
-		xssfCellStyle.setBorderLeft(BorderStyle.MEDIUM);
-		xssfCellStyle.setBottomBorderColor(new XSSFColor(new java.awt.Color(255, 255, 255)));
-		xssfCellStyle.setTopBorderColor(new XSSFColor(new java.awt.Color(255, 255, 255)));
-		xssfCellStyle.setRightBorderColor(new XSSFColor(new java.awt.Color(255, 255, 255)));
-		xssfCellStyle.setLeftBorderColor(new XSSFColor(new java.awt.Color(255, 255, 255)));
+		xssfCellStyle.setBorderBottom(BorderStyle.NONE);
+		xssfCellStyle.setBorderTop(BorderStyle.NONE);
+		xssfCellStyle.setBorderRight(BorderStyle.NONE);
+		xssfCellStyle.setBorderLeft(BorderStyle.NONE);
+		xssfCellStyle.setBottomBorderColor(new XSSFColor(new java.awt.Color(0, 0, 0)));
+		xssfCellStyle.setTopBorderColor(new XSSFColor(new java.awt.Color(0, 0, 0, 0)));
+		xssfCellStyle.setRightBorderColor(new XSSFColor(new java.awt.Color(0, 0, 0)));
+		xssfCellStyle.setLeftBorderColor(new XSSFColor(new java.awt.Color(0, 0, 0)));
 
 	}
 

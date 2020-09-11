@@ -23,14 +23,6 @@ export class AppComponent implements OnInit {
 
   title = 'voir-angular-referential-client';
 
-  images = [
-    '../../assets/imgSalades/salade-cesar.jpg',
-    '../../assets/imgSalades/salade-italienne.jpg',
-    '../../assets/imgSalades/27433644-fresh-vegetable-salad-in-a-plastic-take-away-bowl.jpg',
-    '../../assets/imgSalades/58978038-salad-of-takeaway-container-on-white-background.jpg',
-    '../../assets/imgSalades/fresh-greek-salad-plastic-package-to-take-away-lunch-white-marble-background-fresh-greek-salad-plastic-package-to-153833376.jpg',
-  ];
-
   constructor(
     private productDaoService: ProductDaoService,
     private localStorageService: LocalStorageService
@@ -39,7 +31,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.localStorageStatus = this.localStorageService.isStorageServiceValid();
-    this.selectProduct();
+    this.selectDefaultProduct();
   }
 
   selectDefaultProduct(): void {

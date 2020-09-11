@@ -1,0 +1,11 @@
+.menu-part-box {
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  width: 280px;
+}
+
+

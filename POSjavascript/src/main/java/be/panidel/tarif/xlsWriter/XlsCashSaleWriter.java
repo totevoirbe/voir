@@ -287,7 +287,7 @@ public class XlsCashSaleWriter {
 
 		String GENERIC_FONT_NAME = "Times New Roman";
 		double FONT_HEIGHT = 12;
-		XSSFColor COLOR = new XSSFColor(new Color(127, 127, 127));
+		XSSFColor COLOR = new XSSFColor(new Color(0, 0, 0));
 		XSSFFont xssfFont = xssfWorkbook.createFont();
 		xssfFont.setFontHeight(FONT_HEIGHT);
 		xssfFont.setFontName(GENERIC_FONT_NAME);
@@ -297,8 +297,8 @@ public class XlsCashSaleWriter {
 		xssfCellStyle.setAlignment(HorizontalAlignment.LEFT);
 		xssfCellStyle.setFont(xssfFont);
 		xssfCellStyle.setVerticalAlignment(VerticalAlignment.CENTER);
-		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(252, 238, 228)));
-		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(252, 238, 228)));
+		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(0, 0, 0)));
+		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(0, 0, 0)));
 
 		Cell cell = row.createCell(col);
 		cell.setCellStyle(xssfCellStyle);
@@ -310,7 +310,7 @@ public class XlsCashSaleWriter {
 
 		String GENERIC_FONT_NAME = "Times New Roman";
 		double FONT_HEIGHT = 12;
-		XSSFColor COLOR = new XSSFColor(new Color(127, 127, 127));
+		XSSFColor COLOR = new XSSFColor(new Color(0, 0, 0));
 		XSSFFont xssfFont = xssfWorkbook.createFont();
 		xssfFont.setFontHeight(FONT_HEIGHT);
 		xssfFont.setFontName(GENERIC_FONT_NAME);
@@ -320,8 +320,8 @@ public class XlsCashSaleWriter {
 		xssfCellStyle.setAlignment(HorizontalAlignment.LEFT);
 		xssfCellStyle.setFont(xssfFont);
 		xssfCellStyle.setVerticalAlignment(VerticalAlignment.CENTER);
-		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(252, 238, 228)));
-		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(252, 238, 228)));
+		xssfCellStyle.setFillForegroundColor(new XSSFColor(new Color(0, 0, 0)));
+		xssfCellStyle.setFillBackgroundColor(new XSSFColor(new Color(0, 0, 0)));
 
 		Cell cell = row.createCell(col);
 		cell.setCellStyle(xssfCellStyle);
