@@ -1,7 +1,7 @@
 [POS ADMIN GUI MAIN]Heap utilization 8% / max use 8% - Used[9], Free[109], Total[119], Max[1764]
 [1/POS_EMBEDDED_CREATE]
 [START Select persist unit]Heap utilization 18% / max use 18% - Used[21], Free[97], Total[119], Max[1764]
-Logging initialized @3056ms to org.eclipse.jetty.util.log.Slf4jLog
+Logging initialized @124224ms to org.eclipse.jetty.util.log.Slf4jLog
 Persistence type : JDBC
 Db connection spec : /home/tote/Desktop/jee-workspace/Servers/Tomcat v9.0 Server at localhost-config/server.xml
 Server [globalNamingResources=GlobalNamingResources [resources=[Resource [auth=Container, driverClassName=org.apache.derby.jdbc.EmbeddedDriver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/posEmbedded, password=root, type=javax.sql.DataSource, url=jdbc:derby:/home/tote/Desktop/derbyTest;create=false, username=root], Resource [auth=Container, driverClassName=org.apache.derby.jdbc.EmbeddedDriver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/createPosEmbedded, password=root, type=javax.sql.DataSource, url=jdbc:derby:/home/tote/Desktop/derbyTest;create=true, username=root], Resource [auth=Container, driverClassName=com.mysql.cj.jdbc.Driver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/posRecette, password=81b3020db331c0a9ba051ac0a2a9fdd0, type=javax.sql.DataSource, url=jdbc:mysql://37.59.98.85:3306/posRecette?autoReconnect=true&useSSL=false&serverTimezone=UTC, username=posRecetteUser], Resource [auth=Container, driverClassName=com.mysql.cj.jdbc.Driver, maxIdle=30, maxTotal=50, maxWaitMillis=10000, name=jdbc/posProd, password=81b3020db331c0a9ba051ac0a2a9fdd0, type=javax.sql.DataSource, url=jdbc:mysql://37.59.98.85:3306/posRecette?autoReconnect=true&useSSL=false&serverTimezone=UTC, username=posProdUser], Resource [auth=Container, driverClassName=null, maxIdle=null, maxTotal=null, maxWaitMillis=null, name=UserDatabase, password=null, type=org.apache.catalina.UserDatabase, url=null, username=null]]]]
@@ -23,12 +23,12 @@ HHH10001001: Connection properties: {user=root, password=****, autocommit=false}
 HHH10001003: Autocommit mode: false
 HHH000115: Hibernate connection pool size: 20 (min=1)
 HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
-HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@31559e45] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@720478c2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@13d31509'
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@10e68771] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@212449a8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@217c2951'
 END : true
-[END create DB]Heap utilization 29% / max use 29% - Used[36], Free[87], Total[124], Max[1764]
-[START update referential]Heap utilization 29% / max use 29% - Used[36], Free[87], Total[124], Max[1764]
+[END create DB]Heap utilization 31% / max use 31% - Used[40], Free[89], Total[129], Max[1764]
+[START update referential]Heap utilization 31% / max use 31% - Used[40], Free[89], Total[129], Max[1764]
 Update Vat Rates.
 Persistence : createPosEmbedded-JDBC
 HHH000204: Processing PersistenceUnitInfo [
@@ -40,14 +40,553 @@ HHH10001001: Connection properties: {user=root, password=****, autocommit=false}
 HHH10001003: Autocommit mode: false
 HHH000115: Hibernate connection pool size: 20 (min=1)
 HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
-HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6585fc91] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b4a6be0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@13d31509'
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ff5057d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ac443ec] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@217c2951'
 HHH000397: Using ASTQueryTranslatorFactory
 Update Products.
 Update Payment Methods.
-[END update referential]Heap utilization 31% / max use 31% - Used[57], Free[124], Total[182], Max[1764]
-[START write pos 10 cat]Heap utilization 32% / max use 32% - Used[58], Free[124], Total[182], Max[1764]
-Write pos 10 Catalog.
-Write pos 10 Catalog DONE : resultat/products.xml
-[END write pos 10 cat]Heap utilization 34% / max use 34% - Used[111], Free[209], Total[321], Max[1764]
+[END update referential]Heap utilization 32% / max use 32% - Used[60], Free[128], Total[189], Max[1764]
+[START list products]Heap utilization 32% / max use 32% - Used[60], Free[128], Total[189], Max[1764]
+List products.
+[END list products]Heap utilization 26% / max use 32% - Used[55], Free[156], Total[212], Max[1764]
+[START compute sales action]Heap utilization 32% / max use 32% - Used[68], Free[144], Total[212], Max[1764]
+Cashsales from : Wed Jul 12 00:00:00 CEST 2017 to : Thu Jul 13 00:00:00 CEST 2017
+Cashsale size [FROM/TO included] : 0[Jan 1, 2017/Dec 31, 2017/ [YEAR]]
+ReportPeriod [beginTime=Jan 1, 2017 12:00:00 AM, endTime=Dec 31, 2017 11:59:59 PM, periodType=YEAR] / 0
+Done : 100 % - [writeCashsalesReport]
+[END compute sales action]Heap utilization 41% / max use 41% - Used[88], Free[124], Total[212], Max[1764]
+[START compute sales action]Heap utilization 47% / max use 47% - Used[100], Free[112], Total[212], Max[1764]
+Cashsales from : Wed Jul 12 00:00:00 CEST 2017 to : Thu Jul 13 00:00:00 CEST 2017
+[START compute sales action]Heap utilization 47% / max use 47% - Used[100], Free[111], Total[212], Max[1764]
+Cashsales from : Wed Jan 01 00:00:00 CET 2020 to : Fri Jan 01 00:00:00 CET 2021
+[START compute sales action]Heap utilization 47% / max use 47% - Used[100], Free[111], Total[212], Max[1764]
+Cashsales from : Wed Jan 01 00:00:00 CET 2020 to : Fri Jan 01 00:00:00 CET 2021
+Cashsale size [FROM/TO included] : 0[Jan 1, 2020/Dec 31, 2020/ [YEAR]]
+ReportPeriod [beginTime=Jan 1, 2020 12:00:00 AM, endTime=Dec 31, 2020 11:59:59 PM, periodType=YEAR] / 0
+Done : 100 % - [writeCashsalesReport]
+Cashsale size [FROM/TO included] : 0[Jan 1, 2021/Dec 31, 2021/ [YEAR]]
+ReportPeriod [beginTime=Jan 1, 2021 12:00:00 AM, endTime=Dec 31, 2021 11:59:59 PM, periodType=YEAR] / 0
+[END compute sales action]Heap utilization 52% / max use 52% - Used[111], Free[101], Total[212], Max[1764]
+[2/POS_RECETTE]
+[START Select persist unit]Heap utilization 52% / max use 52% - Used[111], Free[101], Total[212], Max[1764]
+[END Select persist unit]Heap utilization 52% / max use 52% - Used[111], Free[101], Total[212], Max[1764]
+[2/POS_RECETTE]
+[START Select persist unit]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+[END Select persist unit]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+[3/POS_RECETTE_CREATE]
+[START Select persist unit]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getDescription(DataLayerHelper.java:187)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$PeristenceUnitListSelectionListner.valueChanged(POSAdminGui.java:332)
+	at javax.swing.JList.fireSelectionValueChanged(JList.java:1802)
+	at javax.swing.JList$ListSelectionHandler.valueChanged(JList.java:1816)
+	at javax.swing.DefaultListSelectionModel.fireValueChanged(DefaultListSelectionModel.java:184)
+	at javax.swing.DefaultListSelectionModel.fireValueChanged(DefaultListSelectionModel.java:164)
+	at javax.swing.DefaultListSelectionModel.fireValueChanged(DefaultListSelectionModel.java:211)
+	at javax.swing.DefaultListSelectionModel.changeSelection(DefaultListSelectionModel.java:405)
+	at javax.swing.DefaultListSelectionModel.changeSelection(DefaultListSelectionModel.java:415)
+	at javax.swing.DefaultListSelectionModel.setSelectionInterval(DefaultListSelectionModel.java:459)
+	at javax.swing.JList.setSelectionInterval(JList.java:2071)
+	at javax.swing.plaf.basic.BasicListUI$Handler.adjustSelection(BasicListUI.java:2739)
+	at javax.swing.plaf.basic.BasicListUI$Handler.mousePressed(BasicListUI.java:2695)
+	at java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:280)
+	at java.awt.Component.processMouseEvent(Component.java:6536)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4532)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[END Select persist unit]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+[3/POS_RECETTE_CREATE]
+[START Select persist unit]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getDescription(DataLayerHelper.java:187)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$PeristenceUnitListSelectionListner.valueChanged(POSAdminGui.java:332)
+	at javax.swing.JList.fireSelectionValueChanged(JList.java:1802)
+	at javax.swing.JList$ListSelectionHandler.valueChanged(JList.java:1816)
+	at javax.swing.DefaultListSelectionModel.fireValueChanged(DefaultListSelectionModel.java:184)
+	at javax.swing.DefaultListSelectionModel.fireValueChanged(DefaultListSelectionModel.java:154)
+	at javax.swing.DefaultListSelectionModel.setValueIsAdjusting(DefaultListSelectionModel.java:685)
+	at javax.swing.JList.setValueIsAdjusting(JList.java:2146)
+	at javax.swing.plaf.basic.BasicListUI$Handler.mouseReleased(BasicListUI.java:2796)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:290)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[END Select persist unit]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+[START create DB]Heap utilization 53% / max use 53% - Used[113], Free[98], Total[212], Max[1764]
+START
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.createDbSchema(DataLayerHelper.java:160)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$CreateDBActionListner.actionPerformed(POSAdminGui.java:572)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+HHH000204: Processing PersistenceUnitInfo [
+	name: createPosRecette
+	...]
+HHH000181: No appropriate connection provider encountered, assuming application will be supplying connections
+HHH000342: Could not obtain connection to query metadata : The application must supply JDBC connections
+[START update referential]Heap utilization 57% / max use 57% - Used[121], Free[90], Total[212], Max[1764]
+Update Vat Rates.
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.updateDbVatRates(DataFacade.java:465)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:357)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.getAllVatRates(DataFacade.java:389)
+	at be.panidel.dataLayer.DataFacade.updateDbVatRates(DataFacade.java:475)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:357)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Update Products.
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.updateDbProducts(DataFacade.java:415)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:362)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Update Payment Methods.
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.updateDbPaymentMethods(DataFacade.java:440)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:368)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[END update referential]Heap utilization 20% / max use 57% - Used[45], Free[170], Total[216], Max[1764]
+[START update referential]Heap utilization 20% / max use 20% - Used[45], Free[170], Total[216], Max[1764]
+Update Vat Rates.
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.updateDbVatRates(DataFacade.java:465)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:357)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.getAllVatRates(DataFacade.java:389)
+	at be.panidel.dataLayer.DataFacade.updateDbVatRates(DataFacade.java:475)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:357)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Update Products.
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.updateDbProducts(DataFacade.java:415)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:362)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Update Payment Methods.
+Resource not found : jdbc/createPosRecette
+
+java.lang.NullPointerException
+	at be.panidel.dataLayer.helper.DAOConfig.getProps(DAOConfig.java:85)
+	at be.panidel.dataLayer.helper.DataLayerHelper.getNewEntityManager(DataLayerHelper.java:110)
+	at be.panidel.dataLayer.DataFacade.updateDbPaymentMethods(DataFacade.java:440)
+	at be.panidel.exe.POSAdminGui$POSAdminGuiPanel$UpdateReferentialsActionListner.actionPerformed(POSAdminGui.java:368)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at org.GNOME.Accessibility.AtkWrapper$6.dispatchEvent(AtkWrapper.java:715)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[END update referential]Heap utilization 45% / max use 45% - Used[98], Free[117], Total[216], Max[1764]

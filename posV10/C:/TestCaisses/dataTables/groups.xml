@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+	<groups index="5">
+		<group id="1">
+			<code>apeser</code>
+			<nom>apeser</nom>
+			<description>A peser</description>
+			<htmlKeyLabel>apeser</htmlKeyLabel>
+			<touchcolor>-256</touchcolor>
+		</group>
+		<group id="2">
+			<code>baguettes</code>
+			<nom>baguettes</nom>
+			<description>Baguettes</description>
+			<htmlKeyLabel>baguettes</htmlKeyLabel>
+			<touchcolor>-256</touchcolor>
+		</group>
+		<group id="3">
+			<code>boissons</code>
+			<nom>boissons</nom>
+			<description>Boissons</description>
+			<htmlKeyLabel>boissons</htmlKeyLabel>
+			<touchcolor>-20561</touchcolor>
+		</group>
+		<group id="4">
+			<code>panini</code>
+			<nom>panini</nom>
+			<description>Panini</description>
+			<htmlKeyLabel>panini</htmlKeyLabel>
+			<touchcolor>-156877</touchcolor>
+		</group>
+		<group id="5">
+			<code>salades</code>
+			<nom>salades</nom>
+			<description>Salades</description>
+			<htmlKeyLabel>salades</htmlKeyLabel>
+			<touchcolor>-3355393</touchcolor>
+		</group>
+		<group id="6">
+			<code>sdwclassique</code>
+			<nom>sdwclassique</nom>
+			<description>Sdw Classique</description>
+			<htmlKeyLabel>sdwclassique</htmlKeyLabel>
+			<touchcolor>-3342388</touchcolor>
+		</group>
+		<group id="7">
+			<code>sdwcrabe</code>
+			<nom>sdwcrabe</nom>
+			<description>Sdw Crabe</description>
+			<htmlKeyLabel>sdwcrabe</htmlKeyLabel>
+			<touchcolor>-13108</touchcolor>
+		</group>
+		<group id="8">
+			<code>sdwcrevette</code>
+			<nom>sdwcrevette</nom>
+			<description>Sdw Crevette</description>
+			<htmlKeyLabel>sdwcrevette</htmlKeyLabel>
+			<touchcolor>-13108</touchcolor>
+		</group>
+		<group id="9">
+			<code>sdwdivers</code>
+			<nom>sdwdivers</nom>
+			<description>Sdw Divers</description>
+			<htmlKeyLabel>sdwdivers</htmlKeyLabel>
+			<touchcolor>-13210</touchcolor>
+		</group>
+		<group id="10">
+			<code>sdwpoulet</code>
+			<nom>sdwpoulet</nom>
+			<description>Sdw Poulet</description>
+			<htmlKeyLabel>sdwpoulet</htmlKeyLabel>
+			<touchcolor>-6684775</touchcolor>
+		</group>
+		<group id="11">
+			<code>sdwspecialite</code>
+			<nom>sdwspecialite</nom>
+			<description>Sdw Specialite</description>
+			<htmlKeyLabel>sdwspecialite</htmlKeyLabel>
+			<touchcolor>-39271</touchcolor>
+		</group>
+		<group id="12">
+			<code>sdwthon</code>
+			<nom>sdwthon</nom>
+			<description>Sdw Thon</description>
+			<htmlKeyLabel>sdwthon</htmlKeyLabel>
+			<touchcolor>-52</touchcolor>
+		</group>
+		<group id="13">
+			<code>sdwusa</code>
+			<nom>sdwusa</nom>
+			<description>Sdw Usa</description>
+			<htmlKeyLabel>sdwusa</htmlKeyLabel>
+			<touchcolor>-26266</touchcolor>
+		</group>
+		<group id="14">
+			<code>vienois_dessert</code>
+			<nom>vienois_dessert</nom>
+			<description>vienoiserie/dessert</description>
+			<htmlKeyLabel>vienois_dessert</htmlKeyLabel>
+			<touchcolor>-256</touchcolor>
+		</group>
+		<group id="15">
+			<code>salaison</code>
+			<nom>salaison</nom>
+			<description>Salaison</description>
+			<htmlKeyLabel>salaison</htmlKeyLabel>
+			<touchcolor>-256</touchcolor>
+		</group>
+		<group id="16">
+			<code>cups</code>
+			<nom>cups</nom>
+			<description>Cups</description>
+			<htmlKeyLabel>cups</htmlKeyLabel>
+			<touchcolor>-3342388</touchcolor>
+		</group>
+		<group id="17">
+			<code>garnitures</code>
+			<nom>garnitures</nom>
+			<description>Garnitures</description>
+			<htmlKeyLabel>garnitures</htmlKeyLabel>
+			<touchcolor>-3342337</touchcolor>
+		</group>
+	</groups>
+</root>

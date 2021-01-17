@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="syncMsgSubjectPrefix">msg_from_</entry>
+<entry key="datablesDir">C:/Caisses/dataTables</entry>
+<entry key="syncSendEnabled">true</entry>
+<entry key="resStorCseSales">C:/Caisses</entry>
+<entry key="syncEMailUser">link@dagoarlon.be</entry>
+<entry key="syncMsgRecipientList">solution.architect.solution.it@gmail.com, philippe@voir.be</entry>
+<entry key="posStorCseGrp">C:/CaisseGroup</entry>
+<entry key="itemSaleTotalMax">100</entry>
+<entry key="syncReceiveEnabled">false</entry>
+<entry key="resStorCseGrp">C:/CaisseGroup</entry>
+<entry key="posStorCseSales">C:/Caisses</entry>
+<entry key="payementmodeFile">payementmode.xml</entry>
+<entry key="saleIsIdleInMinutes">3</entry>
+<entry key="posStorCseRej">C:/CaisseRejected</entry>
+<entry key="resStorCseRej">C:/CaisseRejected</entry>
+<entry key="payIdAsSale">40,50,60,70</entry>
+<entry key="posIsIdleInMinutes">5</entry>
+<entry key="kbLayoutFile">kbLayout.xml</entry>
+<entry key="posList">DAGOSALLE,DAGORUE</entry>
+<entry key="periodicEventScan">10</entry>
+<entry key="syncMsgFrom">philfran@voir.be</entry>
+<entry key="groupsFile">groups.xml</entry>
+<entry key="itemSaleAmountMax">20</entry>
+<entry key="companyFile">company.xml</entry>
+<entry key="itemPayTotalMax">300</entry>
+<entry key="tvaTakeOnPlace">21</entry>
+<entry key="payIdAsCA">50,60</entry>
+<entry key="syncSmtpHost">relay.skynet.be</entry>
+<entry key="syncPopHost">pop01.mbn1.net</entry>
+<entry key="employeesFile">employees.xml</entry>
+<entry key="productsFile">products.xml</entry>
+<entry key="mgmtEMailBox">christine@voir.be,philippe@voir.be</entry>
+<entry key="tvaTakeAway">6</entry>
+<entry key="eMailSyncPeriodicity">60</entry>
+<entry key="syncEMailPwd">7H7sBGjUF8yeGUwtvC20</entry>
+<entry key="tvaList">6,12,21</entry>
+<entry key="syncEMailBox">link@dagoarlon.be</entry>
+<entry key="itemPayMax">501</entry>
+<entry key="posStorCseArc">C:/CaisseArchive</entry>
+<entry key="resStorCseArc">C:/CaisseArchive</entry>
+</properties>

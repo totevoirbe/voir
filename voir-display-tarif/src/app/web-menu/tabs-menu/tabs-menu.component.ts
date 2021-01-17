@@ -30,7 +30,7 @@ export class TabsMenuComponent implements OnInit {
 
   ngOnInit() {
 
-     setInterval(this.scheduledActivity, 5000, this);
+    //  setInterval(this.scheduledActivity, 5000, this);
 
   }
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+	<employees index="5">
+
+<employee id="10">
+<code>CA1</code>
+<nom>Caisse 1</nom>
+<description/>
+<htmlKeyLabel>C 1</htmlKeyLabel>
+</employee>
+<employee id="20">
+<code>CA2</code>
+<nom>Caisse 2</nom>
+<description/>
+<htmlKeyLabel>C 2</htmlKeyLabel>
+</employee>
+<employee id="30">
+<code>CA3</code>
+<nom>Caisse 3</nom>
+<description/>
+<htmlKeyLabel>C 3</htmlKeyLabel>
+</employee>
+<employee id="40">
+<code>CA4</code>
+<nom>Caisse 4</nom>
+<description/>
+<htmlKeyLabel>C 4</htmlKeyLabel>
+</employee>
+<employee id="50">
+<code>CA5</code>
+<nom>Caisse 5</nom>
+<description/>
+<htmlKeyLabel>C 5</htmlKeyLabel>
+</employee></employees>
+</root>

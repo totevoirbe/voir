@@ -89,7 +89,7 @@ public class ProductPos10Dao {
 			Integer tvaTakeAway = product.getVatRateTakeAway().getRate().multiply(DAOConfig.POS_MULTIPLIER).intValue();
 			Integer tvaTakeOnPlace = product.getVatRateOnPlace().getRate().multiply(DAOConfig.POS_MULTIPLIER)
 					.intValue();
-			String group = null;
+			String group = refProductPos10.getGroup();
 			List<SubproductPos10> subproducts = null;
 
 			product10 = new ProductPos10(id, code, nom, description, htmlKeyLabel, prixachat, prix, tvaTakeAway,

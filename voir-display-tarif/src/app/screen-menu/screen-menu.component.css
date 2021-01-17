@@ -7,3 +7,9 @@
   border-radius: 8px;
   width: 280px;
 }
+
+.menu-part-box {
+  height: 350px;
+  fxFlex: 50%;
+  fxFlex.gt-sm: 25%;
+}

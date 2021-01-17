@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="documentlist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="document"/>
+      </xs:sequence>
+      <xs:attribute name="date" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="personnel"/>
+        <xs:element ref="date"/>
+        <xs:element ref="company"/>
+        <xs:element ref="computername"/>
+        <xs:element ref="takeonplace"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="item"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="payement"/>
+      </xs:sequence>
+      <xs:attribute name="cancelled" type="xs:boolean"/>
+      <xs:attribute name="source" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personnel" type="xs:integer"/>
+  <xs:element name="date" type="xs:integer"/>
+  <xs:element name="company" type="xs:integer"/>
+  <xs:element name="computername" type="xs:NCName"/>
+  <xs:element name="takeonplace" type="xs:string"/>
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="quantity"/>
+        <xs:element ref="product"/>
+        <xs:element ref="description"/>
+        <xs:element ref="unitPrice"/>
+        <xs:element ref="tvaTakeAway"/>
+        <xs:element ref="tvaTakeOnPlace"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="product" type="xs:integer"/>
+  <xs:element name="unitPrice" type="xs:decimal"/>
+  <xs:element name="tvaTakeAway" type="xs:integer"/>
+  <xs:element name="tvaTakeOnPlace" type="xs:integer"/>
+  <xs:element name="payement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="quantity"/>
+        <xs:element ref="description"/>
+        <xs:element ref="mode"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mode" type="xs:integer"/>
+  <xs:element name="value" type="xs:decimal"/>
+  <xs:element name="quantity" type="xs:decimal"/>
+  <xs:element name="description" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,234 @@
+<!-- <marquee behavior="scroll" direction="up"> -->
+
+<mat-tab-group dynamicHeight mat-align-tabs="center" [selectedIndex]="selected.value"
+  (selectedIndexChange)="selected.setValue($event)">
+  <mat-tab label="Traditions">
+    <!-- <ng-template mat-tab-label>
+      <img src="../../../../assets/images/credit-card/edenred.png" alt="chèque repas edenred" hspace="5"
+        style="height: 30px; border: 5px;"> </ng-template> -->
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex fxLayoutAlign="center">
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="" hasGeant="true"></app-tabs-menu-header>
+        <app-tabs-menu-product productCode="NUTELLA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="JAMBON"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="FROMAGE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PHILADELPHIA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="VEGETARIEN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="VEGETARIEN2"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="DAGO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="DAGOPIQUANT"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="DAGOFUME"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="DAGOFUMEPIQUANT"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="JAMBONFROMAGE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="JAMBONFUME"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SAUCISSON"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CHORIZO"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="" hasGeant="true"></app-tabs-menu-header>
+        <app-tabs-menu-product productCode="USAEPICE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="USADOUX"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="MARTINO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALADVIAND"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="JAMBONPOIR"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PITA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PITAPIQUANT"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="KEBAB"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="KEBABPIQUANT"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="POULETCURRY"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="POULETMAYO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="POULETMEXIC"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="POULETHAWAI"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="POULETANDALOU"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="POULETPIQ"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <h1>
+          <font color="antiquewhite">
+            <p>Nos Dagos à toutes les sauces</p>
+          </font>
+        </h1>
+        <h3>
+          <font color="antiquewhite">
+            <p>Dago piquant</p>
+            <p>Dago exotique</p>
+            <p>Dago andalouse</p>
+            <p>Dago poivre</p>
+            <p>Dago brasil</p>
+          </font>
+        </h3>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Découverte">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex fxLayoutAlign="center">
+
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <h1>
+          <font color="antiquewhite">
+            <p>Nos Croquants à toutes les sauces</p>
+          </font>
+        </h1>
+        <h3>
+          <font color="antiquewhite">
+            <p>Croquant maison</p>
+            <p>Croquant piquant</p>
+            <p>Croquant exotique</p>
+            <p>Croquant andalouse</p>
+            <p>Croquant poivre</p>
+            <p>Croquant brasil</p>
+            <p>Croquant tartare</p>
+            <p>Croquant à l'italienne</p>
+            <p>Panini Croquant</p>
+            <p>Salade Croquante</p>
+          </font>
+        </h3>
+      </div>
+
+
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="Côté mer" hasGeant="true">
+        </app-tabs-menu-header>
+        <app-tabs-menu-product productCode="THONMAYO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="THONPIQ"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="THONCOCK"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="THONCOCKPIQ"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CRABE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CRABEEXOTIQUE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CREVETROSE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CREVETDIAB"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CREVETCOCK"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CREVETGRISE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SCAMPIAIL"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SCAMPIPIQ"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SAUMONFUME"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="NORDIQUE"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="Délices de chèvre" hasGeant="true">
+        </app-tabs-menu-header>
+        <app-tabs-menu-product productCode="CHEVREMIEL"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CHEVRERAISIN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CHEVREMIELRAISIN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CHEVREBACON"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CHEVRESUD"></app-tabs-menu-product>
+        <app-tabs-menu-header title="" hasGeant="true">
+        </app-tabs-menu-header>
+        <app-tabs-menu-product productCode="CLUBFETA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBMOZZA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBNICOIS"></app-tabs-menu-product>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Spécialités">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex fxLayoutAlign="center">
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="" hasGeant="true"></app-tabs-menu-header>
+        <app-tabs-menu-product productCode="FILETPOULET"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBDAGO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBBOULETTE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBEXOTIQUE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBPOULETGRILLE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PCAESAR"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="ROTIMOUTARDE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="ROSBIF"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="ROSBIFPARMESAN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="ROSBIFMIELMOUTARDE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="OMELETTE"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="Spécialités Italiennes" hasGeant="true">
+        </app-tabs-menu-header>
+        <app-tabs-menu-product productCode="LEPARMA1"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="LEPARMA2"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="LEPARMA3"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PARMA4"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="MEDITERRANEEN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="NAPOLI"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="TARTAREITALIEN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="TARTAREITALIEN2"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="Spécialités Italiennes" hasGeant="true">
+        </app-tabs-menu-header>
+        <app-tabs-menu-product productCode="CLUBITALIENNE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PHILAPARME"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PHILAPARME2"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CHEVRESUD"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="TOMATMOZZA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="TOMATMOZZA2"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="CLUBMOZZA"></app-tabs-menu-product>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Salades">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex fxLayoutAlign="center">
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-product productCode="SAL7CRUDITES"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALPRINTANIERE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALFERMIERE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALLOUISIANE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALHAWAY"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALCHEVREBACON"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALCHEVREMIEL"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALCHEVRERAISIN"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-header title="Salades à l'Italienne et du Sud" hasGeant="false">
+        </app-tabs-menu-header>
+        <app-tabs-menu-product productCode="SALITALIENNE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALPARMA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALMOZZA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALCLUBMOZZA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALGREC"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALNICOISE"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-product productCode="SALGOURM"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALSAUMFUME"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALTHON"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALTHONPECHE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALPOMTERRE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALPATEJAMB"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALPATFRUITMER"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALTABOULE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="SALTABOULEPOULET"></app-tabs-menu-product>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Panini">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex fxLayoutAlign="center">
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-product productCode="PANCROQUE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANHAWAI"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANROMANA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANBOLO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANBOLOPIQ"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PAN4FROM"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANCHORIZO"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANCHEEZEBURG"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANCROQUANT"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-product productCode="PANPOULET"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANEXOTIQUE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANCHINOIS"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANJAMBON"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANNORDIQUE"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANCHEVREMIEL"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANTOMATEMOZZA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANTHON"></app-tabs-menu-product>
+      </div>
+      <div fxFlex="50%" fxFlex.gt-sm="25%" class="menu-part-box mat-elevation-z4">
+        <app-tabs-menu-product productCode="PANITALIEN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANVEGETARIEN"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANPARMA"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANPARMA1"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANPARMA2"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANPARMA3"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANPARMA4"></app-tabs-menu-product>
+        <app-tabs-menu-product productCode="PANNAPOLI"></app-tabs-menu-product>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

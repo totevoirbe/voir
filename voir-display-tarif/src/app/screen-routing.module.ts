@@ -7,7 +7,9 @@ const screenRoutes: Routes = [
   // { path: 'screen/:pageSelector', component: TarifOnScreenComponent },
   { path: 'web/menu', component: WebMenuComponent },
   { path: 'screen/menu', component: ScreenMenuComponent },
+  { path: 'screen', redirectTo: 'screen/menu', pathMatch: 'full' },
   { path: '', redirectTo: 'screen/menu', pathMatch: 'full' }
+  
 ];
 
 @NgModule({

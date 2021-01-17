@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+	<payments index="3">
+<payment id="10">
+<description>Jeté</description>
+<htmlKeyLabel/>
+<needSomeValue>false</needSomeValue>
+<maxQuantity>100</maxQuantity>
+<maxTotalAmount>20000</maxTotalAmount>
+<beAlone>true</beAlone>
+</payment>
+<payment id="20">
+<description>Gratuit</description>
+<htmlKeyLabel/>
+<needSomeValue>false</needSomeValue>
+<maxQuantity>-100</maxQuantity>
+<maxTotalAmount>5000</maxTotalAmount>
+<beAlone>false</beAlone>
+</payment>
+<payment id="30">
+<description>Impayé</description>
+<htmlKeyLabel/>
+<needSomeValue>false</needSomeValue>
+<maxQuantity>-100</maxQuantity>
+<maxTotalAmount>5000</maxTotalAmount>
+<beAlone>false</beAlone>
+</payment>
+<payment id="40">
+<description>Carte de fidélité</description>
+<htmlKeyLabel/>
+<needSomeValue>true</needSomeValue>
+<maxQuantity>-100</maxQuantity>
+<maxTotalAmount>1000</maxTotalAmount>
+<beAlone>false</beAlone>
+</payment>
+<payment id="50">
+<description>Cheque repas</description>
+<htmlKeyLabel/>
+<needSomeValue>true</needSomeValue>
+<maxQuantity>-100</maxQuantity>
+<maxTotalAmount>5000</maxTotalAmount>
+<beAlone>false</beAlone>
+</payment>
+<payment id="60">
+<description>Cash</description>
+<htmlKeyLabel/>
+<needSomeValue>false</needSomeValue>
+<maxQuantity>-100</maxQuantity>
+<maxTotalAmount>11000</maxTotalAmount>
+<beAlone>false</beAlone>
+</payment>
+<payment id="70">
+<description>Facture</description>
+<htmlKeyLabel/>
+<needSomeValue>false</needSomeValue>
+<maxQuantity>-100</maxQuantity>
+<maxTotalAmount>10000</maxTotalAmount>
+<beAlone>true</beAlone>
+</payment>
+</payments>
+</root>

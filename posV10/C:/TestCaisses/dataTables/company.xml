@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<companies index="5">
+		<company id="1">
+			<code>PAN</code>
+			<nom>Panidel</nom>
+			<description>Panidel sprl</description>
+			<postalCode>6700</postalCode>
+			<phone>+3263/225194</phone>
+			<fax>+3263/227315</fax>
+			<adress>24, rue de Steinfort</adress>
+		</company>
+	</companies>
+</root>

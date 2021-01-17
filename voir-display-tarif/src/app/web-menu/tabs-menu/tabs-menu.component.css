@@ -9,3 +9,17 @@
 }
 
 
+.infoHeader {
+  font-family: 'Calibri';
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.info {
+  font-family: 'Calibri';
+  color: white;
+  font-size: 16px;
+  line-height: 50%;
+  text-align: center;
+}
